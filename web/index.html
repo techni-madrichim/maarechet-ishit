@@ -1902,7 +1902,9 @@ function startApp(DATA, TEAM) {
 
   json("data/staff.json").then(function (st) {
     var person = st.people.filter(function (p) { return p.id === me; })[0];
-    var cmdTeam = !person && (st.teams || []).filter(function (t) { return t.commander_id === me; })[0];
+    // A commander who also teaches (on the staff list) gets commander mode while signed in as commander,
+    // and their plain timetable otherwise.
+    var cmdTeam = (st.teams || []).filter(function (t) { return t.commander_id === me; })[0];
     var cmdSess = cmdTeam && cmdSession(cmdTeam.name);
     if (cmdSess) {  // a team commander: their own timetable, with the team's tabs
       return json("data/" + encodeURIComponent(me) + ".json").then(function (d) {
