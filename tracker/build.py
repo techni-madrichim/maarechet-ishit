@@ -650,7 +650,7 @@ def main():
             build_duty(raw, now, people, team_defs)
     DOCS.mkdir(exist_ok=True)
     (DOCS / "index.html").write_text((ROOT / "web" / "index.html").read_text(encoding="utf-8"), encoding="utf-8")
-    for extra in ("sw.js", "manifest.webmanifest", "icon-192.png", "icon-512.png"):
+    for extra in ("sw.js", "manifest.webmanifest", "icon-192.png", "icon-512.png", "logo.png"):
         if (ROOT / "web" / extra).exists():
             (DOCS / extra).write_bytes((ROOT / "web" / extra).read_bytes())
     (DOCS / ".nojekyll").write_text("")
