@@ -535,7 +535,7 @@
     }
    }
   },
-  "scraped_at": "2026-11-22T14:20+02:00",
+  "scraped_at": "2026-11-22T14:30+02:00",
   "class_end": {
    "2026-11-22": [
     {
@@ -1432,6 +1432,20 @@
     ]
    },
    {
+    "date": "2026-11-22",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "שיחת צוות חשמל",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
     "date": "2026-11-23",
     "hour": 1,
     "start": "08:10",
@@ -1690,6 +1704,20 @@
    },
    {
     "date": "2026-11-25",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "תגבור צוות חשמל",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-11-25",
     "hour": 8,
     "start": "14:25",
     "end": "15:10",
@@ -1813,6 +1841,20 @@
       "mentions_me": false
      }
     ]
+   },
+   {
+    "date": "2026-11-29",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "שיחת צוות חשמל",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
    },
    {
     "date": "2026-11-30",
@@ -2077,6 +2119,20 @@
       "mentions_me": false
      }
     ]
+   },
+   {
+    "date": "2026-12-02",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "תגבור צוות חשמל",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
    },
    {
     "date": "2026-12-02",
@@ -4804,7 +4860,7 @@
    "date": "2026-11-22",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-11-22",
@@ -4953,6 +5009,20 @@
        "mentions_me": true
       }
      ]
+    },
+    {
+     "date": "2026-11-22",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "שיחת צוות חשמל",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
     }
    ]
   },
@@ -4960,7 +5030,7 @@
    "date": "2026-11-23",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-11-23",
@@ -5048,7 +5118,7 @@
    "date": "2026-11-24",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-11-24",
@@ -5164,7 +5234,7 @@
    "date": "2026-11-25",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-11-25",
@@ -5237,6 +5307,20 @@
     },
     {
      "date": "2026-11-25",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "תגבור צוות חשמל",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-11-25",
      "hour": 8,
      "start": "14:25",
      "end": "15:10",
@@ -5277,7 +5361,7 @@
    "date": "2026-11-26",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-11-26",
@@ -5328,14 +5412,14 @@
    "date": "2026-11-27",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": []
   },
   {
    "date": "2026-11-29",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-11-29",
@@ -5383,6 +5467,20 @@
        "mentions_me": false
       }
      ]
+    },
+    {
+     "date": "2026-11-29",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "שיחת צוות חשמל",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
     }
    ]
   },
@@ -5390,7 +5488,7 @@
    "date": "2026-11-30",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-11-30",
@@ -5478,7 +5576,7 @@
    "date": "2026-12-01",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-12-01",
@@ -5594,7 +5692,7 @@
    "date": "2026-12-02",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-12-02",
@@ -5674,6 +5772,20 @@
     },
     {
      "date": "2026-12-02",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "תגבור צוות חשמל",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-02",
      "hour": 8,
      "start": "14:25",
      "end": "15:10",
@@ -5714,7 +5826,7 @@
    "date": "2026-12-03",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": [
     {
      "date": "2026-12-03",
@@ -5758,7 +5870,7 @@
    "date": "2026-12-04",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T14:20+02:00",
+   "recorded_at": "2026-11-22T14:30+02:00",
    "lessons": []
   }
  ]
