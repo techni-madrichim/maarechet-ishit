@@ -136,6 +136,7 @@ def load_staff(raw):
         track = track_name(r.get("התמחות", ""))
         if track:
             person["track"] = track
+            person["track_head"] = "ראש" in r.get("התמחות", "")
         staff.append(person)
         team = r.get("צוות", "")
         if team:
@@ -164,21 +165,31 @@ def track_name(text):
 TRACKS = ("חשמל", "אלקטרוניקה", "מכונות")
 
 
+def track_members(staff):
+    """{track: (head's name or None, [instructors' names])}, from the sheet's התמחות column (else tracks.json);
+    the head is whoever has "מגמת <track>" in the תפקיד column (or "ראש מגמת ..." in התמחות)."""
+    fallback = {k: track_name(v) for k, v in load_json(ROOT / "tracks.json", {}).items() if k != "_"}
+    out = {}
+    for track in TRACKS:
+        head, who = None, []
+        for p in staff:
+            shown = p.get("display") or p.get("name") or p["as_given"]
+            mine = p.get("track") or fallback.get(shown) or fallback.get(" ".join(reversed(shown.split(" ", 1))))
+            if any(track_name(r) == track and "מגמ" in r for r in p.get("roles", [])) or (p.get("track_head") and mine == track):
+                head = head or shown
+            elif mine == track:
+                who.append(shown)
+        out[track] = (head, who)
+    return out
+
+
 def meeting_groups(staff, teams):
     """Names a row in the extras tab can use instead of one person: a team ("צוות ט") is its members and
     commander; a track ("מגמת חשמל" or "צוות חשמל") is its instructors and the track's head."""
     groups = {name: t["members"] + ([t["commander"]] if t.get("commander") else []) for name, t in teams.items()}
-    fallback = load_json(ROOT / "tracks.json", {})
-    for track in TRACKS:
-        who = []
-        for p in staff:
-            shown = p.get("display") or p.get("name") or p["as_given"]
-            mine = p.get("track") or fallback.get(shown) or fallback.get(" ".join(reversed(shown.split(" ", 1))))
-            head = any(track_name(r) == track and "מגמ" in r for r in p.get("roles", []))
-            if mine == track or head:
-                who.append(shown)
+    for track, (head, who) in track_members(staff).items():
         for key in (f"מגמת {track}", f"צוות {track}"):
-            groups.setdefault(key, who)
+            groups.setdefault(key, who + ([head] if head and head not in who else []))
     print("track meetings: " + ", ".join(f"{t} {len(groups[f'מגמת {t}'])}" for t in TRACKS))
     return groups
 
@@ -677,8 +688,14 @@ def main():
                 teams.append({"name": team_name, "lead": by_name[t["lead"]], "members": members,
                               "commander": t.get("commander", ""), "grades": t.get("grades", []),
                               "commander_id": commander_ids.get(t.get("commander", "")) or by_name.get(t.get("commander", ""), "")})
+        # A track's head gets the track's timetables and free time on their own page.
+        tracks = []
+        for track, (head, who) in track_members(staff).items():
+            if head in by_name:
+                tracks.append({"name": f"מגמת {track}", "head": by_name[head],
+                               "members": [{"id": by_name[m], "name": m} for m in who if m in by_name]})
         write_json(DOCS / "data" / "staff.json",
-                   {"updated": now.isoformat(timespec="minutes"), "people": people, "teams": teams, "api": CONFIG.get("api_url", ""),
+                   {"updated": now.isoformat(timespec="minutes"), "people": people, "teams": teams, "tracks": tracks, "api": CONFIG.get("api_url", ""),
                     "cmd_hash": CONFIG.get("commander_hash", "")})
         if raw:
             build_duty(raw, now, people, team_defs)

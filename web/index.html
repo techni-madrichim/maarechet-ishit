@@ -434,6 +434,7 @@ body { margin: 0; }
   </section>
 
   <section id="view-cteam" hidden style="display:grid; grid-template-columns:minmax(0,1fr); gap:12px">
+    <div id="ct-chg"></div>
     <div class="clspick"><div class="g gr" id="ct-pick" aria-label="בחירת מדריך"></div></div>
     <div class="dayhead"><h2 id="ct-title"></h2>
       <div class="seg" id="ct-nav"><button type="button" data-ct="-1">→ הקודם</button><button type="button" data-ct="1">הבא ←</button></div></div>
@@ -683,6 +684,7 @@ function startApp(DATA, TEAM) {
   }
   // ---- yard duty, built each hour from everyone's timetable
   var DUTY = null, ME = DATA.teacher || "";
+  var TRACK = !!(TEAM && TEAM.track), LEAD = TEAM && !TRACK ? TEAM : null;
   function dutyOn(iso) {
     var out = [], day = DUTY && DUTY.days[iso];
     if (!day) return out;
@@ -1239,7 +1241,7 @@ function startApp(DATA, TEAM) {
   }
   function teamNotes() {
     var box = document.getElementById("team-notes"); if (!box) return;
-    if (HQ) { box.innerHTML = ""; return; }
+    if (HQ || TRACK) { box.innerHTML = ""; return; }
     if (!myToken()) {
       box.innerHTML = '<div class="ends"><h3>תזכורות הצוות</h3><p class="muted" style="margin:0">כדי לראות את התזכורות של הצוות, קשרו את הטלפון למערכת שלכם.</p><div id="tn-login"><button type="button" class="addnote" id="tn-go">🔗 קישור הטלפון</button></div></div>';
       document.getElementById("tn-go").onclick = function () { bindFlow(document.getElementById("tn-login"), function () { renderTeam(); }); };
@@ -1253,6 +1255,11 @@ function startApp(DATA, TEAM) {
         return '<tr><td class="t" style="text-align:start;width:4.5em">שעה ' + x.hour + '</td><td><b>' + esc(x.text) + '</b><div class="muted" style="font-size:.8rem">' + esc(x.name) + (x.date ? "" : " · כל שבוע") + '</div></td></tr>';
       }).join("") + '</table>' : '<p class="muted" style="margin:0">אין תזכורות ביום הזה.</p>') + '</div>';
     }).catch(function () { box.innerHTML = ""; });
+  }
+  if (TRACK) {
+    document.getElementById("tab-team").textContent = "זמן למגמה";
+    document.getElementById("tab-cteam").textContent = "מערכת המגמה";
+    document.getElementById("tab-cteam").hidden = false;
   }
   if (TEAM) {
     document.getElementById("tab-team").hidden = false;
@@ -1424,15 +1431,15 @@ function startApp(DATA, TEAM) {
     document.getElementById("duty-mine").textContent = mine.length ? "לך יש " + mine.length + " תורנויות היום" : "";
     var body = document.getElementById("duty-body");
     body.innerHTML = dutySlots(DT.grade, day[DT.grade], ME, !!API) + '<p class="muted" style="margin:0;font-size:.8rem">הרשימה נבנית כל בוקר מהמערכת של כל הצוות: רק מי שפנוי באותה שעה, ובחלוקה שווה לפי טבלת צדק חודשית. אם מישהו מקבל שיעור, הוא מוחלף לבד בעדכון הבא.' + (API ? ' כל אחד מהצוות יכול ללחוץ על שורה ולשנות אותה ידנית, למשל כשמישהו בשמירות.' : "") + '</p>' + leadReport();
-    if (API) dutyBind(body, { api: API, date: todayISO, duty: DUTY, redraw: renderDuty, askCode: !!(TEAM || DATA.hq),
+    if (API) dutyBind(body, { api: API, date: todayISO, duty: DUTY, redraw: renderDuty, askCode: !!(LEAD || DATA.hq),
       by: DATA.hq ? "אנשי מנהלה" : (owner() || DATA.teacher || ""),
-      code: function () { return (DATA.hq && DATA.hq.code) || (CMD && CMD.code) || (TEAM ? dGet("duty-code") : "") || ""; }, saveCode: function (c) { dSet("duty-code", c); },
+      code: function () { return (DATA.hq && DATA.hq.code) || (CMD && CMD.code) || (LEAD ? dGet("duty-code") : "") || ""; }, saveCode: function (c) { dSet("duty-code", c); },
       device: function () { var o = owner(); var t = o && dGet("dev-" + o); return t ? { name: o, token: t } : null; } });
   }
   // Team leads see their team's monthly report under the list.
   var REP = null, REPM = null;
-  function leadReport() { return TEAM && REP ? dutyReport(REP, TEAM.name, REPM) : ""; }
-  if (TEAM) getJSON("data/duty_reports.json").then(function (r) { REP = r; if (!document.getElementById("view-duty").hidden) renderDuty(); }).catch(function () {});
+  function leadReport() { return LEAD && REP ? dutyReport(REP, LEAD.name, REPM) : ""; }
+  if (LEAD) getJSON("data/duty_reports.json").then(function (r) { REP = r; if (!document.getElementById("view-duty").hidden) renderDuty(); }).catch(function () {});
   document.getElementById("duty-body").addEventListener("click", function (e) { var b = e.target.closest("button[data-rm]"); if (!b) return; REPM = b.getAttribute("data-rm"); renderDuty(); });
   document.getElementById("duty-grades").addEventListener("click", function (e) { var b = e.target.closest("button[data-grade]"); if (!b) return; DT.grade = b.getAttribute("data-grade"); renderDuty(); });
   document.getElementById("duty-strip").addEventListener("click", function (e) { var b = e.target.closest("button[data-date]"); if (!b) return; DT.day = b.getAttribute("data-date"); renderDuty(); });
@@ -1535,6 +1542,25 @@ function startApp(DATA, TEAM) {
     var ms = (TEAM ? TEAM.members : []).filter(function (m) { return m.data; });
     if (!ms.length) { document.getElementById("ct-grid").innerHTML = '<tr><td class="empty">אין מערכות להצגה.</td></tr>'; return; }
     CT.i = (CT.i + ms.length) % ms.length;
+    if (TRACK) {  // what changed today for the track's instructors
+      var BIGK = /מילוי מקום|לא מתקיים|נוסף|ביטול/;
+      var chg = [];
+      // "2026-11-22 שעה 3 · <subject> · <classes> — A <- B 20 ..." -> hour, classes, "B במקום A"
+      function swapTxt(t) { var m = /([^,<]+?)\s*<-\s*([^\d,]+)/.exec(t || ""); return m ? m[2].trim() + " במקום " + m[1].trim() : ""; }
+      var seen = {};
+      ms.forEach(function (x) { (x.data.changelog || []).forEach(function (c) {
+        if (c.date !== todayISO || !BIGK.test(c.kind || "")) return;
+        var m = /^\d{4}-\d\d-\d\d(?: שעה (\d+))? · ([^—]*) · ([^·—]*?)(?: — (.*))?$/.exec(c.text || "");
+        var hr = m && m[1] ? +m[1] : 99, cls = m ? m[3].replace(/'?\s*-\s*(\d)/g, "'$1") : "";
+        var what = (m && (swapTxt(m[4]) || swapTxt(m[2]))) || (/לא מתקיים|ביטול/.test(c.kind) ? "לא מתקיים" : c.kind);
+        var key = hr + cls + what; if (seen[key]) return; seen[key] = 1;  // the same swap shows on both people's pages
+        chg.push({ who: x.name, hr: hr, line: (hr < 99 ? "שעה " + hr + " · " : "") + (cls ? cls + ": " : "") + what, kind: c.kind });
+      }); });
+      chg.sort(function (a, b) { return a.hr - b.hr; });
+      document.getElementById("ct-chg").innerHTML = '<div class="ends"><h3>שינויים היום במגמה</h3>' + (chg.length ? '<table>' + chg.slice(0, 15).map(function (x) {
+        return '<tr><td>' + (/ במקום /.test(x.line) ? "🔄 " : "❌ ") + esc(x.line) + '</td></tr>';
+      }).join("") + '</table>' : '<p class="muted" style="margin:0">אין שינויים היום.</p>') + '</div>';
+    }
     var m = ms[CT.i], L2 = m.data.latest || {}, ls = L2.lessons || [];
     document.getElementById("ct-pick").innerHTML = ms.map(function (x, i) { return '<button type="button" data-ci="' + i + '" aria-pressed="' + (i === CT.i) + '">' + esc(x.name) + '</button>'; }).join("");
     document.getElementById("ct-title").textContent = m.name;
@@ -1601,7 +1627,7 @@ function startApp(DATA, TEAM) {
   setInterval(renderNow, 60000);
   var saved = store("view");
   if (saved === "week" || saved === "hist" || saved === "agenda" || saved === "cls" || saved === "duty" || (saved === "team" && TEAM) ||
-      saved === "rel" || (saved === "cteam" && CMD)) show(CMD && (saved === "hist") ? "week" : saved);
+      saved === "rel" || (saved === "cteam" && (CMD || TRACK))) show(CMD && (saved === "hist") ? "week" : saved);
   else if (CMD) show("week");
 }
 
@@ -1926,11 +1952,14 @@ function startApp(DATA, TEAM) {
         document.title = "המערכת של " + d.teacher.split(" ").slice(-1)[0];
         app.hidden = false;
         // Team leads also get the "time for the team" tab, built from the members' own pages.
+        // A track's head (מגמה) gets the same two tabs for the track's instructors.
         var team = (st.teams || []).filter(function (t) { return t.lead === me; })[0];
-        var load = !team ? Promise.resolve(null) : Promise.all(team.members.map(function (m) {
+        var track = !team && (st.tracks || []).filter(function (t) { return t.head === me; })[0];
+        var group = team || track;
+        var load = !group ? Promise.resolve(null) : Promise.all(group.members.map(function (m) {
           return json("data/" + encodeURIComponent(m.id) + ".json").then(function (x) { return { name: m.name, data: x }; },
             function () { return { name: m.name, data: null }; });
-        })).then(function (members) { return { name: team.name, members: members }; });
+        })).then(function (members) { return { name: group.name, members: members, track: !!track }; });
         var hq = hqSession(); if (hq) d.hq = hq;
         var myTeam = (st.teams || []).filter(function (t) { return t.members.some(function (m) { return m.id === me; }); })[0];
         d.team_name = myTeam ? myTeam.name : "";
