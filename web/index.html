@@ -1840,9 +1840,11 @@ function startApp(DATA, TEAM) {
         list.innerHTML = shown.length ? '<div class="grid2">' + shown.map(btn).join("") + '</div>' : '<p class="muted">לא נמצא שם כזה ברשימה.</p>';
       }
       draw("");
-      if (!get("home") && visit() !== "picker") {
+      // once per device: a device linked before "home" existed opens its owner's timetable
+      if (!get("home") && !get("home-checked") && visit() !== "picker") {
+        set("home-checked", "1");
         var owner = get("dev-owner"), was = owner && all.filter(function (p) { return p.name === owner; })[0];
-        var ct = !was && get("cmd-push") && (d.teams || []).filter(function (t) { return t.name === get("cmd-push") && t.commander_id; })[0];
+        var ct = !was && get("cmd-push") && (d.teams || []).filter(function (t) { return t.name === get("cmd-push") && t.commander_id && cmdSession(t.name); })[0];
         if (was || ct) { set("home", was ? was.id : ct.commander_id); go(was ? was.id : ct.commander_id); return; }
       }
       document.getElementById("psearch").oninput = function (e) { draw(e.target.value.trim()); };
@@ -1915,7 +1917,7 @@ function startApp(DATA, TEAM) {
         })).then(function (members) { startApp(d, { name: cmdTeam.name, members: members }); });
       });
     }
-    if (!person) { if (get("home") === me) set("home", null); set("me", null); showPicker(); return; }
+    if (!person) { if (get("home") === me) set("home", null); set("me", null); visit("picker"); showPicker(); return; }
     return unlock(person).then(function () {
       return json("data/" + encodeURIComponent(me) + ".json").then(function (d) {
         document.documentElement.dir = "rtl"; document.documentElement.lang = "he";
