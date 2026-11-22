@@ -148,8 +148,9 @@ def load_staff(raw):
     return staff, teams
 
 
-def load_extras():
-    """Extra lessons the school site doesn't list (tutoring, mentoring...), from the Google Sheet and/or extras.json."""
+def load_extras(teams=None):
+    """Extra lessons the school site doesn't list (tutoring, mentoring...), from the Google Sheet and/or extras.json.
+    A row whose name is a team ("צוות ט") goes to everyone in that team and to its commander (a team meeting)."""
     rows = list(load_json(ROOT / "extras.json", []))
     for r in read_sheet_tab(CONFIG.get("extras_sheet_tab", "תוספות"), HEADERS["name"]) or []:
         row = {k: r.get(v, "") for k, v in HEADERS.items()}
@@ -173,7 +174,10 @@ def load_extras():
         else:
             continue
         # Keyed by the set of name words, so "מאי כהן" and "כהן מאי" are the same person.
-        by_name.setdefault(frozenset(r["name"].split()), []).append(extra)
+        team = (teams or {}).get(" ".join(r["name"].split()))
+        who = (team["members"] + ([team["commander"]] if team.get("commander") else [])) if team else [r["name"]]
+        for n in dict.fromkeys(who):
+            by_name.setdefault(frozenset(n.split()), []).append(extra)
     return by_name
 
 
@@ -599,8 +603,9 @@ def main():
         raw = collect(now=now)
         if not raw["classes"] or not raw["days"]:
             sys.exit("scan returned no classes or days; keeping the previous data")
-        extras = load_extras()
     staff, team_defs = load_staff(raw)
+    if raw:
+        extras = load_extras(team_defs)
     for t in team_defs.values():
         for person in staff:
             shown = person.get("display") or person.get("name") or " ".join(reversed(person["as_given"].split(" ", 1)))
