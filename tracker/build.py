@@ -133,6 +133,9 @@ def load_staff(raw):
                   "roles": [role_label(x) for x in r.get("תפקיד", "").split(",") if x.strip()]}
         if homerooms:
             person["homeroom"], person["homeroom_extra"] = homerooms[0], homerooms[1:]
+        track = track_name(r.get("התמחות", ""))
+        if track:
+            person["track"] = track
         staff.append(person)
         team = r.get("צוות", "")
         if team:
@@ -148,9 +151,39 @@ def load_staff(raw):
     return staff, teams
 
 
-def load_extras(teams=None):
+def track_name(text):
+    """ "מגמת חשמל" / "ראש צוות מגמת חשמל" / "חשמל" -> "חשמל"."""
+    t = " ".join((text or "").split())
+    for name in TRACKS:
+        if name in t:
+            return name
+    return ""
+
+
+TRACKS = ("חשמל", "אלקטרוניקה", "מכונות")
+
+
+def meeting_groups(staff, teams):
+    """Names a row in the extras tab can use instead of one person: a team ("צוות ט") is its members and
+    commander; a track ("מגמת חשמל" or "צוות חשמל") is its instructors and the track's head."""
+    groups = {name: t["members"] + ([t["commander"]] if t.get("commander") else []) for name, t in teams.items()}
+    fallback = load_json(ROOT / "tracks.json", {})
+    for track in TRACKS:
+        who = []
+        for p in staff:
+            shown = p.get("display") or p.get("name") or p["as_given"]
+            mine = p.get("track") or fallback.get(shown) or fallback.get(" ".join(reversed(shown.split(" ", 1))))
+            head = any(track_name(r) == track and "מגמ" in r for r in p.get("roles", []))
+            if mine == track or head:
+                who.append(shown)
+        for key in (f"מגמת {track}", f"צוות {track}"):
+            groups.setdefault(key, who)
+    return groups
+
+
+def load_extras(groups=None):
     """Extra lessons the school site doesn't list (tutoring, mentoring...), from the Google Sheet and/or extras.json.
-    A row whose name is a team ("צוות ט") goes to everyone in that team and to its commander (a team meeting)."""
+    A row whose name is a group (a team like "צוות ט", a track like "מגמת חשמל") goes to everyone in it."""
     rows = list(load_json(ROOT / "extras.json", []))
     for r in read_sheet_tab(CONFIG.get("extras_sheet_tab", "תוספות"), HEADERS["name"]) or []:
         row = {k: r.get(v, "") for k, v in HEADERS.items()}
@@ -174,8 +207,7 @@ def load_extras(teams=None):
         else:
             continue
         # Keyed by the set of name words, so "מאי כהן" and "כהן מאי" are the same person.
-        team = (teams or {}).get(" ".join(r["name"].split()))
-        who = (team["members"] + ([team["commander"]] if team.get("commander") else [])) if team else [r["name"]]
+        who = (groups or {}).get(" ".join(r["name"].split())) or [r["name"]]
         for n in dict.fromkeys(who):
             by_name.setdefault(frozenset(n.split()), []).append(extra)
     return by_name
@@ -605,7 +637,7 @@ def main():
             sys.exit("scan returned no classes or days; keeping the previous data")
     staff, team_defs = load_staff(raw)
     if raw:
-        extras = load_extras(team_defs)
+        extras = load_extras(meeting_groups(staff, team_defs))
     for t in team_defs.values():
         for person in staff:
             shown = person.get("display") or person.get("name") or " ".join(reversed(person["as_given"].split(" ", 1)))
