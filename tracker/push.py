@@ -23,6 +23,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from lib import fill, load_json, write_json  # noqa: E402
+from notify_text import changes_message, lesson_message  # noqa: E402
 from scrape import ISRAEL_TZ  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -258,22 +259,17 @@ def main():
                 start = l.get("start") or HOURS.get(h, "")
                 left = mins(start) - (now.hour * 60 + now.minute) if start else -1
                 if 12 <= left < 38:
-                    body = " · ".join(x for x in [l["subject"], ", ".join(l.get("classes", [])),
-                                                  ("חדר " + ", ".join(l["rooms"])) if l.get("rooms") else ""] if x)
-                    extra = [f"{c['type']}: {fill(c['text'])}" for c in l.get("changes", [])][:2]
-                    messages.append((f"lesson|{h}", f"📚 בעוד כ־{left} דקות · {start}", body + ("\n" + "\n".join(extra) if extra else "")))
+                    messages.append((f"lesson|{h}", *lesson_message(l, left, start, name)))
         # Today's changes not sent yet, together in one message (a missed run catches up on the next).
         new = []
         for c in data.get("changelog", []):
             if c.get("date") == today and c.get("kind") != "עודכן":
                 k = "c:" + hashlib.sha1(f"{name}|{today}|{c.get('kind')}|{c.get('text')}".encode("utf-8")).hexdigest()[:16]
-                line = f"{c.get('kind')}: {fill(c.get('text', ''))}"
-                if k not in log and line not in [x[1] for x in new]:
-                    new.append((k, line))
+                item = (c.get("kind"), c.get("text", ""))
+                if k not in log and item not in [x[1] for x in new]:
+                    new.append((k, item))
         if new:
-            body = "\n".join(x[1] for x in new[:5]) + (f"\nועוד {len(new) - 5}" if len(new) > 5 else "")
-            title = "⚠️ שינוי במערכת להיום" if len(new) == 1 else f"⚠️ {len(new)} שינויים במערכת להיום"
-            messages.append(("chg|" + new[0][0], title, body))
+            messages.append(("chg|" + new[0][0], *changes_message([x[1] for x in new], name)))
 
         if rmonth and name in lead_of:
             messages += report_message(reports, rmonth, lead_of[name])
