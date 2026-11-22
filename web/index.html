@@ -458,6 +458,20 @@ function dutyEdits(api, date) {
   return fetch(api, { method: "POST", body: JSON.stringify({ action: "duty_get", date: date, who: window.DUTY_WHO || "" }) }).then(function (r) { return r.json(); })
     .then(function (r) { return r.ok ? r.edits : []; }).catch(function () { return []; });
 }
+// The list shows as soon as duty.json arrives (with the hand-made changes this device saw last);
+// the engine's answer, which can take a few seconds, updates it when it comes.
+function dutyLoad(api, date, fetchJSON, show) {
+  return fetchJSON("data/duty.json").then(function (d) {
+    var base = JSON.stringify(d), key = "duty-edits-" + date, cached = [];
+    try { cached = JSON.parse(dGet(key) || "[]"); } catch (e) {}
+    var first = JSON.parse(base); dutyApply(first, date, cached); show(first);
+    return dutyEdits(api, date).then(function (edits) {
+      if (JSON.stringify(edits) === JSON.stringify(cached)) return;
+      dSet(key, JSON.stringify(edits));
+      var fresh = JSON.parse(base); dutyApply(fresh, date, edits); show(fresh);
+    });
+  });
+}
 // Puts hand-made changes on top of the hourly list, so they show at once and not only after the next update.
 function dutyApply(duty, date, edits) {
   var day = duty && duty.days && duty.days[date]; if (!day) return;
@@ -529,8 +543,10 @@ function dutyBind(box, ctx) {
           }
           if (c) ctx.saveCode(c);
           if (action === "duty_set") { sl.people = picked(); sl.manual = true; sl.note = form.n.value.trim() || note; sl.by = ctx.by || ""; }
+          if (action === "duty_clear") { sl.manual = false; sl.note = ""; }
+          ctx.redraw();  // show the saved change at once; the engine's full list follows
           return dutyEdits(ctx.api, ctx.date).then(function (edits) {
-            if (action === "duty_clear") { sl.manual = false; sl.note = ""; }
+            dSet("duty-edits-" + ctx.date, JSON.stringify(edits));
             dutyApply(ctx.duty, ctx.date, edits); ctx.redraw();
           });
         }).catch(function () { form.querySelector(".err").textContent = "אין חיבור. נסו שוב."; });
@@ -1375,6 +1391,7 @@ function startApp(DATA, TEAM) {
   function renderDuty() {
     var day = DUTY && DUTY.days[todayISO];
     document.getElementById("duty-strip").hidden = true;
+    if (!DUTY) { document.getElementById("duty-body").innerHTML = '<div class="empty">טוען…</div>'; return; }
     if (!day || !Object.keys(day).length) {
       document.getElementById("duty-grades").innerHTML = "";
       document.getElementById("duty-title").textContent = "תורני חצר · היום";
@@ -1566,9 +1583,7 @@ function startApp(DATA, TEAM) {
   pushSetup();
   // who opened the site today, for the daily visit count (not administration staff)
   window.DUTY_WHO = HQ ? "" : CMD ? "מפקד " + DATA.teacher : (owner() || DATA.teacher || "");
-  getJSON("data/duty.json").then(function (d) {
-    return dutyEdits(DATA.api || "", todayISO).then(function (edits) { dutyApply(d, todayISO, edits); return d; });
-  }).then(function (d) {
+  dutyLoad(DATA.api || "", todayISO, getJSON, function (d) {
     DUTY = d; renderDay();
     if (!document.getElementById("view-week").hidden) renderWeek();
     if (!document.getElementById("view-duty").hidden) renderDuty();
@@ -1638,9 +1653,7 @@ function startApp(DATA, TEAM) {
         code: function () { return (hq && hq.code) || ""; }, saveCode: function () {} });
       document.getElementById("hq-back2").onclick = function () { location.reload(); };
     }
-    json("data/duty.json").then(function (d) {
-      return dutyEdits(api, today).then(function (edits) { dutyApply(d, today, edits); state.duty = d; draw(); });
-    }).catch(draw);
+    dutyLoad(api, today, json, function (d) { state.duty = d; draw(); }).catch(draw);
   }
   // ---- a team's commander: today's yard duty, the team's reminders and changes, and notifications
   function cmdSession(team) {
@@ -1718,9 +1731,7 @@ function startApp(DATA, TEAM) {
       document.getElementById("cmd-out").onclick = function () { set("cmd", null); location.reload(); };
       cmdPush(api, team, code);
     }
-    json("data/duty.json").then(function (x) {
-      return dutyEdits(api, today).then(function (edits) { dutyApply(x, today, edits); state.duty = x; draw(); });
-    }).catch(draw);
+    dutyLoad(api, today, json, function (x) { state.duty = x; draw(); }).catch(draw);
     if (team.commander_id) json("data/" + encodeURIComponent(team.commander_id) + ".json").then(function (x) { state.me = x; draw(); }).catch(function () { state.me = { latest: { days: [], lessons: [] } }; draw(); });
     json("data/duty_reports.json").then(function (x) { state.rep = x; draw(); }).catch(function () { state.rep = {}; draw(); });
     if (api) fetch(api, { method: "POST", body: JSON.stringify({ action: "cmd_team", code: code, team: team.name }) }).then(function (r) { return r.json(); })
