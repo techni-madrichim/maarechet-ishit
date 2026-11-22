@@ -147,7 +147,8 @@ def load_staff(raw):
         if r.get("שם הצוות") in teams:
             teams[r["שם הצוות"]]["grades"] = [g.strip(" '\"") for g in r.get("שכבות", "").split(",") if g.strip()]
             teams[r["שם הצוות"]]["commander"] = " ".join(r.get("מפקד", "").split())
-    print(f"staff from sheet: {len(staff)} people, {len(teams)} teams")
+    print(f"staff from sheet: {len(staff)} people, {len(teams)} teams, "
+          f"{sum(1 for p in staff if p.get('track'))} with a track in the התמחות column")
     return staff, teams
 
 
@@ -178,6 +179,7 @@ def meeting_groups(staff, teams):
                 who.append(shown)
         for key in (f"מגמת {track}", f"צוות {track}"):
             groups.setdefault(key, who)
+    print("track meetings: " + ", ".join(f"{t} {len(groups[f'מגמת {t}'])}" for t in TRACKS))
     return groups
 
 
