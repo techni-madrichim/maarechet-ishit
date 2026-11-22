@@ -534,7 +534,7 @@
     }
    }
   },
-  "scraped_at": "2026-11-22T13:20+02:00",
+  "scraped_at": "2026-11-22T13:32+02:00",
   "class_end": {
    "2026-11-22": [
     {
@@ -1296,6 +1296,20 @@
    },
    {
     "date": "2026-11-26",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "שיחת צוות י״א",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-11-26",
     "hour": 3,
     "start": "09:55",
     "end": "10:40",
@@ -1941,6 +1955,20 @@
       "room": ""
      }
     ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-03",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "שיחת צוות י״א",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
     "other_lessons": [],
     "changes": []
    },
@@ -4251,7 +4279,7 @@
    "date": "2026-11-22",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
     {
      "date": "2026-11-22",
@@ -4393,7 +4421,7 @@
    "date": "2026-11-23",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
     {
      "date": "2026-11-23",
@@ -4591,7 +4619,7 @@
    "date": "2026-11-24",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
     {
      "date": "2026-11-24",
@@ -4718,7 +4746,7 @@
    "date": "2026-11-25",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
     {
      "date": "2026-11-25",
@@ -4848,8 +4876,22 @@
    "date": "2026-11-26",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
+    {
+     "date": "2026-11-26",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "שיחת צוות י״א",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
     {
      "date": "2026-11-26",
      "hour": 3,
@@ -4933,14 +4975,14 @@
    "date": "2026-11-27",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": []
   },
   {
    "date": "2026-11-29",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
     {
      "date": "2026-11-29",
@@ -5083,7 +5125,7 @@
    "date": "2026-11-30",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
     {
      "date": "2026-11-30",
@@ -5281,7 +5323,7 @@
    "date": "2026-12-01",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
     {
      "date": "2026-12-01",
@@ -5408,7 +5450,7 @@
    "date": "2026-12-02",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
     {
      "date": "2026-12-02",
@@ -5545,8 +5587,22 @@
    "date": "2026-12-03",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": [
+    {
+     "date": "2026-12-03",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "שיחת צוות י״א",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
     {
      "date": "2026-12-03",
      "hour": 3,
@@ -5623,7 +5679,7 @@
    "date": "2026-12-04",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-22T13:20+02:00",
+   "recorded_at": "2026-11-22T13:32+02:00",
    "lessons": []
   }
  ]
