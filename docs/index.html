@@ -922,8 +922,8 @@ function startApp(DATA, TEAM) {
     hqb.className = "hqbar";
     hqb.innerHTML = '<b>🏢 מצב אנשי מנהלה</b><span>צופים במערכת של ' + esc(ME) + "" + '</span><div class="btns"><button type="button" id="hq-list">חזרה לרשימה</button><button type="button" id="hq-out">יציאה ממצב אנשי מנהלה</button></div>';
     document.querySelector("#app header").appendChild(hqb);
-    document.getElementById("hq-list").onclick = function () { try { localStorage.removeItem("me"); } catch (e) {} location.reload(); };
-    document.getElementById("hq-out").onclick = function () { try { localStorage.removeItem("me"); localStorage.removeItem("hq"); } catch (e) {} location.reload(); };
+    document.getElementById("hq-list").onclick = function () { try { localStorage.removeItem("me"); sessionStorage.setItem("nav", "picker"); } catch (e) {} location.reload(); };
+    document.getElementById("hq-out").onclick = function () { try { localStorage.removeItem("me"); localStorage.removeItem("hq"); sessionStorage.setItem("nav", "picker"); } catch (e) {} location.reload(); };
   } else if (API && otherOwner()) {
     notes = [];  // someone else's page on a linked phone: no reminders here
   }
@@ -936,7 +936,7 @@ function startApp(DATA, TEAM) {
     if (!API || !myToken()) return Promise.resolve();
     return call({ action: "list", name: ME, token: myToken() }).then(function (r) {
       if (r.ok) { notes = fromServer(r.reminders); saveNotes(); renderDay(); if (!document.getElementById("view-week").hidden) renderWeek(); }
-      else if (r.error === "not this phone") { store(DEV_KEY, ""); if (owner() === ME) store(OWNER_KEY, ""); }
+      else if (r.error === "not this phone") { store(DEV_KEY, ""); if (owner() === ME) store(OWNER_KEY, ""); if (store("home") === store("me")) store("home", ""); }
     }).catch(function () {});
   }
   // Link this browser to this person, after they confirm the page is theirs. The first browser links
@@ -980,7 +980,7 @@ function startApp(DATA, TEAM) {
     slot.querySelector("#l-code").focus();
   }
   function finishBind(token, done) {
-    store(DEV_KEY, token); store(OWNER_KEY, ME);
+    store(DEV_KEY, token); store(OWNER_KEY, ME); store("home", store("me") || "");
     // reminders written in this browser before the link move to the unit's store
     return notes.slice().reduce(function (pr, n) {
       return pr.then(function () { return call({ action: "add", name: ME, token: token, reminder: n }); });
@@ -1054,7 +1054,7 @@ function startApp(DATA, TEAM) {
       return reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64key(DATA.vapid) }).then(function (s2) {
         return call({ action: "subscribe", name: ME, token: myToken(), sub: s2.toJSON() });
       }).then(function (r) {
-        if (r && r.ok) { store("push-on", ME); pushSetup(); }
+        if (r && r.ok) { store("push-on", ME); store("home", store("me") || ""); pushSetup(); }
         else box.innerHTML = '<p class="pushhint">לא הצלחתי להפעיל. נסו שוב בעוד רגע.</p>';
       });
     }).catch(function () { box.innerHTML = '<p class="pushhint">לא הצלחתי להפעיל. נסו שוב בעוד רגע.</p>'; });
@@ -1551,7 +1551,7 @@ function startApp(DATA, TEAM) {
     document.querySelector("#view-agenda > p").textContent = "מבחנים ואירועים קרובים בכל הכיתות של " + (DATA.grade_label || "השכבה") + ".";
     var sw = document.getElementById("switch"), sw2 = sw.cloneNode(true);  // drop the plain "switch" handler
     sw2.textContent = "יציאה ממצב מפקד"; sw.parentNode.replaceChild(sw2, sw);
-    sw2.onclick = function () { try { localStorage.removeItem("cmd"); localStorage.removeItem("me"); } catch (e) {} location.reload(); };
+    sw2.onclick = function () { try { if (localStorage.getItem("home") === localStorage.getItem("me")) localStorage.removeItem("home"); localStorage.removeItem("cmd"); localStorage.removeItem("me"); sessionStorage.setItem("nav", "picker"); } catch (e) {} location.reload(); };
     var cmb = document.createElement("div"); cmb.className = "hqbar";
     cmb.innerHTML = '<b>🎖️ מפקד ' + esc(CMD.team) + '</b><div id="cmd-push" class="btns"></div>';
     document.querySelector("#app header").appendChild(cmb);
@@ -1584,6 +1584,9 @@ function startApp(DATA, TEAM) {
 (function () {
   "use strict";
   function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function visit(v) { try { if (v === undefined) return sessionStorage.getItem("nav"); sessionStorage.setItem("nav", v); } catch (e) { return null; } }
+  function go(id) { visit("app"); set("me", id); location.reload(); }
+  function toPicker() { visit("picker"); set("me", null); location.reload(); }
   function set(k, v) { try { v === null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch (e) {} }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function json(url) { return fetch(url + "?t=" + Math.floor(Date.now() / 60000)).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
@@ -1648,7 +1651,7 @@ function startApp(DATA, TEAM) {
   function cmdOpen(d, team) {
     if (!team) return;
     // A commander with a timetable on the school site gets the full app; the others keep the board.
-    var open = function (code) { if (team.commander_id) { set("me", team.commander_id); location.reload(); } else cmdBoard(d, team, code); };
+    var open = function (code) { if (team.commander_id) go(team.commander_id); else cmdBoard(d, team, code); };
     var box = document.getElementById("hq");
     document.getElementById("plist").hidden = true; document.getElementById("psearch").hidden = true;
     document.getElementById("hq-go").hidden = true; document.getElementById("hq-bar").hidden = true; box.hidden = false;
@@ -1755,7 +1758,7 @@ function startApp(DATA, TEAM) {
             return reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64k(x.vapid) }).then(function (sub) {
               return fetch(api, { method: "POST", body: JSON.stringify({ action: "cmd_subscribe", code: code, team: team.name, sub: sub.toJSON() }) }).then(function (r) { return r.json(); });
             }).then(function (r) {
-              if (r && r.ok) { set("cmd-push", team.name); cmdPush(api, team, code); }
+              if (r && r.ok) { set("cmd-push", team.name); if (team.commander_id || get("me")) set("home", team.commander_id || get("me")); cmdPush(api, team, code); }
               else box.innerHTML = '<span style="font-size:.82rem">לא הצלחתי להפעיל. נסו שוב.</span>';
             });
           });
@@ -1817,6 +1820,11 @@ function startApp(DATA, TEAM) {
         list.innerHTML = shown.length ? '<div class="grid2">' + shown.map(btn).join("") + '</div>' : '<p class="muted">לא נמצא שם כזה ברשימה.</p>';
       }
       draw("");
+      if (!get("home") && visit() !== "picker") {
+        var owner = get("dev-owner"), was = owner && all.filter(function (p) { return p.name === owner; })[0];
+        var ct = !was && get("cmd-push") && (d.teams || []).filter(function (t) { return t.name === get("cmd-push") && t.commander_id; })[0];
+        if (was || ct) { set("home", was ? was.id : ct.commander_id); go(was ? was.id : ct.commander_id); return; }
+      }
       document.getElementById("psearch").oninput = function (e) { draw(e.target.value.trim()); };
       var hq = hqSession();
       if (hq) {
@@ -1831,15 +1839,21 @@ function startApp(DATA, TEAM) {
         var c = e.target.closest("button[data-cmd]");
         if (c) { cmdOpen(d, (d.teams || []).filter(function (t) { return t.name === c.getAttribute("data-cmd"); })[0]); return; }
         var b = e.target.closest("button[data-id]"); if (!b) return;
-        set("me", b.getAttribute("data-id")); location.reload();
+        go(b.getAttribute("data-id"));
       };
     }).catch(function () { list.innerHTML = '<p class="muted">לא הצלחתי לטעון את הרשימה. נסו לרענן את הדף.</p>'; });
   }
 
-  document.getElementById("switch").addEventListener("click", function () { set("me", null); location.reload(); });
-  document.getElementById("pin-back").addEventListener("click", function () { set("me", null); location.reload(); });
-  var me = get("me");
-  if (!me) { showPicker(); return; }
+  document.getElementById("switch").addEventListener("click", toPicker);
+  document.getElementById("pin-back").addEventListener("click", toPicker);
+  // The site opens on the main page. A device linked to someone's timetable (notifications turned on)
+  // opens that timetable instead; choosing a name or "switch" holds for the rest of this visit.
+  var me = get("me"), nav = visit();
+  if (nav === "picker") { showPicker(); return; }
+  if (nav !== "app" || !me) {
+    if (get("home")) { me = get("home"); set("me", me); }
+    else { showPicker(); return; }
+  }
 
   function sha256(text) {
     return crypto.subtle.digest("SHA-256", new TextEncoder().encode(text)).then(function (buf) {
@@ -1881,7 +1895,7 @@ function startApp(DATA, TEAM) {
         })).then(function (members) { startApp(d, { name: cmdTeam.name, members: members }); });
       });
     }
-    if (!person) { set("me", null); showPicker(); return; }
+    if (!person) { if (get("home") === me) set("home", null); set("me", null); showPicker(); return; }
     return unlock(person).then(function () {
       return json("data/" + encodeURIComponent(me) + ".json").then(function (d) {
         document.documentElement.dir = "rtl"; document.documentElement.lang = "he";
