@@ -981,7 +981,7 @@ function startApp(DATA, TEAM) {
     slot.querySelector("#b-yes").onclick = function () {
       var err = slot.querySelector("#b-err"); err.textContent = "מקשר…";
       call({ action: "bind", name: ME }).then(function (r) {
-        if (r.ok) return finishBind(r.token, done);
+        if (r.ok) return finishBind(r.token, done, r.recovery);
         if (r.error === "bound elsewhere") return linkFlow(slot, done);
         err.textContent = r.error === "unknown name" ? "השם לא נמצא ברשימת אנשי הצוות. פנו למנהל המערכת." : "לא הצלחתי לקשר. נסו שוב בעוד רגע.";
       }).catch(function () { err.textContent = "אין חיבור. נסו שוב בעוד רגע."; });
@@ -989,25 +989,27 @@ function startApp(DATA, TEAM) {
   }
   function linkFlow(slot, done) {
     slot.innerHTML = '<form class="noteform" id="l-form"><p style="margin:0;font-weight:600">המערכת שלך כבר מקושרת בדפדפן אחר</p>' +
-      '<p class="hint" style="font-size:.85rem">כדי לקשר גם את הדפדפן הזה: פתח את המערכת שלך בדפדפן שכבר מקושר (למשל ספארי, או האייקון במסך הבית), לחץ שם על <b>"📲 קישור דפדפן נוסף"</b>, והקלד כאן את הקוד שמופיע.</p>' +
-      '<label for="l-code">קוד קישור<input id="l-code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6"></label>' +
+      '<p class="hint" style="font-size:.85rem">מקלידים כאן אחד משניים:<br>• <b>קוד השחזור שלך</b> (8 ספרות), שקיבלת כשקישרת את הטלפון בפעם הראשונה.<br>• או <b>קוד קישור</b> (6 ספרות): בדפדפן שכבר מקושר לוחצים <b>"📲 קישור דפדפן נוסף"</b>.</p>' +
+      '<label for="l-code">קוד<input id="l-code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="9" dir="ltr"></label>' +
       '<div class="btns"><button type="submit" class="save">קישור</button><button type="button" id="l-cancel">ביטול</button></div>' +
-      '<p class="hint" id="l-err">אין לך גישה לדפדפן הקודם? מנהל המערכת יכול לאפס את הקישור.</p></form>';
+      '<p class="hint" id="l-err">אין לך אף אחד מהם? מנהל המערכת יכול לאפס את הקישור.</p></form>';
     slot.querySelector("#l-cancel").onclick = function () { if (slot.id === "noteslot") renderDay(); else pushSetup(); };
     slot.querySelector("#l-form").onsubmit = function (e) {
       e.preventDefault();
-      var err = slot.querySelector("#l-err"), code = slot.querySelector("#l-code").value.trim();
-      if (!/^\d{6}$/.test(code)) { err.textContent = "הקוד הוא 6 ספרות."; return; }
+      var err = slot.querySelector("#l-err"), code = slot.querySelector("#l-code").value.replace(/\D/g, "");
+      if (!/^(\d{6}|\d{8})$/.test(code)) { err.textContent = "קוד שחזור הוא 8 ספרות, וקוד קישור 6 ספרות."; return; }
       err.textContent = "מקשר…";
       call({ action: "bind", name: ME, link: code }).then(function (r) {
-        if (r.ok) return finishBind(r.token, done);
-        err.textContent = r.error === "wrong link code" ? "הקוד לא נכון או שעברו 10 דקות. צור קוד חדש בדפדפן המקושר." : "לא הצלחתי לקשר. נסו שוב בעוד רגע.";
+        if (r.ok) return finishBind(r.token, done, r.recovery);
+        err.textContent = r.error === "wrong link code" ? (code.length === 8 ? "קוד השחזור לא נכון." : "הקוד לא נכון או שעברו 10 דקות. צור קוד חדש בדפדפן המקושר.") :
+          r.error === "too many tries" ? "יותר מדי ניסיונות. נסו שוב בעוד 10 דקות." : "לא הצלחתי לקשר. נסו שוב בעוד רגע.";
       }).catch(function () { err.textContent = "אין חיבור. נסו שוב בעוד רגע."; });
     };
     slot.querySelector("#l-code").focus();
   }
-  function finishBind(token, done) {
+  function finishBind(token, done, recovery) {
     store(DEV_KEY, token); store(OWNER_KEY, ME); store("home", store("me") || "");
+    if (recovery) { try { sessionStorage.setItem("recovery", recovery); } catch (e) {} }
     // reminders written in this browser before the link move to the unit's store
     return notes.slice().reduce(function (pr, n) {
       return pr.then(function () { return call({ action: "add", name: ME, token: token, reminder: n }); });
@@ -1032,10 +1034,32 @@ function startApp(DATA, TEAM) {
     }).catch(function () {});
   }
   // On a linked browser: a one-time code to link one more (another browser, the home-screen icon, a new phone).
+  // The recovery code, shown once when the first browser links, and on demand ("קוד שחזור חדש").
+  function recoveryBox(code) {
+    return '<div class="noteform" style="border-color:var(--warn)"><p style="margin:0;font-weight:600">🔑 קוד השחזור שלך</p>' +
+      '<p style="margin:0;font-size:1.6rem;letter-spacing:.12em;font-weight:700" dir="ltr">' + esc(code.slice(0, 4) + "-" + code.slice(4)) + '</p>' +
+      '<p class="hint" style="font-size:.85rem">שמרו אותו (צילום מסך או פתק). אם האייקון במסך הבית נמחק או שהחלפתם טלפון, לוחצים "הפעלת התראות וקישור הטלפון" ומקלידים את הקוד, בלי לפנות לאף אחד. הוא מוצג רק עכשיו, וקוד חדש מבטל את הקודם.</p>' +
+      '<div class="btns"><button type="button" class="save" id="rc-ok">שמרתי</button></div></div>';
+  }
+  function showRecovery(box) {
+    var code = null; try { code = sessionStorage.getItem("recovery"); } catch (e) {}
+    if (!code) return;
+    var b = document.createElement("div"); b.innerHTML = recoveryBox(code); box.insertBefore(b, box.firstChild);
+    b.querySelector("#rc-ok").onclick = function () { try { sessionStorage.removeItem("recovery"); } catch (e) {} b.remove(); };
+  }
   function linkMore(box) {
     var b = document.createElement("div");
-    b.innerHTML = '<button type="button" class="linkmore" id="lm-go">📲 קישור דפדפן נוסף</button><p class="pushhint" id="lm-out" hidden></p>';
+    b.innerHTML = '<button type="button" class="linkmore" id="lm-go">📲 קישור דפדפן נוסף</button> <button type="button" class="linkmore" id="rc-new">🔑 קוד שחזור חדש</button><p class="pushhint" id="lm-out" hidden></p>';
     box.appendChild(b);
+    showRecovery(box);
+    document.getElementById("rc-new").onclick = function () {
+      var out = document.getElementById("lm-out"); out.hidden = false; out.textContent = "יוצר קוד…";
+      call({ action: "recovery_code", name: ME, token: myToken() }).then(function (r) {
+        if (!r.ok) { out.textContent = "לא הצלחתי ליצור קוד. נסו שוב בעוד רגע."; return; }
+        try { sessionStorage.setItem("recovery", r.code); } catch (e) {}
+        out.hidden = true; showRecovery(box);
+      }).catch(function () { out.textContent = "אין חיבור. נסו שוב בעוד רגע."; });
+    };
     document.getElementById("lm-go").onclick = function () {
       var out = document.getElementById("lm-out"); out.hidden = false; out.textContent = "יוצר קוד…";
       call({ action: "link_code", name: ME, token: myToken() }).then(function (r) {
