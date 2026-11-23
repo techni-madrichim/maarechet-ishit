@@ -653,7 +653,8 @@ function dutyReport(rep, team, month) {
 </script>
 <script>
 function startApp(DATA, TEAM) {
-  var CMD = DATA.cmd || null;  // a team commander's own page: { team, code }
+  var CMD = DATA.cmd || null;  // a team commander's own page: { team, code }; a section manager's has mgr: true
+  function mineTeam(t) { return !!(DATA.hq || (t && (t === DATA.team_name || (DATA.team_names || []).indexOf(t) >= 0))); }
   "use strict";
   var L = DATA.latest, lessons = L.lessons;
 
@@ -1440,7 +1441,7 @@ function startApp(DATA, TEAM) {
       return;
     }
     // Each team sees its own grades; administration staff see every grade.
-    var grades = DUTY_GROUPS.filter(function (g) { return day[g] && (DATA.hq || day[g].team === DATA.team_name); });
+    var grades = DUTY_GROUPS.filter(function (g) { return day[g] && mineTeam(day[g].team); });
     var mine = dutyOn(todayISO);
     if (!grades.length) {
       document.getElementById("duty-grades").innerHTML = "";
@@ -1499,7 +1500,7 @@ function startApp(DATA, TEAM) {
     if (!RS.grades) {
       box.innerHTML = '<p class="muted">טוען…</p>';
       Promise.all([getJSON("data/staff.json"), getJSON("data/classes.json")]).then(function (r) {
-        var teams = (r[0].teams || []).filter(function (t) { return DATA.hq || t.name === DATA.team_name; });
+        var teams = (r[0].teams || []).filter(function (t) { return mineTeam(t.name); });
         var gs = [].concat.apply([], teams.map(function (t) { return t.grades || []; }));
         RS.grades = gs; RS.index = r[1].classes.filter(function (c) { return gs.indexOf(c.grade) >= 0; });
         return Promise.all(RS.index.map(function (c) { return getJSON("data/class/" + c.id + ".json").then(function (f) { RS.files[c.id] = f; }, function () {}); }));
@@ -1545,7 +1546,7 @@ function startApp(DATA, TEAM) {
     document.getElementById("rel-title").textContent = "שחרורי כיתות · היום " + dm(todayISO);
     if (!DUTY) { body.innerHTML = '<p class="muted">טוען…</p>'; return; }
     // Each team sees its own grades; administration staff see every grade.
-    var groups = day ? DUTY_GROUPS.filter(function (g) { return day[g] && (DATA.hq || day[g].team === DATA.team_name) && (day[g].releases || []).length; }) : [];
+    var groups = day ? DUTY_GROUPS.filter(function (g) { return day[g] && mineTeam(day[g].team) && (day[g].releases || []).length; }) : [];
     if (!groups.length) { body.innerHTML = '<div class="empty">אין רשימת שחרורים להיום. היא נבנית בעדכון של הבוקר בימי לימודים.</div>'; return; }
     body.innerHTML = groups.map(function (g) {
       var away = day[g].away || [];
@@ -1564,6 +1565,11 @@ function startApp(DATA, TEAM) {
   var CT = { i: 0, w: 0 };
   function renderCmdTeam() {
     var ms = (TEAM ? TEAM.members : []).filter(function (m) { return m.data; });
+    var tnames = []; ms.forEach(function (m) { if (m.team && tnames.indexOf(m.team) < 0) tnames.push(m.team); });
+    if (tnames.length > 1) {
+      if (tnames.indexOf(CT.team) < 0) CT.team = tnames[0];
+      ms = ms.filter(function (m) { return m.team === CT.team; });
+    }
     if (!ms.length) { document.getElementById("ct-grid").innerHTML = '<tr><td class="empty">אין מערכות להצגה.</td></tr>'; return; }
     CT.i = (CT.i + ms.length) % ms.length;
     if (TRACK) {  // what changed today for the track's instructors
@@ -1586,7 +1592,8 @@ function startApp(DATA, TEAM) {
       }).join("") + '</table>' : '<p class="muted" style="margin:0">אין שינויים היום.</p>') + '</div>';
     }
     var m = ms[CT.i], L2 = m.data.latest || {}, ls = L2.lessons || [];
-    document.getElementById("ct-pick").innerHTML = ms.map(function (x, i) { return '<button type="button" data-ci="' + i + '" aria-pressed="' + (i === CT.i) + '">' + esc(x.name) + '</button>'; }).join("");
+    document.getElementById("ct-pick").innerHTML = (tnames.length > 1 ? tnames.map(function (t) { return '<button type="button" data-ctt="' + esc(t) + '" aria-pressed="' + (t === CT.team) + '" style="font-weight:700">' + esc(t) + '</button>'; }).join("") + '<span style="flex-basis:100%;height:0"></span>' : "") +
+      ms.map(function (x, i) { return '<button type="button" data-ci="' + i + '" aria-pressed="' + (i === CT.i) + '">' + esc(x.name) + '</button>'; }).join("");
     document.getElementById("ct-title").textContent = m.name;
     var wks = [];
     (L2.days || []).forEach(function (d) {
@@ -1617,7 +1624,9 @@ function startApp(DATA, TEAM) {
     });
     document.getElementById("ct-grid").innerHTML = hs.length ? h : '<tr><td class="empty">אין שיעורים בשבוע הזה.</td></tr>';
   }
-  document.getElementById("ct-pick").addEventListener("click", function (e) { var b = e.target.closest("button[data-ci]"); if (b) { CT.i = +b.getAttribute("data-ci"); renderCmdTeam(); } });
+  document.getElementById("ct-pick").addEventListener("click", function (e) {
+    var t = e.target.closest("button[data-ctt]"); if (t) { CT.team = t.getAttribute("data-ctt"); CT.i = 0; renderCmdTeam(); return; }
+    var b = e.target.closest("button[data-ci]"); if (b) { CT.i = +b.getAttribute("data-ci"); renderCmdTeam(); } });
   document.getElementById("ct-nav").addEventListener("click", function (e) { var b = e.target.closest("button[data-ct]"); if (b) { CT.i += +b.getAttribute("data-ct"); renderCmdTeam(); } });
   document.getElementById("ct-weeks").addEventListener("click", function (e) { var b = e.target.closest("button[data-cw]"); if (b) { CT.w = +b.getAttribute("data-cw"); renderCmdTeam(); } });
   if (CMD) {
@@ -1626,12 +1635,13 @@ function startApp(DATA, TEAM) {
     document.getElementById("tab-cteam").hidden = false;
     document.querySelector("#view-agenda > p").textContent = "מבחנים ואירועים קרובים בכל הכיתות של " + (DATA.grade_label || "השכבה") + ".";
     var sw = document.getElementById("switch"), sw2 = sw.cloneNode(true);  // drop the plain "switch" handler
-    sw2.textContent = "יציאה ממצב מפקד"; sw.parentNode.replaceChild(sw2, sw);
+    sw2.textContent = CMD.mgr ? "יציאה ממצב מנהל" : "יציאה ממצב מפקד"; sw.parentNode.replaceChild(sw2, sw);
     sw2.onclick = function () { try { if (localStorage.getItem("home") === localStorage.getItem("me")) localStorage.removeItem("home"); localStorage.removeItem("cmd"); localStorage.removeItem("me"); sessionStorage.setItem("nav", "picker"); } catch (e) {} location.reload(); };
     var cmb = document.createElement("div"); cmb.className = "hqbar";
-    cmb.innerHTML = '<b>🎖️ מפקד ' + esc(CMD.team) + '</b><div id="cmd-push" class="btns"></div>';
+    cmb.innerHTML = '<b>' + (CMD.mgr ? "🏫 " + esc(CMD.team) : "🎖️ מפקד " + esc(CMD.team)) + '</b><div id="cmd-push" class="btns"></div>';
     document.querySelector("#app header").appendChild(cmb);
-    if (window.cmdPushUI) window.cmdPushUI(API, { name: CMD.team }, CMD.code);
+    if (CMD.mgr) document.getElementById("tab-cteam").textContent = "מערכות הצוותים";
+    else if (window.cmdPushUI) window.cmdPushUI(API, { name: CMD.team }, CMD.code);
   }
   document.querySelector(".tabs").addEventListener("click", function (e) {
     var b = e.target.closest("button[data-view]"); if (b) show(b.getAttribute("data-view"));
@@ -1729,7 +1739,7 @@ function startApp(DATA, TEAM) {
     document.getElementById("hq-go").hidden = true; document.getElementById("hq-bar").hidden = true; box.hidden = false;
     var sess = cmdSession(team.name);
     if (sess) { open(sess.code); return; }
-    box.innerHTML = '<form class="noteform" id="cmd-form" style="border-color:var(--accent)"><p style="margin:0;font-weight:600">🎖️ ' + esc(team.commander) + ' · מפקד ' + esc(team.name) + '</p>' +
+    box.innerHTML = '<form class="noteform" id="cmd-form" style="border-color:var(--accent)"><p style="margin:0;font-weight:600">' + (team.mgr ? "🏫 " : "🎖️ ") + esc(team.commander) + ' · ' + (team.mgr ? "" : "מפקד ") + esc(team.name) + '</p>' +
       '<label for="cmd-code">קוד<input type="password" id="cmd-code" inputmode="numeric" autocomplete="off"></label>' +
       '<div class="btns"><button type="submit" class="save" style="background:var(--accent);border-color:var(--accent)">כניסה</button><button type="button" id="cmd-back">חזרה</button></div><p class="hint" id="cmd-err"></p></form>';
     document.getElementById("cmd-back").onclick = function () { location.reload(); };
@@ -1866,6 +1876,12 @@ function startApp(DATA, TEAM) {
       }
       // One card per team: the lead first, then the team's instructors by class.
       var placed = {};
+      (d.managers || []).forEach(function (m) { placed[m.id] = 1; });
+      function mgrCard(t) {
+        return (d.managers || []).filter(function (m) { return m.teams[0] === t.name; }).map(function (m) {
+          return '<section class="team"><header><h2>' + esc(m.title) + '</h2></header><div class="body"><button type="button" class="lead cmdbtn" data-mgr="' + esc(m.id) + '"><span class="crown">🏫</span><span><b>' + esc(m.name) + '</b><small>' + esc(m.title) + '</small></span></button></div></section>';
+        }).join("");
+      }
       var cards = (d.teams || []).map(function (t) {
         var lead = byId[t.lead];
         var rest = t.members.map(function (m) { return byId[m.id]; }).filter(function (p) { return p && p !== lead; })
@@ -1873,7 +1889,7 @@ function startApp(DATA, TEAM) {
         if (lead) placed[lead.id] = 1;
         rest.forEach(function (p) { placed[p.id] = 1; });
         var mentors = rest.filter(isMentor), instructors = rest.filter(function (p) { return !isMentor(p); });
-        return '<section class="team"><header><h2>' + esc(t.name) + '</h2><span>' + (rest.length + (lead ? 1 : 0)) + ' אנשים</span></header><div class="body">' +
+        return mgrCard(t) + '<section class="team"><header><h2>' + esc(t.name) + '</h2><span>' + (rest.length + (lead ? 1 : 0)) + ' אנשים</span></header><div class="body">' +
           (t.commander ? '<button type="button" class="lead cmdbtn" data-cmd="' + esc(t.name) + '"><span class="crown">🎖️</span><span><b>' + esc(t.commander) + '</b><small>מפקד הצוות</small></span></button>' : "") +
           (lead ? '<button type="button" class="lead" data-id="' + esc(lead.id) + '"><span class="crown">👑</span><span><b>' + esc(lead.name) + '</b><small>ראש צוות' + (lead.homerooms.length ? ' · ' + esc(lead.homerooms.join(", ")) : "") + '</small></span></button>' : "") +
           '<div class="grid2">' + instructors.map(btn).join("") + '</div>' +
@@ -1908,6 +1924,9 @@ function startApp(DATA, TEAM) {
         var hb = document.getElementById("hq-go"); hb.hidden = false; hb.onclick = function () { hqLogin(d.api || ""); };
       }
       list.onclick = function (e) {
+        var mg = e.target.closest("button[data-mgr]");
+        if (mg) { var m = (d.managers || []).filter(function (x) { return x.id === mg.getAttribute("data-mgr"); })[0];
+          if (m) cmdOpen(d, { name: m.title, commander: m.name, commander_id: m.id, mgr: true }); return; }
         var c = e.target.closest("button[data-cmd]");
         if (c) { cmdOpen(d, (d.teams || []).filter(function (t) { return t.name === c.getAttribute("data-cmd"); })[0]); return; }
         var b = e.target.closest("button[data-id]"); if (!b) return;
@@ -1956,6 +1975,28 @@ function startApp(DATA, TEAM) {
     // and their plain timetable otherwise.
     var cmdTeam = (st.teams || []).filter(function (t) { return t.commander_id === me; })[0];
     var cmdSess = cmdTeam && cmdSession(cmdTeam.name);
+    var mgr = (st.managers || []).filter(function (m) { return m.id === me; })[0];
+    var mgrSess = mgr && cmdSession(mgr.title);
+    if (mgrSess) {  // a section manager (high school, engineering college): every team of the section
+      var mTeams = (st.teams || []).filter(function (t) { return mgr.teams.indexOf(t.name) >= 0; });
+      return json("data/" + encodeURIComponent(me) + ".json").then(function (d) {
+        document.documentElement.dir = "rtl"; document.documentElement.lang = "he";
+        document.title = "המערכת של " + d.teacher.split(" ").slice(-1)[0];
+        app.hidden = false;
+        d.cmd = { team: mgr.title, code: mgrSess.code, mgr: true }; d.team_name = ""; d.team_names = mgr.teams; d.api = d.api || st.api;
+        d.grade_label = "שכבות " + mgr.grades.join(", ");
+        var names = {}; (st.people || []).forEach(function (p) { names[p.id] = p.name; });
+        var list = [];
+        mTeams.forEach(function (t) {
+          var ids = [t.lead].concat(t.members.map(function (m) { return m.id; })).filter(function (x, i, a) { return x && a.indexOf(x) === i; });
+          ids.forEach(function (id) { list.push({ id: id, name: names[id] || "", team: t.name }); });
+        });
+        return Promise.all(list.map(function (m) {
+          return json("data/" + encodeURIComponent(m.id) + ".json").then(function (x) { return { name: m.name, team: m.team, data: x }; },
+            function () { return { name: m.name, team: m.team, data: null }; });
+        })).then(function (members) { startApp(d, { name: mgr.title, members: members }); });
+      });
+    }
     if (cmdSess) {  // a team commander: their own timetable, with the team's tabs
       return json("data/" + encodeURIComponent(me) + ".json").then(function (d) {
         document.documentElement.dir = "rtl"; document.documentElement.lang = "he";
