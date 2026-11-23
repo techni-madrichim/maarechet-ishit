@@ -679,6 +679,24 @@ def main():
             commander_ids[c] = entry["id"]
             if raw:
                 add_grade_agenda(entry["id"], t.get("grades", []), raw, now)
+    # Heads of a whole school section (the high school, the engineering college): a page of their own,
+    # and with the commanders' code a board over all the section's teams.
+    managers = []
+    sheet_mgrs = [{"name": p.get("display") or p.get("name") or p["as_given"], "title": r}
+                  for p in staff for r in p.get("roles", []) if r.startswith("מנהל")]
+    for m in sheet_mgrs or [m for m in load_json(ROOT / "managers.json", []) if m.get("name")]:
+        grades = ["ט", "י", "יא", "יב"] if "תיכון" in m["title"] else ["יג", "יד"] if "הנדסא" in m["title"] else []
+        covered = [n for n, t in team_defs.items() if set(t.get("grades", [])) & set(grades)]
+        mid = shown.get(m["name"]) or commander_ids.get(m["name"])
+        if not mid:
+            site_name = m["name"] if m["name"] in known else by_tokens.get(frozenset(m["name"].split()))
+            entry = build_person({"name": site_name, "as_given": m["name"], "display": m["name"], "code": "", "roles": [m["title"]]},
+                                 raw, extras, now, args.offline, False)
+            mid = entry["id"] if entry else None
+        if mid:
+            if raw:
+                add_grade_agenda(mid, grades, raw, now)
+            managers.append({"name": m["name"], "title": m["title"], "id": mid, "grades": grades, "teams": covered})
     if people:
         by_name = {p["name"]: p["id"] for p in people}
         teams = []
@@ -695,7 +713,7 @@ def main():
                 tracks.append({"name": f"מגמת {track}", "head": by_name[head],
                                "members": [{"id": by_name[m], "name": m} for m in who if m in by_name]})
         write_json(DOCS / "data" / "staff.json",
-                   {"updated": now.isoformat(timespec="minutes"), "people": people, "teams": teams, "tracks": tracks, "api": CONFIG.get("api_url", ""),
+                   {"updated": now.isoformat(timespec="minutes"), "people": people, "teams": teams, "tracks": tracks, "managers": managers, "api": CONFIG.get("api_url", ""),
                     "cmd_hash": CONFIG.get("commander_hash", "")})
         if raw:
             build_duty(raw, now, people, team_defs)
