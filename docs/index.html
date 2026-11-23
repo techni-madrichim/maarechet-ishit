@@ -415,6 +415,7 @@ body { margin: 0; }
   </section>
 
   <section id="view-rel" hidden style="display:grid; grid-template-columns:minmax(0,1fr); gap:12px">
+    <div class="clspick" id="rel-pick" hidden><div class="g gr" id="rel-grades"></div></div>
     <div class="dayhead"><h2 id="rel-title">שחרורי כיתות · היום</h2></div>
     <div id="rel-body"><p class="muted">טוען…</p></div>
     <div class="dayhead"><h2>בוקר וסוף יום לפי כיתה</h2>
@@ -1507,7 +1508,7 @@ function startApp(DATA, TEAM) {
       }).then(renderSpan).catch(function () { box.innerHTML = '<div class="empty">לא הצלחתי לטעון את מערכות הכיתות.</div>'; });
       return;
     }
-    var rows = RS.index.map(function (c) {
+    var rows = RS.index.filter(function (c) { return !RG || dGroup(c.grade) === RG; }).map(function (c) {
       var f = RS.files[c.id]; if (!f) return "";
       // A period counts if the class is in it: a lesson, or an exam or event in place of one.
       function evt(x) { return x.changes.filter(function (ch) { return /מבחן|אירוע|טיול|פעילות/.test(ch.type || ""); })[0]; }
@@ -1539,15 +1540,25 @@ function startApp(DATA, TEAM) {
     box.innerHTML = '<section class="hqday"><h3>' + esc(new Intl.DateTimeFormat("he-IL", { weekday: "long", day: "2-digit", month: "2-digit" }).format(new Date(date + "T12:00:00"))) + '</h3>' + rows + '</section>' +
       '<p class="muted" style="margin:0;font-size:.8rem">הקבצה שהמורה שלה מבוטלת בלי מחליף בשעה הראשונה מגיעה מאוחר יותר, ובשעה האחרונה משתחררת מוקדם יותר. מילוי מקום לא משנה את השעות.</p>';
   }
+  document.getElementById("rel-grades").addEventListener("click", function (e) { var b = e.target.closest("button[data-rg]"); if (b) { RG = b.getAttribute("data-rg"); renderRel(); } });
   document.getElementById("rel-day").addEventListener("click", function (e) { var b = e.target.closest("button[data-rd]"); if (b) { RS.day = +b.getAttribute("data-rd"); renderSpan(); } });
+  var RG = null;  // the grade shown in "שחרורי כיתות" when there are several
   function renderRel() {
-    renderSpan();
     var body = document.getElementById("rel-body"), day = DUTY && DUTY.days[todayISO];
     document.getElementById("rel-title").textContent = "שחרורי כיתות · היום " + dm(todayISO);
-    if (!DUTY) { body.innerHTML = '<p class="muted">טוען…</p>'; return; }
+    if (!DUTY) { body.innerHTML = '<p class="muted">טוען…</p>'; renderSpan(); return; }
     // Each team sees its own grades; administration staff see every grade.
     var groups = day ? DUTY_GROUPS.filter(function (g) { return day[g] && mineTeam(day[g].team) && (day[g].releases || []).length; }) : [];
-    if (!groups.length) { body.innerHTML = '<div class="empty">אין רשימת שחרורים להיום. היא נבנית בעדכון של הבוקר בימי לימודים.</div>'; return; }
+    // Several grades (a manager, administration): one grade at a time, picked like in yard duty.
+    var pick = document.getElementById("rel-pick");
+    pick.hidden = groups.length < 2;
+    if (groups.length > 1) {
+      if (groups.indexOf(RG) < 0) RG = groups.indexOf(DT.grade) >= 0 ? DT.grade : groups[0];
+      document.getElementById("rel-grades").innerHTML = groups.map(function (g) { return '<button type="button" data-rg="' + g + '" aria-pressed="' + (g === RG) + '">' + dTab(g) + "</button>"; }).join("");
+      groups = [RG];
+      document.getElementById("rel-title").textContent = "שחרורי כיתות · " + dLabel(RG) + " · היום " + dm(todayISO);
+    } else RG = null;
+    if (!groups.length) { body.innerHTML = '<div class="empty">אין רשימת שחרורים להיום. היא נבנית בעדכון של הבוקר בימי לימודים.</div>'; renderSpan(); return; }
     body.innerHTML = groups.map(function (g) {
       var away = day[g].away || [];
       return (groups.length > 1 ? '<div class="dayhead"><h2>' + esc(dLabel(g)) + '</h2></div>' : "") +
@@ -1560,6 +1571,7 @@ function startApp(DATA, TEAM) {
         return '<div class="r"><b>' + esc(r.class.replace(/\s+/g, "")) + '</b><span>מסיימת ב־<b class="mono">' + esc(r.end) + '</b> (שעה ' + r.hour + ')' + changed + early + '<br>משחרר/ת: <b>' + who + '</b></span><span class="who">' + esc(why) + '</span></div>';
       }).join("") + '</section>';
     }).join("") + '<p class="muted" style="margin:0;font-size:.8rem">קודם מדריך/ת הכיתה. אם הוא/היא בשיעור או נעדר/ת היום, משחרר מדריך פנוי מהצוות של השכבה לפי טבלת צדק (מי שהכי מעט שחרר החודש). מי שמישהו ממלא את מקומו היום נחשב נעדר.</p>';
+    renderSpan();
   }
   // ---- a team commander's own app: their timetable, and the team's timetables one by one
   var CT = { i: 0, w: 0 };
@@ -1640,7 +1652,7 @@ function startApp(DATA, TEAM) {
     var cmb = document.createElement("div"); cmb.className = "hqbar";
     cmb.innerHTML = '<b>' + (CMD.mgr ? "🏫 " + esc(CMD.team) : "🎖️ מפקד " + esc(CMD.team)) + '</b><div id="cmd-push" class="btns"></div>';
     document.querySelector("#app header").appendChild(cmb);
-    if (CMD.mgr) document.getElementById("tab-cteam").textContent = "מערכות הצוותים";
+    if (CMD.mgr) { document.getElementById("tab-cteam").textContent = "מערכות הצוותים"; document.getElementById("tab-team").hidden = true; }
     else if (window.cmdPushUI) window.cmdPushUI(API, { name: CMD.team }, CMD.code);
   }
   document.querySelector(".tabs").addEventListener("click", function (e) {
@@ -1660,7 +1672,7 @@ function startApp(DATA, TEAM) {
   }).catch(function () {});
   setInterval(renderNow, 60000);
   var saved = store("view");
-  if (saved === "week" || saved === "hist" || saved === "agenda" || saved === "cls" || saved === "duty" || (saved === "team" && TEAM) ||
+  if (saved === "week" || saved === "hist" || saved === "agenda" || saved === "cls" || saved === "duty" || (saved === "team" && TEAM && !(CMD && CMD.mgr)) ||
       saved === "rel" || (saved === "cteam" && (CMD || TRACK))) show(CMD && (saved === "hist") ? "week" : saved);
   else if (CMD) show("week");
 }
