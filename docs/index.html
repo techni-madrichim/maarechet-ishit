@@ -1963,6 +1963,8 @@ function startApp(DATA, TEAM) {
   document.getElementById("pin-back").addEventListener("click", toPicker);
   // The site opens on the main page. A device linked to someone's timetable (notifications turned on)
   // opens that timetable instead; choosing a name or "switch" holds for the rest of this visit.
+  // ".../maarechet-ishit/?main": always the main page (the list of teams), even on a linked device.
+  if (/[?&]main\b/.test(location.search)) { visit("picker"); try { history.replaceState(null, "", location.pathname); } catch (e) {} }
   var me = get("me"), nav = visit();
   if (nav === "picker") { showPicker(); return; }
   if (nav !== "app" || !me) {
