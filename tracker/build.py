@@ -183,6 +183,13 @@ def track_members(staff):
     return out
 
 
+def manager_list(staff):
+    """Heads of a school section: rows of the staff tab whose תפקיד starts with "מנהל", else managers.json."""
+    from_sheet = [{"name": p.get("display") or p.get("name") or p["as_given"], "title": r}
+                  for p in staff for r in p.get("roles", []) if r.startswith("מנהל")]
+    return from_sheet or [m for m in load_json(ROOT / "managers.json", []) if m.get("name")]
+
+
 def meeting_groups(staff, teams):
     """Names a row in the extras tab can use instead of one person: a team ("צוות ט") is its members and
     commander; a track ("מגמת חשמל" or "צוות חשמל") is its instructors and the track's head."""
@@ -190,6 +197,12 @@ def meeting_groups(staff, teams):
     for track, (head, who) in track_members(staff).items():
         for key in (f"מגמת {track}", f"צוות {track}"):
             groups.setdefault(key, who + ([head] if head and head not in who else []))
+    # Meetings of the people in charge: "מפקדים" (every team commander), "מנהלים", "מנהלים ומפקדים".
+    commanders = list(dict.fromkeys(t["commander"] for t in teams.values() if t.get("commander")))
+    managers = [m["name"] for m in manager_list(staff)]
+    groups.setdefault("מפקדים", commanders)
+    groups.setdefault("מנהלים", managers)
+    groups.setdefault("מנהלים ומפקדים", list(dict.fromkeys(managers + commanders)))
     print("track meetings: " + ", ".join(f"{t} {len(groups[f'מגמת {t}'])}" for t in TRACKS))
     return groups
 
@@ -682,9 +695,7 @@ def main():
     # Heads of a whole school section (the high school, the engineering college): a page of their own,
     # and with the commanders' code a board over all the section's teams.
     managers = []
-    sheet_mgrs = [{"name": p.get("display") or p.get("name") or p["as_given"], "title": r}
-                  for p in staff for r in p.get("roles", []) if r.startswith("מנהל")]
-    for m in sheet_mgrs or [m for m in load_json(ROOT / "managers.json", []) if m.get("name")]:
+    for m in manager_list(staff):
         grades = ["ט", "י", "יא", "יב"] if "תיכון" in m["title"] else ["יג", "יד"] if "הנדסא" in m["title"] else []
         covered = [n for n, t in team_defs.items() if set(t.get("grades", [])) & set(grades)]
         mid = shown.get(m["name"]) or commander_ids.get(m["name"])
