@@ -50,19 +50,25 @@ function handle(req) {
   if (a === 'bind') {
     if (req.token && mine.some(function (r) { return String(r[1]) === String(req.token); })) return { ok: true, token: req.token };
     if (mine.length) {
+      // Another browser: a 6-digit code from a linked browser, or the person's own 8-digit recovery code.
       var cache = CacheService.getScriptCache(), want = cache.get('link:' + name);
       if (!req.link) return { ok: false, error: 'bound elsewhere' };
-      if (!want || String(req.link).trim() !== want) {
-        var tries = Number(cache.get('tries:' + name) || 0) + 1;
-        if (tries >= 5) { cache.remove('link:' + name); cache.remove('tries:' + name); } else cache.put('tries:' + name, String(tries), 600);
+      var given = String(req.link).replace(/\D/g, ''), tries = Number(cache.get('tries:' + name) || 0);
+      var good = tries < 5 && (given.length === 8 ? recoveryOk_(name, given) : (!!want && given === want));
+      if (!good) {
+        tries += 1;
+        if (tries >= 5) cache.remove('link:' + name);
+        cache.put('tries:' + name, String(tries), 600);  // 5 wrong tries lock linking for 10 minutes
         Utilities.sleep(800);
-        return { ok: false, error: 'wrong link code' };
+        return { ok: false, error: tries >= 5 ? 'too many tries' : 'wrong link code' };
       }
       cache.remove('link:' + name); cache.remove('tries:' + name);
     }
     var token = Utilities.getUuid().replace(/-/g, '') + Utilities.getUuid().replace(/-/g, '');
     dev.appendRow([name, token, new Date()]);
-    return { ok: true, token: token };
+    var res = { ok: true, token: token };
+    if (!recoveryRow_(name)) res.recovery = newRecovery_(name);  // shown once, on the first link
+    return res;
   }
   if (!req.token || !mine.some(function (r) { return String(r[1]) === String(req.token); })) {
     Utilities.sleep(800);
@@ -74,6 +80,7 @@ function handle(req) {
     CacheService.getScriptCache().remove('tries:' + name);
     return { ok: true, code: code };
   }
+  if (a === 'recovery_code') return { ok: true, code: newRecovery_(name) };  // a new one replaces the old
   if (a === 'prefs') {  // per-person settings; for now: a notification before each lesson (on unless turned off)
     var pt = ensureSheet('העדפות', ['שם', 'התראה לפני שיעור', 'עודכן']), pr = findRow(pt, 1, name);
     if (typeof req.lesson_alerts === 'boolean') {
@@ -283,6 +290,25 @@ function store() {
 }
 
 function sheet(name) { return store().getSheetByName(name); }
+
+// A personal recovery code links a new browser without a code from a linked one (an iPhone home-screen
+// icon that was deleted, a new phone). Only its hash is kept, in "שחזור".
+function recoveryHash_(name, code) {
+  return Utilities.base64Encode(Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, 'recovery:' + name + ':' + code, Utilities.Charset.UTF_8));
+}
+function recoveryRow_(name) {
+  return findRow(ensureSheet('שחזור', ['שם', 'טביעת קוד', 'עודכן']), 1, name);
+}
+function recoveryOk_(name, code) {
+  var r = recoveryRow_(name);
+  return r > 0 && String(sheet('שחזור').getRange(r, 2).getValue()) === recoveryHash_(name, code);
+}
+function newRecovery_(name) {
+  var code = String(10000000 + parseInt(Utilities.getUuid().replace(/-/g, '').slice(0, 12), 16) % 90000000);
+  var t = ensureSheet('שחזור', ['שם', 'טביעת קוד', 'עודכן']), r = findRow(t, 1, name), row = [name, recoveryHash_(name, code), new Date()];
+  if (r > 0) t.getRange(r, 1, 1, 3).setValues([row]); else t.appendRow(row);
+  return code;
+}
 
 function ensureSheet(name, head) {
   var ss = store(), tab = ss.getSheetByName(name);
