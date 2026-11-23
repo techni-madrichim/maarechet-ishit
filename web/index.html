@@ -1652,7 +1652,18 @@ function startApp(DATA, TEAM) {
     var cmb = document.createElement("div"); cmb.className = "hqbar";
     cmb.innerHTML = '<b>' + (CMD.mgr ? "🏫 " + esc(CMD.team) : "🎖️ מפקד " + esc(CMD.team)) + '</b><div id="cmd-push" class="btns"></div>';
     document.querySelector("#app header").appendChild(cmb);
-    if (CMD.mgr) { document.getElementById("tab-cteam").textContent = "מערכות הצוותים"; document.getElementById("tab-team").hidden = true; }
+    if (CMD.mgr) {
+      document.getElementById("tab-cteam").textContent = "מערכות הצוותים"; document.getElementById("tab-team").hidden = true;
+      // No notifications for managers; linking the device only makes the site open on their page.
+      var me0 = store("me"), pb = document.getElementById("cmd-push");
+      var drawLink = function () {
+        var on = store("home") === me0;
+        pb.innerHTML = on ? '<span class="pushhint">🔗 המכשיר מקושר: האתר נפתח ישר על הדף שלך</span> <button type="button" class="linkmore" id="mg-link">ביטול</button>'
+          : '<button type="button" class="linkmore" id="mg-link">🔗 קישור המכשיר: לפתוח את האתר ישר על הדף שלי</button>';
+        document.getElementById("mg-link").onclick = function () { try { on ? localStorage.removeItem("home") : localStorage.setItem("home", me0); } catch (e) {} drawLink(); };
+      };
+      drawLink();
+    }
     else if (window.cmdPushUI) window.cmdPushUI(API, { name: CMD.team }, CMD.code);
   }
   document.querySelector(".tabs").addEventListener("click", function (e) {
@@ -1870,7 +1881,7 @@ function startApp(DATA, TEAM) {
       }).join("") : '<p class="muted" style="margin:0">אין תזכורות.</p>') + '</section>';
     }).join("");
   }
-  function showPicker() {
+  function showPicker(signIn) {  // signIn: a linked commander or manager whose code expired
     app.hidden = true; picker.hidden = false;
     var list = document.getElementById("plist");
     list.innerHTML = '<p class="muted">טוען…</p>';
@@ -1918,6 +1929,7 @@ function startApp(DATA, TEAM) {
         list.innerHTML = shown.length ? '<div class="grid2">' + shown.map(btn).join("") + '</div>' : '<p class="muted">לא נמצא שם כזה ברשימה.</p>';
       }
       draw("");
+      if (signIn) { cmdOpen(d, signIn); return; }
       // once per device: a device linked before "home" existed opens its owner's timetable
       if (!get("home") && !get("home-checked") && visit() !== "picker") {
         set("home-checked", "1");
@@ -2022,7 +2034,11 @@ function startApp(DATA, TEAM) {
         })).then(function (members) { startApp(d, { name: cmdTeam.name, members: members }); });
       });
     }
-    if (!person) { if (get("home") === me) set("home", null); set("me", null); visit("picker"); showPicker(); return; }
+    if (!person) {
+      var again = get("home") === me && (mgr ? { name: mgr.title, commander: mgr.name, commander_id: mgr.id, mgr: true } : cmdTeam);
+      if (!again) { if (get("home") === me) set("home", null); set("me", null); }
+      visit("picker"); showPicker(again || null); return;
+    }
     return unlock(person).then(function () {
       return json("data/" + encodeURIComponent(me) + ".json").then(function (d) {
         document.documentElement.dir = "rtl"; document.documentElement.lang = "he";
