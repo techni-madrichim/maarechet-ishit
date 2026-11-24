@@ -145,15 +145,25 @@ def vapid_sub():
     return f"https://{u.hostname}" if u.hostname else "https://github.com"
 
 
+def device(name, sub):
+    """Who a message went to: the person and this one phone. Someone with two subscriptions (a new phone,
+    or the home-screen icon next to Safari) gets every message on each."""
+    return name + "#" + hashlib.sha1(str(sub.get("endpoint", "")).encode("utf-8")).hexdigest()[:10]
+
+
+def sent_key(who, tag, today):
+    if tag.startswith("report|"):  # once per month, not once per day
+        return "r:" + hashlib.sha1(f"{who}|{tag}".encode("utf-8")).hexdigest()[:16]
+    return hashlib.sha1(f"{who}|{today}|{tag}".encode("utf-8")).hexdigest()[:16]
+
+
 def send_all(webpush, WebPushException, sub, name, messages, log, today, key):
-    """Send each message once; returns (sent, gone) where gone means the phone turned notifications off."""
-    sent = 0
+    """Send each message once to this phone; returns (sent, gone) where gone means the phone turned
+    notifications off. Keys from before the log was per phone (by name alone) still count as sent."""
+    sent, who = 0, device(name, sub)
     for tag, title, body in messages:
-        if tag.startswith("report|"):  # once per month, not once per day
-            k = "r:" + hashlib.sha1(f"{name}|{tag}".encode("utf-8")).hexdigest()[:16]
-        else:
-            k = hashlib.sha1(f"{name}|{today}|{tag}".encode("utf-8")).hexdigest()[:16]
-        if k in log:
+        k = sent_key(who, tag, today)
+        if k in log or sent_key(name, tag, today) in log:
             continue
         try:
             webpush(subscription_info=sub, data=json.dumps({"title": title, "body": body, "tag": tag[:40], "url": CONFIG.get("site_url", "./")}, ensure_ascii=False),
@@ -264,9 +274,10 @@ def main():
         new = []
         for c in data.get("changelog", []):
             if c.get("date") == today and c.get("kind") != "עודכן":
-                k = "c:" + hashlib.sha1(f"{name}|{today}|{c.get('kind')}|{c.get('text')}".encode("utf-8")).hexdigest()[:16]
+                k = "c:" + hashlib.sha1(f"{device(name, sub)}|{today}|{c.get('kind')}|{c.get('text')}".encode("utf-8")).hexdigest()[:16]
+                old = "c:" + hashlib.sha1(f"{name}|{today}|{c.get('kind')}|{c.get('text')}".encode("utf-8")).hexdigest()[:16]
                 item = (c.get("kind"), c.get("text", ""))
-                if k not in log and item not in [x[1] for x in new]:
+                if k not in log and old not in log and item not in [x[1] for x in new]:
                     new.append((k, item))
         if new:
             messages.append(("chg|" + new[0][0], *changes_message([x[1] for x in new], name)))
@@ -275,7 +286,7 @@ def main():
             messages += report_message(reports, rmonth, lead_of[name])
         ok, gone = send_all(webpush, WebPushException, sub, name, messages, log, today, key)
         sent += ok
-        if new and hashlib.sha1(f"{name}|{today}|chg|{new[0][0]}".encode("utf-8")).hexdigest()[:16] in log:
+        if new and sent_key(device(name, sub), "chg|" + new[0][0], today) in log:
             for k, _ in new:  # these changes went out
                 log[k] = today
         if gone:  # the phone turned notifications off
