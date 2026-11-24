@@ -23,7 +23,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from lib import fill, load_json, write_json  # noqa: E402
-from notify_text import changes_message, lesson_message  # noqa: E402
+from notify_text import changes_message, group_changes, lesson_message  # noqa: E402
 from scrape import ISRAEL_TZ  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -60,17 +60,19 @@ def short(name):
 def commander_messages(team, all_reminders, duty, ids, today, dow, morning):
     """A team's commander: one morning summary, then one message per run with the team's new changes."""
     members = [m["name"] for m in team.get("members", [])]
-    changes, fresh = [], []
+    changes, fresh, seen = [], [], set()
     for m in team.get("members", []):
         data = load_json(DOCS / "data" / f"{m['id']}.json", {})
         stamp = data.get("latest", {}).get("scraped_at")
         for c in data.get("changelog", []):
             if c.get("date") == today and any(k in (c.get("kind") or "") for k in BIG_CHANGES):
-                line = f"{m['name']}: {c.get('kind')} · {fill(c.get('text', ''))}"
-                if line not in changes:
-                    changes.append(line)
-                    if c.get("detected_at") == stamp:
-                        fresh.append(line)
+                item = (c.get("kind"), c.get("text", ""))
+                if item in seen:
+                    continue
+                seen.add(item)
+                changes.append(f"{m['name']}: {c.get('kind')} · {fill(c.get('text', ''))}")
+                if c.get("detected_at") == stamp:
+                    fresh.append(item)
     out = []
     if morning:
         parts = []
@@ -90,16 +92,16 @@ def commander_messages(team, all_reminders, duty, ids, today, dow, morning):
             parts.append("🏫 שינויים בכיתות: " + " · ".join(dict.fromkeys(homeroom))[:180])
         others = [c for c in changes if "כיתת חינוך" not in c]
         if others:
-            parts.append(f"⚠️ {len(others)} שינויים במערכת של הצוות")
+            parts.append(f"⚠️ {len(others)} שינויים במערכת של הצוות היום")
         n = sum(1 for r in all_reminders if r.get("team") == team["name"] and (r["date"] == today if r["date"] else r["dow"] == dow))
         if n:
             parts.append(f"📝 {n} תזכורות של הצוות להיום")
         if parts:
             out.append(("cmd-morning", f"👥 {team['name']} · הבוקר", "\n".join(parts)))
     elif fresh:
-        body = "\n".join(fresh[:6]) + (f"\nועוד {len(fresh) - 6}" if len(fresh) > 6 else "")
-        out.append(("cmd-chg|" + hashlib.sha1("|".join(fresh).encode("utf-8")).hexdigest()[:10],
-                    f"⚠️ {team['name']} · {len(fresh)} שינויים חדשים להיום", body))
+        _, body = changes_message(fresh, None, limit=6)
+        out.append(("cmd-chg|" + hashlib.sha1("|".join(k + t for k, t in fresh).encode("utf-8")).hexdigest()[:10],
+                    f"⚠️ {team['name']} · {len(group_changes(fresh))} שינויים חדשים להיום", body))
     return out
 
 
@@ -236,7 +238,7 @@ def main():
             parts = []
             if lessons:
                 first = min(lessons, key=lambda l: l["hour"])
-                parts.append(f"{len({l['hour'] for l in lessons})} שעות הוראה, הראשונה ב-{first['start']} ({first['subject']})")
+                parts.append(f"{len({l['hour'] for l in lessons})} שעות במערכת, הראשונה ב-{first['start']} ({first['subject']})")
             else:
                 parts.append("אין לך שיעורים היום")
             for d in sorted(duties, key=lambda d: d["hour"]):

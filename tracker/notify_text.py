@@ -201,7 +201,9 @@ def lesson_message(lesson, left, start, me=None):
     """The alert before a lesson: classes, room, and what changed in it."""
     rooms = ", ".join(room(r) for r in lesson.get("rooms", []))
     parts = [cls(", ".join(lesson.get("classes", []))), f"חדר {rooms}" if rooms else ""]
-    for c in lesson.get("changes", [])[:2]:
+    changes = lesson.get("changes", [])
+    mine = [c for c in changes if me and me in c.get("text", "")]
+    for c in (mine or changes)[:2]:
         s = swap(c.get("text", ""), me)
         parts.append(f"{ICON.get(c.get('type'), '•')} " + (s.split(' · חדר')[0] if s else short(f"{c.get('type')}: {c.get('text', '')}", 40)))
     return f"📚 בעוד {left} דקות · {start}", " · ".join(p for p in parts if p)
