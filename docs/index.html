@@ -1837,6 +1837,8 @@ function startApp(DATA, TEAM) {
     document.getElementById("cmd-code").focus();
   }
   // ---- a grade coordinator (רכז שכבה): one shared code, a look at the grade only
+  // Grade coordinators are for the high school only (ט–יב), not the engineering college.
+  function hasCoord(t) { return !!t && (t.grades || []).length > 0 && t.grades.every(function (g) { return ["ט", "י", "יא", "יב"].indexOf(g) >= 0; }); }
   function coordSession(team) {
     try { var c = JSON.parse(localStorage.getItem("coord") || "null"); if (c && c.team === team && Date.now() - c.at < 30 * 864e5) return c; } catch (e) {}
     return null;
@@ -1997,7 +1999,7 @@ function startApp(DATA, TEAM) {
         rest.forEach(function (p) { placed[p.id] = 1; });
         var mentors = rest.filter(isMentor), instructors = rest.filter(function (p) { return !isMentor(p); });
         return mgrCard(t) + '<section class="team"><header><h2>' + esc(t.name) + '</h2><span>' + (rest.length + (lead ? 1 : 0)) + ' אנשים</span></header><div class="body">' +
-          (d.coord_hash ? '<button type="button" class="lead cmdbtn" data-coord="' + esc(t.name) + '"><span class="crown">📋</span><span><b>רכז/ת שכבה</b><small>מבט על השכבה · כניסה בקוד</small></span></button>' : "") +
+          (d.coord_hash && hasCoord(t) ? '<button type="button" class="lead cmdbtn" data-coord="' + esc(t.name) + '"><span class="crown">📋</span><span><b>רכז/ת שכבה</b><small>מבט על השכבה · כניסה בקוד</small></span></button>' : "") +
           (t.commander ? '<button type="button" class="lead cmdbtn" data-cmd="' + esc(t.name) + '"><span class="crown">🎖️</span><span><b>' + esc(t.commander) + '</b><small>מפקד הצוות</small></span></button>' : "") +
           (lead ? '<button type="button" class="lead" data-id="' + esc(lead.id) + '"><span class="crown">👑</span><span><b>' + esc(lead.name) + '</b><small>ראש צוות' + (lead.homerooms.length ? ' · ' + esc(lead.homerooms.join(", ")) : "") + '</small></span></button>' : "") +
           '<div class="grid2">' + instructors.map(btn).join("") + '</div>' +
@@ -2085,7 +2087,7 @@ function startApp(DATA, TEAM) {
   json("data/staff.json").then(function (st) {
     if (/^coord:/.test(me)) {  // a grade coordinator: the grade's days and exams, no personal timetable
       var cTeam = (st.teams || []).filter(function (t) { return t.name === me.slice(6); })[0];
-      if (!cTeam || !coordSession(cTeam.name)) { set("me", null); visit("picker"); showPicker(); return; }
+      if (!cTeam || !hasCoord(cTeam) || !coordSession(cTeam.name)) { set("me", null); visit("picker"); showPicker(); return; }
       var src = cTeam.commander_id || cTeam.lead;
       return json("data/" + encodeURIComponent(src) + ".json").then(function (x) {
         document.documentElement.dir = "rtl"; document.documentElement.lang = "he";
