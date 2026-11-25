@@ -415,17 +415,25 @@ def build_duty(raw, now, people, team_defs):
     days = {}
     edits = duty_edits(today, prev.get(today, {}))
 
-    def pick(cands, date, key, taken):
-        # fewest duties this month first, then whoever had one longest ago
+    duty_at = {}  # person -> the periods they already have duty in today (6.5 is the lunch break)
+
+    def near(c, h):
+        return any(abs(x - h) <= 1 for x in duty_at.get(c, ()))
+
+    def pick(cands, date, key, taken, h):
+        # not two periods in a row while someone else is free; then fewest duties this month,
+        # then whoever had one longest ago
         free = [c for c in cands if c not in taken]
-        free.sort(key=lambda c: (count.get(c, 0), last.get(c, ""), hashlib.sha1(f"{c}|{date}|{key}".encode()).hexdigest()))
+        free.sort(key=lambda c: (near(c, h), count.get(c, 0), last.get(c, ""), hashlib.sha1(f"{c}|{date}|{key}".encode()).hexdigest()))
         return free[0] if free else None
 
     for date in dates:
         day_out, taken_at = {}, {}
+        duty_at.clear()
         for (grade, h, role), e in edits.items():  # hand-made choices come first
             for c in e["people"]:
                 taken_at.setdefault(h, set()).add(c)
+                duty_at.setdefault(c, set()).add(h)
         for team, t in team_defs.items():
             members = [m for m in t.get("members", []) if m in known]
             away = absent.get(date, set())
@@ -460,9 +468,10 @@ def build_duty(raw, now, people, team_defs):
                     else:
                         cands = [m for m in members if (date, h) not in busy.get(m, set()) and m not in away]
                     keep = [x for x in old.get((h, role), []) if x in cands and x not in taken]
-                    chosen = keep[:1] or [x for x in [pick(cands, date, f"{grade}{h}{role}", taken)] if x]
+                    chosen = keep[:1] or [x for x in [pick(cands, date, f"{grade}{h}{role}", taken, h)] if x]
                     for c in chosen:
                         taken.add(c)
+                        duty_at.setdefault(c, set()).add(h)
                         count[c] = count.get(c, 0) + 1
                         last[c] = date
                     slot = {"hour": h, "people": chosen}

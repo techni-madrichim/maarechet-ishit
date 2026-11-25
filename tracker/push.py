@@ -96,8 +96,7 @@ def commander_messages(team, all_reminders, duty, ids, today, dow, morning):
         n = sum(1 for r in all_reminders if r.get("team") == team["name"] and (r["date"] == today if r["date"] else r["dow"] == dow))
         if n:
             parts.append(f"📝 {n} תזכורות של הצוות להיום")
-        if parts:
-            out.append(("cmd-morning", f"👥 {team['name']} · הבוקר", "\n".join(parts)))
+        out.append(("cmd-morning", f"👥 {team['name']} · הבוקר", "\n".join(parts) or "✅ אין שינויים מיוחדים בצוות היום"))
     elif fresh:
         _, body = changes_message(fresh, None, limit=6)
         out.append(("cmd-chg|" + hashlib.sha1("|".join(k + t for k, t in fresh).encode("utf-8")).hexdigest()[:10],
@@ -203,7 +202,7 @@ def main():
     log = {k: v for k, v in log.items() if v >= (now.date() - timedelta(days=40 if k.startswith("r:") else 3)).isoformat()}
     morning = now.hour == 7
     window = (now.hour * 60 + now.minute, now.hour * 60 + now.minute + 60)
-    sent = dropped = 0
+    sent = dropped = mornings = 0
 
     teams = {t["name"]: t for t in staff.get("teams", [])}
     reports = load_json(DOCS / "data" / "duty_reports.json", {})
@@ -220,6 +219,7 @@ def main():
                 messages += report_message(reports, rmonth, team["name"])
             ok, gone = send_all(webpush, WebPushException, sub, name, messages, log, today, key)
             sent += ok
+            mornings += any(t == "cmd-morning" for t, _, _ in messages) and sent_key(device(name, sub), "cmd-morning", today) in log
             if gone:
                 api({"action": "push_drop", "token": token, "endpoint": sub.get("endpoint", "")})
                 dropped += 1
@@ -288,6 +288,7 @@ def main():
             messages += report_message(reports, rmonth, lead_of[name])
         ok, gone = send_all(webpush, WebPushException, sub, name, messages, log, today, key)
         sent += ok
+        mornings += morning and (sent_key(device(name, sub), "morning", today) in log or sent_key(name, "morning", today) in log)
         if new and sent_key(device(name, sub), "chg|" + new[0][0], today) in log:
             for k, _ in new:  # these changes went out
                 log[k] = today
@@ -296,6 +297,8 @@ def main():
             dropped += 1
     write_json(log_path, log)
     print(f"notifications: {sent} sent to {len(feed['subs'])} phones, {dropped} removed")
+    if morning:  # every phone should get the morning summary; fewer means some failed (see the lines above)
+        print(f"morning summaries: {mornings} of {len(feed['subs'])} phones have today's")
 
 
 if __name__ == "__main__":
