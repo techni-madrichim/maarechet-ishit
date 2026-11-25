@@ -734,7 +734,7 @@ def main():
                                "members": [{"id": by_name[m], "name": m} for m in who if m in by_name]})
         write_json(DOCS / "data" / "staff.json",
                    {"updated": now.isoformat(timespec="minutes"), "people": people, "teams": teams, "tracks": tracks, "managers": managers, "api": CONFIG.get("api_url", ""),
-                    "cmd_hash": CONFIG.get("commander_hash", "")})
+                    "cmd_hash": CONFIG.get("commander_hash", ""), "coord_hash": CONFIG.get("coord_hash", "")})
         if raw:
             build_duty(raw, now, people, team_defs)
     DOCS.mkdir(exist_ok=True)

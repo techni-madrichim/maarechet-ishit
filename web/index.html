@@ -377,6 +377,7 @@ body { margin: 0; }
     <button role="tab" id="tab-hist" aria-selected="false" data-view="hist">יומן</button>
     <button role="tab" id="tab-team" aria-selected="false" data-view="team" hidden>זמן לצוות</button>
     <button role="tab" id="tab-cteam" aria-selected="false" data-view="cteam" hidden>מערכת הצוות</button>
+    <button role="tab" id="tab-gchg" aria-selected="false" data-view="gchg" hidden>שינויים בשכבה</button>
   </nav>
 
   <section id="view-day" class="lessons-view" style="display:grid; grid-template-columns:minmax(0,1fr); gap:14px">
@@ -421,6 +422,13 @@ body { margin: 0; }
     <div class="dayhead"><h2>בוקר וסוף יום לפי כיתה</h2>
       <div class="seg" id="rel-day"><button type="button" data-rd="0" aria-pressed="true">היום</button><button type="button" data-rd="1" aria-pressed="false">יום הלימודים הבא</button></div></div>
     <div id="rel-span"><p class="muted">טוען…</p></div>
+  </section>
+
+  <section id="view-gchg" hidden style="display:grid; grid-template-columns:minmax(0,1fr); gap:12px">
+    <div class="dayhead"><h2 id="gchg-title">שינויים במערכת</h2>
+      <div class="seg" id="gchg-day"><button type="button" data-gd="0" aria-pressed="true">היום</button><button type="button" data-gd="1" aria-pressed="false">יום הלימודים הבא</button></div></div>
+    <div class="clspick" id="gchg-pick" hidden><div class="g gr" id="gchg-grades"></div></div>
+    <div id="gchg-body"><p class="muted">טוען…</p></div>
   </section>
 
   <section id="view-agenda" hidden style="display:grid; grid-template-columns:minmax(0,1fr); gap:10px">
@@ -1322,6 +1330,10 @@ function startApp(DATA, TEAM) {
     var curC = CL.index.filter(function (c) { return c.id === CL.id; })[0];
     if (!CL.grade) CL.grade = curC ? curC.grade : GRADES[0];
     var grades = GRADES.filter(function (g) { return CL.index.some(function (c) { return c.grade === g; }); });
+    if (CMD && CMD.coord) {
+      grades = grades.filter(function (g) { return CMD.grades.indexOf(g) >= 0; });
+      if (grades.indexOf(CL.grade) < 0) { CL.grade = grades[0]; var first = CL.index.filter(function (c) { return c.grade === CL.grade; })[0]; CL.id = first ? first.id : CL.id; renderCls(); return; }
+    }
     document.getElementById("cls-pick").innerHTML =
       '<div class="g gr">' + grades.map(function (g) { return '<button type="button" data-grade="' + g + '" aria-pressed="' + (g === CL.grade) + '">' + g + "'</button>"; }).join("") + '</div>' +
       '<div class="g">' + CL.index.filter(function (c) { return c.grade === CL.grade; }).map(function (c) {
@@ -1456,8 +1468,9 @@ function startApp(DATA, TEAM) {
     document.getElementById("duty-title").textContent = "תורני חצר · " + dLabel(DT.grade) + " · היום " + dm(todayISO);
     document.getElementById("duty-mine").textContent = mine.length ? "לך יש " + mine.length + " תורנויות היום" : "";
     var body = document.getElementById("duty-body");
-    body.innerHTML = dutySlots(DT.grade, day[DT.grade], ME, !!API) + '<p class="muted" style="margin:0;font-size:.8rem">הרשימה נבנית כל בוקר מהמערכת של כל הצוות: רק מי שפנוי באותה שעה, ובחלוקה שווה לפי טבלת צדק חודשית. אם מישהו מקבל שיעור, הוא מוחלף לבד בעדכון הבא.' + (API ? ' כל אחד מהצוות יכול ללחוץ על שורה ולשנות אותה ידנית, למשל כשמישהו בשמירות.' : "") + '</p>' + leadReport();
-    if (API) dutyBind(body, { api: API, date: todayISO, duty: DUTY, redraw: renderDuty, askCode: !!(LEAD || DATA.hq),
+    var canEdit = !!API && !(CMD && CMD.coord);
+    body.innerHTML = dutySlots(DT.grade, day[DT.grade], ME, canEdit) + '<p class="muted" style="margin:0;font-size:.8rem">הרשימה נבנית כל בוקר מהמערכת של כל הצוות: רק מי שפנוי באותה שעה, ובחלוקה שווה לפי טבלת צדק חודשית. אם מישהו מקבל שיעור, הוא מוחלף לבד בעדכון הבא.' + (canEdit ? ' כל אחד מהצוות יכול ללחוץ על שורה ולשנות אותה ידנית, למשל כשמישהו בשמירות.' : "") + '</p>' + leadReport();
+    if (canEdit) dutyBind(body, { api: API, date: todayISO, duty: DUTY, redraw: renderDuty, askCode: !!(LEAD || DATA.hq),
       by: DATA.hq ? "אנשי מנהלה" : (owner() || DATA.teacher || ""),
       code: function () { return (DATA.hq && DATA.hq.code) || (CMD && CMD.code) || (LEAD ? dGet("duty-code") : "") || ""; }, saveCode: function (c) { dSet("duty-code", c); },
       device: function () { var o = owner(); var t = o && dGet("dev-" + o); return t ? { name: o, token: t } : null; } });
@@ -1472,7 +1485,7 @@ function startApp(DATA, TEAM) {
 
   // ---- tabs
   function show(view) {
-    ["day", "week", "cls", "duty", "rel", "agenda", "hist", "team", "cteam"].forEach(function (v) {
+    ["day", "week", "cls", "duty", "rel", "agenda", "hist", "team", "cteam", "gchg"].forEach(function (v) {
       document.getElementById("view-" + v).hidden = v !== view;
       document.getElementById("tab-" + v).setAttribute("aria-selected", String(v === view));
     });
@@ -1485,7 +1498,46 @@ function startApp(DATA, TEAM) {
     if (view === "duty") renderDuty();
     if (view === "cteam") renderCmdTeam();
     if (view === "rel") renderRel();
+    if (view === "gchg") renderGchg();
   }
+  // ---- a grade coordinator (רכז שכבה): every change in the grade's classes, today or the next school day
+  var GC = { day: 0, grade: null, files: {}, index: null };
+  function renderGchg() {
+    var body = document.getElementById("gchg-body"), grades = (CMD && CMD.grades) || [];
+    document.querySelectorAll("#gchg-day button").forEach(function (b) { b.setAttribute("aria-pressed", String(+b.getAttribute("data-gd") === GC.day)); });
+    if (!GC.index) {
+      body.innerHTML = '<p class="muted">טוען…</p>';
+      getJSON("data/classes.json").then(function (d) {
+        GC.index = d.classes.filter(function (c) { return grades.indexOf(c.grade) >= 0; });
+        return Promise.all(GC.index.map(function (c) { return getJSON("data/class/" + c.id + ".json").then(function (f) { GC.files[c.id] = f; }, function () {}); }));
+      }).then(renderGchg).catch(function () { body.innerHTML = '<div class="empty">לא הצלחתי לטעון את הכיתות.</div>'; });
+      return;
+    }
+    var date = GC.day ? nextSchoolDay() : todayISO;
+    var gs = grades.filter(function (g) { return GC.index.some(function (c) { return c.grade === g; }); });
+    document.getElementById("gchg-pick").hidden = gs.length < 2;
+    if (gs.indexOf(GC.grade) < 0) GC.grade = gs[0] || null;
+    document.getElementById("gchg-grades").innerHTML = gs.map(function (g) { return '<button type="button" data-gg="' + g + '" aria-pressed="' + (g === GC.grade) + '">' + g + "'</button>"; }).join("");
+    if (!date) { body.innerHTML = '<div class="empty">אין עדיין מערכת ליום הלימודים הבא.</div>'; return; }
+    document.getElementById("gchg-title").textContent = "שינויים במערכת · " + new Intl.DateTimeFormat("he-IL", { weekday: "long", day: "2-digit", month: "2-digit" }).format(new Date(date + "T12:00:00"));
+    var total = 0;
+    var html = GC.index.filter(function (c) { return !GC.grade || c.grade === GC.grade; }).map(function (c) {
+      var f = GC.files[c.id]; if (!f) return "";
+      var rows = f.slots.filter(function (x) { return x.date === date && (x.changes.length || (x.removed || []).length); }).sort(function (a, b) { return a.hour - b.hour; }).map(function (x) {
+        var items = x.changes.map(function (ch) { return '<b>' + esc(ch.type || "שינוי") + '</b> · ' + esc(fill(ch.text || "")); });
+        (x.removed || []).forEach(function (r) {
+          var covered = x.changes.some(function (ch) { return r.teacher && (ch.text || "").indexOf(r.teacher) >= 0; });
+          if (!covered) items.push('<b>לא מתקיים</b> · ' + esc(r.subject || "") + (r.teacher ? " (" + esc(r.teacher) + ")" : ""));
+        });
+        total += items.length;
+        return '<div class="r"><b>שעה ' + x.hour + '</b><span>' + items.join("<br>") + '</span><span class="who mono">' + esc(x.start || "") + '</span></div>';
+      });
+      return rows.length ? '<section class="hqday"><h3>' + esc(c.name.replace(/\s+/g, "")) + '</h3>' + rows.join("") + '</section>' : "";
+    }).join("");
+    body.innerHTML = total ? html : '<div class="empty">אין שינויים בכיתות השכבה ביום הזה.</div>';
+  }
+  document.getElementById("gchg-day").addEventListener("click", function (e) { var b = e.target.closest("button[data-gd]"); if (b) { GC.day = +b.getAttribute("data-gd"); renderGchg(); } });
+  document.getElementById("gchg-grades").addEventListener("click", function (e) { var b = e.target.closest("button[data-gg]"); if (b) { GC.grade = b.getAttribute("data-gg"); renderGchg(); } });
   // Who releases each class of the team's grades at the end of today (built with the yard duty).
   // Start and end of the day for each class of the team's grades, today or on the next school day,
   // with any level group that starts later or leaves earlier (its teacher dropped, no stand-in).
@@ -1647,12 +1699,18 @@ function startApp(DATA, TEAM) {
     document.getElementById("tab-cteam").hidden = false;
     document.querySelector("#view-agenda > p").textContent = "מבחנים ואירועים קרובים בכל הכיתות של " + (DATA.grade_label || "השכבה") + ".";
     var sw = document.getElementById("switch"), sw2 = sw.cloneNode(true);  // drop the plain "switch" handler
-    sw2.textContent = CMD.mgr ? "יציאה ממצב מנהל" : "יציאה ממצב מפקד"; sw.parentNode.replaceChild(sw2, sw);
-    sw2.onclick = function () { try { if (localStorage.getItem("home") === localStorage.getItem("me")) localStorage.removeItem("home"); localStorage.removeItem("cmd"); localStorage.removeItem("me"); sessionStorage.setItem("nav", "picker"); } catch (e) {} location.reload(); };
+    sw2.textContent = CMD.coord ? "יציאה ממצב רכז/ת שכבה" : CMD.mgr ? "יציאה ממצב מנהל" : "יציאה ממצב מפקד"; sw.parentNode.replaceChild(sw2, sw);
+    sw2.onclick = function () { try { if (localStorage.getItem("home") === localStorage.getItem("me")) localStorage.removeItem("home"); if (CMD.coord) localStorage.removeItem("coord"); else localStorage.removeItem("cmd"); localStorage.removeItem("me"); sessionStorage.setItem("nav", "picker"); } catch (e) {} location.reload(); };
     var cmb = document.createElement("div"); cmb.className = "hqbar";
-    cmb.innerHTML = '<b>' + (CMD.mgr ? "🏫 " + esc(CMD.team) : "🎖️ מפקד " + esc(CMD.team)) + '</b><div id="cmd-push" class="btns"></div>';
+    cmb.innerHTML = '<b>' + (CMD.coord ? "📋 רכז/ת שכבה · " + esc(DATA.grade_label) : CMD.mgr ? "🏫 " + esc(CMD.team) : "🎖️ מפקד " + esc(CMD.team)) + '</b><div id="cmd-push" class="btns"></div>';
     document.querySelector("#app header").appendChild(cmb);
-    if (CMD.mgr) {
+    if (CMD.coord) {
+      // the grade only: its classes, changes, releases, exams and a read-only yard duty list; no personal timetable
+      ["tab-week", "tab-team", "tab-cteam"].forEach(function (id) { document.getElementById(id).hidden = true; });
+      document.getElementById("tab-gchg").hidden = false;
+      ["now", "alerts"].forEach(function (id) { var e = document.getElementById(id); if (e) e.hidden = true; });
+      document.getElementById("meta").hidden = true;
+    } else if (CMD.mgr) {
       document.getElementById("tab-cteam").textContent = "מערכות הצוותים"; document.getElementById("tab-team").hidden = true;
       // No notifications for managers; linking the device only makes the site open on their page.
       var me0 = store("me"), pb = document.getElementById("cmd-push");
@@ -1683,6 +1741,7 @@ function startApp(DATA, TEAM) {
   }).catch(function () {});
   setInterval(renderNow, 60000);
   var saved = store("view");
+  if (CMD && CMD.coord) { show(["cls", "duty", "rel", "agenda", "gchg"].indexOf(saved) >= 0 ? saved : "cls"); return; }
   if (saved === "week" || saved === "hist" || saved === "agenda" || saved === "cls" || saved === "duty" || (saved === "team" && TEAM && !(CMD && CMD.mgr)) ||
       saved === "rel" || (saved === "cteam" && (CMD || TRACK))) show(CMD && (saved === "hist") ? "week" : saved);
   else if (CMD) show("week");
@@ -1776,6 +1835,31 @@ function startApp(DATA, TEAM) {
       });
     };
     document.getElementById("cmd-code").focus();
+  }
+  // ---- a grade coordinator (רכז שכבה): one shared code, a look at the grade only
+  function coordSession(team) {
+    try { var c = JSON.parse(localStorage.getItem("coord") || "null"); if (c && c.team === team && Date.now() - c.at < 30 * 864e5) return c; } catch (e) {}
+    return null;
+  }
+  function coordOpen(d, team) {
+    if (!team) return;
+    if (coordSession(team.name)) { go("coord:" + team.name); return; }
+    var box = document.getElementById("hq");
+    document.getElementById("plist").hidden = true; document.getElementById("psearch").hidden = true;
+    document.getElementById("hq-go").hidden = true; document.getElementById("hq-bar").hidden = true; box.hidden = false;
+    box.innerHTML = '<form class="noteform" id="co-form" style="border-color:var(--accent)"><p style="margin:0;font-weight:600">📋 רכז/ת שכבה · ' + esc(team.name) + '</p>' +
+      '<label for="co-code">קוד<input type="password" id="co-code" inputmode="numeric" autocomplete="off"></label>' +
+      '<div class="btns"><button type="submit" class="save" style="background:var(--accent);border-color:var(--accent)">כניסה</button><button type="button" id="co-back">חזרה</button></div><p class="hint" id="co-err"></p></form>';
+    document.getElementById("co-back").onclick = function () { location.reload(); };
+    document.getElementById("co-form").onsubmit = function (e) {
+      e.preventDefault();
+      sha256("coord:" + document.getElementById("co-code").value.trim()).then(function (h) {
+        if (!d.coord_hash || h !== d.coord_hash) { document.getElementById("co-err").textContent = "הקוד לא נכון."; return; }
+        set("coord", JSON.stringify({ team: team.name, at: Date.now() }));
+        go("coord:" + team.name);
+      });
+    };
+    document.getElementById("co-code").focus();
   }
   function cmdBoard(d, team, code) {
     var box = document.getElementById("hq"), api = d.api || "";
@@ -1913,6 +1997,7 @@ function startApp(DATA, TEAM) {
         rest.forEach(function (p) { placed[p.id] = 1; });
         var mentors = rest.filter(isMentor), instructors = rest.filter(function (p) { return !isMentor(p); });
         return mgrCard(t) + '<section class="team"><header><h2>' + esc(t.name) + '</h2><span>' + (rest.length + (lead ? 1 : 0)) + ' אנשים</span></header><div class="body">' +
+          (d.coord_hash ? '<button type="button" class="lead cmdbtn" data-coord="' + esc(t.name) + '"><span class="crown">📋</span><span><b>רכז/ת שכבה</b><small>מבט על השכבה · כניסה בקוד</small></span></button>' : "") +
           (t.commander ? '<button type="button" class="lead cmdbtn" data-cmd="' + esc(t.name) + '"><span class="crown">🎖️</span><span><b>' + esc(t.commander) + '</b><small>מפקד הצוות</small></span></button>' : "") +
           (lead ? '<button type="button" class="lead" data-id="' + esc(lead.id) + '"><span class="crown">👑</span><span><b>' + esc(lead.name) + '</b><small>ראש צוות' + (lead.homerooms.length ? ' · ' + esc(lead.homerooms.join(", ")) : "") + '</small></span></button>' : "") +
           '<div class="grid2">' + instructors.map(btn).join("") + '</div>' +
@@ -1948,6 +2033,8 @@ function startApp(DATA, TEAM) {
         var hb = document.getElementById("hq-go"); hb.hidden = false; hb.onclick = function () { hqLogin(d.api || ""); };
       }
       list.onclick = function (e) {
+        var co = e.target.closest("button[data-coord]");
+        if (co) { coordOpen(d, (d.teams || []).filter(function (t) { return t.name === co.getAttribute("data-coord"); })[0]); return; }
         var mg = e.target.closest("button[data-mgr]");
         if (mg) { var m = (d.managers || []).filter(function (x) { return x.id === mg.getAttribute("data-mgr"); })[0];
           if (m) cmdOpen(d, { name: m.title, commander: m.name, commander_id: m.id, mgr: true }); return; }
@@ -1996,6 +2083,20 @@ function startApp(DATA, TEAM) {
   }
 
   json("data/staff.json").then(function (st) {
+    if (/^coord:/.test(me)) {  // a grade coordinator: the grade's days and exams, no personal timetable
+      var cTeam = (st.teams || []).filter(function (t) { return t.name === me.slice(6); })[0];
+      if (!cTeam || !coordSession(cTeam.name)) { set("me", null); visit("picker"); showPicker(); return; }
+      var src = cTeam.commander_id || cTeam.lead;
+      return json("data/" + encodeURIComponent(src) + ".json").then(function (x) {
+        document.documentElement.dir = "rtl"; document.documentElement.lang = "he";
+        document.title = "רכז/ת שכבה · " + cTeam.name;
+        app.hidden = false;
+        var gl = (cTeam.grades || []).length ? "שכבה " + cTeam.grades.join(", ") : cTeam.name;
+        startApp({ teacher: "רכז/ת " + gl, roles: [], api: st.api, source: x.source || "", team_name: cTeam.name, grade_label: gl, grade_agenda: x.grade_agenda || [],
+          cmd: { team: cTeam.name, code: "", coord: true, grades: cTeam.grades || [] }, changelog: [], history: [],
+          latest: { lessons: [], days: (x.latest || {}).days || [], agenda: [], homerooms: [], class_end: {}, scraped_at: (x.latest || {}).scraped_at } }, null);
+      });
+    }
     var person = st.people.filter(function (p) { return p.id === me; })[0];
     // A commander who also teaches (on the staff list) gets commander mode while signed in as commander,
     // and their plain timetable otherwise.
