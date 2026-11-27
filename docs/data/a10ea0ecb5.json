@@ -10,41 +10,11 @@
  "summary_sent": "",
  "latest": {
   "homeroom": null,
-  "scraped_at": "2026-11-26T21:31+02:00",
+  "scraped_at": "2026-11-27T20:30+02:00",
   "class_end": {},
   "site_update": "מעודכן ל: 26.11.2026, שעה: 15:03",
   "class_count": 30,
   "days": [
-   {
-    "date": "2026-11-22",
-    "weekday": "יום ראשון",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-23",
-    "weekday": "יום שני",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-24",
-    "weekday": "יום שלישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-25",
-    "weekday": "יום רביעי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-26",
-    "weekday": "יום חמישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-27",
-    "weekday": "יום שישי",
-    "holidays": []
-   },
    {
     "date": "2026-11-29",
     "weekday": "יום ראשון",
@@ -74,155 +44,51 @@
     "date": "2026-12-04",
     "weekday": "יום שישי",
     "holidays": []
+   },
+   {
+    "date": "2026-12-06",
+    "weekday": "יום ראשון",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-07",
+    "weekday": "יום שני",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-08",
+    "weekday": "יום שלישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-09",
+    "weekday": "יום רביעי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-10",
+    "weekday": "יום חמישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-11",
+    "weekday": "יום שישי",
+    "holidays": [
+     "חנוכה"
+    ]
    }
   ],
   "lessons": [
-   {
-    "date": "2026-11-22",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "צוות תיכון שבועי",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "חדר דיונים - מנהל התיכון"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "צוות תיכון שבועי",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "חדר דיונים - מנהל התיכון"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 2,
-    "start": "08:55",
-    "end": "09:40",
-    "subject": "קפ\"ק מורחב",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "קפ\"ק מורחב",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "שיחת צוות י״ב",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "ביטול תיגבור במתמטיקה, אלבר יעל",
-    "status": "regular",
-    "classes": [
-     "יג'- 1"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 1",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול תיגבור במתמטיקה, אלבר יעל",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "תיגבור במתמטיקה",
-    "status": "cancelled",
-    "classes": [
-     "יג'- 1"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 1",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול תיגבור במתמטיקה, אלבר יעל",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "צוות רכזים פדגוגי",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "צוות אילוצי מערכת",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
    {
     "date": "2026-11-29",
     "hour": 3,
@@ -328,6 +194,123 @@
    },
    {
     "date": "2026-12-03",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "צוות אילוצי מערכת",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "צוות תיכון שבועי",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "חדר דיונים - מנהל התיכון"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 4,
+    "start": "10:40",
+    "end": "11:25",
+    "subject": "צוות תיכון שבועי",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "חדר דיונים - מנהל התיכון"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 2,
+    "start": "08:55",
+    "end": "09:40",
+    "subject": "קפ\"ק מורחב",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "קפ\"ק מורחב",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "שיחת צוות י״ב",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "תיגבור במתמטיקה",
+    "status": "regular",
+    "classes": [
+     "יג'- 1"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "צוות רכזים פדגוגי",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
     "hour": 6,
     "start": "12:15",
     "end": "13:00",
@@ -803,7 +786,7 @@
    "date": "2026-11-29",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-29",
@@ -843,14 +826,14 @@
    "date": "2026-11-30",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": []
   },
   {
    "date": "2026-12-01",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-01",
@@ -900,7 +883,7 @@
    "date": "2026-12-02",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-02",
@@ -923,7 +906,7 @@
    "date": "2026-12-03",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-03",
@@ -959,26 +942,186 @@
    "date": "2026-12-04",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": []
+  },
+  {
+   "date": "2026-12-06",
+   "weekday": "יום ראשון",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-06",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "צוות תיכון שבועי",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "חדר דיונים - מנהל התיכון"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 4,
+     "start": "10:40",
+     "end": "11:25",
+     "subject": "צוות תיכון שבועי",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "חדר דיונים - מנהל התיכון"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-07",
+   "weekday": "יום שני",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": []
+  },
+  {
+   "date": "2026-12-08",
+   "weekday": "יום שלישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-08",
+     "hour": 2,
+     "start": "08:55",
+     "end": "09:40",
+     "subject": "קפ\"ק מורחב",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "קפ\"ק מורחב",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "שיחת צוות י״ב",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-09",
+   "weekday": "יום רביעי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-09",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "תיגבור במתמטיקה",
+     "status": "regular",
+     "classes": [
+      "יג'- 1"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-10",
+   "weekday": "יום חמישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-10",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "צוות רכזים פדגוגי",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "צוות אילוצי מערכת",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-11",
+   "weekday": "יום שישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": []
   }
  ],
  "grade_agenda": [
-  {
-   "kind": "אירוע",
-   "date": "2026-11-26",
-   "title": "שבוע כנף לכיתות חשמל יב 5 + יב6",
-   "hours": [
-    0,
-    10
-   ],
-   "text": "26.11.2026, שבוע כנף לכיתות חשמל יב 5 + יב6 משיעור 0 עד שיעור 10 לכיתות: יב'- 5, יב'- 6",
-   "my_classes": [
-    "יב'- 5",
-    "יב'- 6"
-   ],
-   "my_lessons": []
-  },
   {
    "kind": "אירוע",
    "date": "2026-11-29",
@@ -1094,7 +1237,7 @@
     3,
     4
    ],
-   "text": "15.12.2026, מבחן במיקרו מעבדים יב3+ יב4 משיעור 3 עד שיעור 4 לכיתות: יב'- 3 בקבוצה של טמנוגרדסקי שון, חדר: 55 יב-3",
+   "text": "15.12.2026, מבחן במיקרו מעבדים יב3+ יב4 משיעור 3 עד שיעור 4 לכיתות: יב'- 3 בקבוצה של מילץ אליאור",
    "my_classes": [
     "יב'- 3",
     "יב'- 4"
@@ -1162,7 +1305,7 @@
     5,
     6
    ],
-   "text": "22.12.2026, מבחן במתמטיקה שכבה יב משיעור 5 עד שיעור 6 לכיתות: יב'- 1 בקבוצה של רוזנברג אריקה, חדר: 19 מע' מחשבים",
+   "text": "22.12.2026, מבחן במתמטיקה שכבה יב משיעור 5 עד שיעור 6 לכיתות: יב'- 1 בקבוצה של איליאגויוב סיוון, חדר: 53 יב-1",
    "my_classes": [
     "יב'- 1",
     "יב'- 2",
@@ -1247,7 +1390,7 @@
     3,
     4
    ],
-   "text": "30.12.2026, מבחן בפרויקטים יב3+ יב4 משיעור 3 עד שיעור 4 לכיתות: יב'- 3 בקבוצה של עשור אביתר",
+   "text": "30.12.2026, מבחן בפרויקטים יב3+ יב4 משיעור 3 עד שיעור 4 לכיתות: יב'- 3 בקבוצה של גלדון לובוב",
    "my_classes": [
     "יב'- 3",
     "יב'- 4"

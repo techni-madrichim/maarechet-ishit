@@ -10,41 +10,11 @@
  "summary_sent": "",
  "latest": {
   "homeroom": null,
-  "scraped_at": "2026-11-26T21:31+02:00",
+  "scraped_at": "2026-11-27T20:30+02:00",
   "class_end": {},
   "site_update": "מעודכן ל: 26.11.2026, שעה: 15:03",
   "class_count": 30,
   "days": [
-   {
-    "date": "2026-11-22",
-    "weekday": "יום ראשון",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-23",
-    "weekday": "יום שני",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-24",
-    "weekday": "יום שלישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-25",
-    "weekday": "יום רביעי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-26",
-    "weekday": "יום חמישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-27",
-    "weekday": "יום שישי",
-    "holidays": []
-   },
    {
     "date": "2026-11-29",
     "weekday": "יום ראשון",
@@ -74,173 +44,51 @@
     "date": "2026-12-04",
     "weekday": "יום שישי",
     "holidays": []
-   }
-  ],
-  "lessons": [
-   {
-    "date": "2026-11-22",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "תורת החשמל",
-    "status": "regular",
-    "classes": [
-     "יא- 6"
-    ],
-    "rooms": [
-     "39 כיתה חכמה"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
    },
    {
-    "date": "2026-11-22",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "תורת החשמל",
-    "status": "regular",
-    "classes": [
-     "יא- 6"
-    ],
-    "rooms": [
-     "39 כיתה חכמה"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 2,
-    "start": "08:55",
-    "end": "09:40",
-    "subject": "קפ\"ק מורחב",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "קפ\"ק מורחב",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "תורת החשמל",
-    "status": "regular",
-    "classes": [
-     "יא- 6"
-    ],
-    "rooms": [
-     "39 כיתה חכמה"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "תורת החשמל",
-    "status": "regular",
-    "classes": [
-     "יא- 6"
-    ],
-    "rooms": [
-     "39 כיתה חכמה"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "תורת החשמל",
-    "status": "cancelled",
-    "classes": [
-     "יא- 6"
-    ],
-    "rooms": [
-     "39 כיתה חכמה"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יא- 6",
-      "type": "אירוע",
-      "text": "סיור משואה- שכבת יא",
-      "mentions_me": false
-     }
+    "date": "2026-12-06",
+    "weekday": "יום ראשון",
+    "holidays": [
+     "חנוכה"
     ]
    },
    {
-    "date": "2026-11-25",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "מקצוע הכוונה",
-    "status": "regular",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
+    "date": "2026-12-07",
+    "weekday": "יום שני",
+    "holidays": [
+     "חנוכה"
+    ]
    },
    {
-    "date": "2026-11-25",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "מקצוע הכוונה",
-    "status": "regular",
-    "classes": [
-     "יג'- 2"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
+    "date": "2026-12-08",
+    "weekday": "יום שלישי",
+    "holidays": [
+     "חנוכה"
+    ]
    },
    {
-    "date": "2026-11-26",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "צוות רכזים פדגוגי",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
+    "date": "2026-12-09",
+    "weekday": "יום רביעי",
+    "holidays": [
+     "חנוכה"
+    ]
    },
+   {
+    "date": "2026-12-10",
+    "weekday": "יום חמישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-11",
+    "weekday": "יום שישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   }
+  ],
+  "lessons": [
    {
     "date": "2026-11-29",
     "hour": 7,
@@ -397,38 +245,167 @@
     "co_teachers": [],
     "other_lessons": [],
     "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "תורת החשמל",
+    "status": "regular",
+    "classes": [
+     "יא- 6"
+    ],
+    "rooms": [
+     "39 כיתה חכמה"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "תורת החשמל",
+    "status": "regular",
+    "classes": [
+     "יא- 6"
+    ],
+    "rooms": [
+     "39 כיתה חכמה"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 2,
+    "start": "08:55",
+    "end": "09:40",
+    "subject": "קפ\"ק מורחב",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "קפ\"ק מורחב",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "תורת החשמל",
+    "status": "regular",
+    "classes": [
+     "יא- 6"
+    ],
+    "rooms": [
+     "39 כיתה חכמה"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "תורת החשמל",
+    "status": "regular",
+    "classes": [
+     "יא- 6"
+    ],
+    "rooms": [
+     "39 כיתה חכמה"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "תורת החשמל",
+    "status": "regular",
+    "classes": [
+     "יא- 6"
+    ],
+    "rooms": [
+     "39 כיתה חכמה"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "מקצוע הכוונה",
+    "status": "regular",
+    "classes": [
+     "יד'- 2"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "מקצוע הכוונה",
+    "status": "regular",
+    "classes": [
+     "יג'- 2"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "צוות רכזים פדגוגי",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
    }
   ],
   "class_changes": [],
   "agenda": [
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן בהמרת אנרגיה",
-    "hours": [
-     1,
-     2
-    ],
-    "text": "26.11.2026, מבחן בהמרת אנרגיה משיעור 1 עד שיעור 2 לכיתות: יג'- 2 בקבוצה של דטינקה כהן אסף, חדר: 98 - יג 2",
-    "my_classes": [
-     "יג'- 2"
-    ],
-    "my_lessons": []
-   },
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן בספרות שכבה יא",
-    "hours": [
-     5,
-     6
-    ],
-    "text": "26.11.2026, מבחן בספרות שכבה יא משיעור 5 עד שיעור 6 לכיתות: יא- 6 בקבוצה של שריקי יונית, חדר: 48 יא6",
-    "my_classes": [
-     "יא- 6"
-    ],
-    "my_lessons": []
-   },
    {
     "kind": "אירוע",
     "date": "2026-11-29",
@@ -507,7 +484,7 @@
      3,
      4
     ],
-    "text": "02.12.2026, מבחן בתורת החשמל א משיעור 3 עד שיעור 4 לכיתות: יג'- 2 בקבוצה של פוקס איליה, חדר: 98 - יג 2",
+    "text": "02.12.2026, מבחן בתורת החשמל א משיעור 3 עד שיעור 4 לכיתות: יג'- 2 בקבוצה של פוקס איליה, חדר: 82 הקבצה ט",
     "my_classes": [
      "יג'- 2"
     ],
@@ -689,7 +666,7 @@
      2,
      3
     ],
-    "text": "27.12.2026, מבחן במתמטיקה שכבה יא משיעור 2 עד שיעור 3 לכיתות: יא'- 2...יא'- 5, יא- 6 בקבוצה של סינואני אסתר, חדר: 48 יא6",
+    "text": "27.12.2026, מבחן במתמטיקה שכבה יא משיעור 2 עד שיעור 3 לכיתות: יא'- 2...יא'- 5, יא- 6 בקבוצה של צרפתי סיגל, חדר: 51 יא-2",
     "my_classes": [
      "יא- 6"
     ],
@@ -731,7 +708,7 @@
      1,
      2
     ],
-    "text": "04.01.2027, מבחן באנגלית (מתכונת) שכבת י\"א משיעור 1 עד שיעור 2 לכיתות: יא'- 3...יא'- 5, יא- 6 בקבוצה של פיכמן אינה, חדר: 45 - הקבצה יא",
+    "text": "04.01.2027, מבחן באנגלית (מתכונת) שכבת י\"א משיעור 1 עד שיעור 2 לכיתות: יא'- 3...יא'- 5, יא- 6 בקבוצה של ניסנוב לאה, חדר: 47 הקבצה יא",
     "my_classes": [
      "יא- 6"
     ],
@@ -977,7 +954,7 @@
    "date": "2026-11-29",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-29",
@@ -1019,14 +996,14 @@
    "date": "2026-11-30",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": []
   },
   {
    "date": "2026-12-01",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-01",
@@ -1096,7 +1073,7 @@
    "date": "2026-12-02",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-02",
@@ -1151,7 +1128,7 @@
    "date": "2026-12-03",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-03",
@@ -1173,40 +1150,226 @@
    "date": "2026-12-04",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": []
+  },
+  {
+   "date": "2026-12-06",
+   "weekday": "יום ראשון",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-06",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "תורת החשמל",
+     "status": "regular",
+     "classes": [
+      "יא- 6"
+     ],
+     "rooms": [
+      "39 כיתה חכמה"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "תורת החשמל",
+     "status": "regular",
+     "classes": [
+      "יא- 6"
+     ],
+     "rooms": [
+      "39 כיתה חכמה"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-07",
+   "weekday": "יום שני",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": []
+  },
+  {
+   "date": "2026-12-08",
+   "weekday": "יום שלישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-08",
+     "hour": 2,
+     "start": "08:55",
+     "end": "09:40",
+     "subject": "קפ\"ק מורחב",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "קפ\"ק מורחב",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "תורת החשמל",
+     "status": "regular",
+     "classes": [
+      "יא- 6"
+     ],
+     "rooms": [
+      "39 כיתה חכמה"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "תורת החשמל",
+     "status": "regular",
+     "classes": [
+      "יא- 6"
+     ],
+     "rooms": [
+      "39 כיתה חכמה"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-09",
+   "weekday": "יום רביעי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-09",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "תורת החשמל",
+     "status": "regular",
+     "classes": [
+      "יא- 6"
+     ],
+     "rooms": [
+      "39 כיתה חכמה"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "מקצוע הכוונה",
+     "status": "regular",
+     "classes": [
+      "יד'- 2"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "מקצוע הכוונה",
+     "status": "regular",
+     "classes": [
+      "יג'- 2"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-10",
+   "weekday": "יום חמישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-10",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "צוות רכזים פדגוגי",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-11",
+   "weekday": "יום שישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": []
   }
  ],
  "grade_agenda": [
-  {
-   "kind": "מבחן",
-   "date": "2026-11-26",
-   "title": "מבחן בהמרת אנרגיה",
-   "hours": [
-    1,
-    2
-   ],
-   "text": "26.11.2026, מבחן בהמרת אנרגיה משיעור 1 עד שיעור 2 לכיתות: יג'- 2 בקבוצה של דטינקה כהן אסף, חדר: 98 - יג 2",
-   "my_classes": [
-    "יג'- 2"
-   ],
-   "my_lessons": []
-  },
-  {
-   "kind": "מבחן",
-   "date": "2026-11-26",
-   "title": "מבחן במערכות תקשורת",
-   "hours": [
-    3,
-    4
-   ],
-   "text": "26.11.2026, מבחן במערכות תקשורת משיעור 3 עד שיעור 4 לכיתות: יג'- 3 בקבוצה של פיינלב מקסים, חדר: 96 יג -3",
-   "my_classes": [
-    "יג'- 3",
-    "יג'- 4"
-   ],
-   "my_lessons": []
-  },
   {
    "kind": "מבחן",
    "date": "2026-11-29",
@@ -1229,7 +1392,7 @@
     1,
     2
    ],
-   "text": "30.11.2026, מבחן ב DSP משיעור 1 עד שיעור 2 לכיתות: יד'- 3 בקבוצה של לוי אייל, חדר: 89 יד-3",
+   "text": "30.11.2026, מבחן ב DSP משיעור 1 עד שיעור 2 לכיתות: יד'- 3 בקבוצה של לוי אייל, חדר: 97 הקבצה מכללה",
    "my_classes": [
     "יד'- 3"
    ],
@@ -1329,7 +1492,7 @@
     3,
     4
    ],
-   "text": "02.12.2026, מבחן בתורת החשמל א משיעור 3 עד שיעור 4 לכיתות: יג'- 2 בקבוצה של פוקס איליה, חדר: 98 - יג 2",
+   "text": "02.12.2026, מבחן בתורת החשמל א משיעור 3 עד שיעור 4 לכיתות: יג'- 2 בקבוצה של פוקס איליה, חדר: 82 הקבצה ט",
    "my_classes": [
     "יג'- 2"
    ],
@@ -1343,7 +1506,7 @@
     3,
     4
    ],
-   "text": "02.12.2026, מבחן בתקשורת מחשבים משיעור 3 עד שיעור 4 לכיתות: יד'- 3 בקבוצה של טסליצקי מרק, חדר: 89 יד-3",
+   "text": "02.12.2026, מבחן בתקשורת מחשבים משיעור 3 עד שיעור 4 לכיתות: יד'- 3 בקבוצה של טסליצקי מרק, חדר: 97 הקבצה מכללה",
    "my_classes": [
     "יד'- 3"
    ],

@@ -11,41 +11,11 @@
  "summary_sent": "",
  "latest": {
   "homeroom": null,
-  "scraped_at": "2026-11-26T21:31+02:00",
+  "scraped_at": "2026-11-27T20:30+02:00",
   "class_end": {},
   "site_update": "מעודכן ל: 26.11.2026, שעה: 15:03",
   "class_count": 30,
   "days": [
-   {
-    "date": "2026-11-22",
-    "weekday": "יום ראשון",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-23",
-    "weekday": "יום שני",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-24",
-    "weekday": "יום שלישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-25",
-    "weekday": "יום רביעי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-26",
-    "weekday": "יום חמישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-27",
-    "weekday": "יום שישי",
-    "holidays": []
-   },
    {
     "date": "2026-11-29",
     "weekday": "יום ראשון",
@@ -75,274 +45,51 @@
     "date": "2026-12-04",
     "weekday": "יום שישי",
     "holidays": []
+   },
+   {
+    "date": "2026-12-06",
+    "weekday": "יום ראשון",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-07",
+    "weekday": "יום שני",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-08",
+    "weekday": "יום שלישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-09",
+    "weekday": "יום רביעי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-10",
+    "weekday": "יום חמישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-11",
+    "weekday": "יום שישי",
+    "holidays": [
+     "חנוכה"
+    ]
    }
   ],
   "lessons": [
-   {
-    "date": "2026-11-22",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "חונכות · תנ\"ך - בן אל נפוסי, סנד עזמי",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "י' - 2"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "חונכות · לשון - ניקול, אריקה, איליי, דנה",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "ט' - 4"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "חונכות · אנגלית - איליה, אריקה, מיכאל, הנו כנאן",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "ט' - 4"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "ישיבה · שיחת צוות חונכות",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "חונכות · אנגלית - הראל ברונשטיין, ליאל מירחור",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "י' - 1"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "חונכות · לשון - דניאל",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "י - 6"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "חונכות · אנגלית - אלן בן, ליאם ווינר, נויה, דניאל פ",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "ט' - 3"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "חונכות · אנגלית - קטיה, שליו יצחקי",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "י' - 3"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "חונכות · אנגלית - אליאנה קופרי, מאיה",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "ט' - 1"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "חונכות · אנגלית - קריסטיניה וליאנה",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "ט' - 2"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "חונכות · מתמטיקה - עמית, מישל, דוד",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "ט' - 3"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "חונכות · אנגלית - ירדן, דניאל פנפילוב",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "ט' - 1"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 9,
-    "start": "15:15",
-    "end": "16:00",
-    "subject": "תיגבור במתמטיקה",
-    "status": "regular",
-    "classes": [
-     "יג'- 4"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "שיחת צוות י׳",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "חונכות · מתמטיקה הקבצה ב' - איתי, ארתור, מילנה, הדר",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "ט' - 1"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "ישיבה · שיחת צוות י'",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "חונכות · לשון - הראל ברונשטיין, ולדיסלב מקרוב, דיאנה נמוהאי",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "י' - 1"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
    {
     "date": "2026-11-29",
     "hour": 1,
@@ -629,6 +376,271 @@
     "co_teachers": [],
     "other_lessons": [],
     "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "חונכות · תנ\"ך - בן אל נפוסי, סנד עזמי",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "י' - 2"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "חונכות · לשון - ניקול, אריקה, איליי, דנה",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "ט' - 4"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "חונכות · אנגלית - איליה, אריקה, מיכאל, הנו כנאן",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "ט' - 4"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "ישיבה · שיחת צוות חונכות",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "חונכות · אנגלית - הראל ברונשטיין, ליאל מירחור",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "י' - 1"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "חונכות · לשון - דניאל",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "י - 6"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "חונכות · אנגלית - אלן בן, ליאם ווינר, נויה, דניאל פ",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "ט' - 3"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "חונכות · אנגלית - קטיה, שליו יצחקי",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "י' - 3"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 4,
+    "start": "10:40",
+    "end": "11:25",
+    "subject": "חונכות · אנגלית - אליאנה קופרי, מאיה",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "ט' - 1"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "חונכות · אנגלית - קריסטיניה וליאנה",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "ט' - 2"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "חונכות · מתמטיקה - עמית, מישל, דוד",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "ט' - 3"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "חונכות · אנגלית - ירדן, דניאל פנפילוב",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "ט' - 1"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 9,
+    "start": "15:15",
+    "end": "16:00",
+    "subject": "תיגבור במתמטיקה",
+    "status": "regular",
+    "classes": [
+     "יג'- 4"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "שיחת צוות י׳",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "חונכות · מתמטיקה הקבצה ב' - איתי, ארתור, מילנה, הדר",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "ט' - 1"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 4,
+    "start": "10:40",
+    "end": "11:25",
+    "subject": "ישיבה · שיחת צוות י'",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "חונכות · לשון - הראל ברונשטיין, ולדיסלב מקרוב, דיאנה נמוהאי",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "י' - 1"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
    }
   ],
   "class_changes": [
@@ -640,91 +652,6 @@
    }
   ],
   "agenda": [
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן בלוגיקה ספרתית כולל תוספת זמן",
-    "hours": [
-     3,
-     5
-    ],
-    "text": "26.11.2026, מבחן בלוגיקה ספרתית כולל תוספת זמן משיעור 3 עד שיעור 5 לכיתות: י'-1 בקבוצה של ברקן דרור, חדר: 68 י-1",
-    "my_classes": [
-     "י' - 1",
-     "י' - 2"
-    ],
-    "my_lessons": []
-   },
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן במערכות משובצות מחשב י3+ י4",
-    "hours": [
-     3,
-     4
-    ],
-    "text": "26.11.2026, מבחן במערכות משובצות מחשב י3+ י4 משיעור 3 עד שיעור 4 לכיתות: י'-3 בקבוצה של עשור אביתר, חדר: 66 י-3",
-    "my_classes": [
-     "י' - 3"
-    ],
-    "my_lessons": []
-   },
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן במערכות משובצות מחשב י3+ י4 תוספת זמן",
-    "hours": [
-     5,
-     5
-    ],
-    "text": "26.11.2026, מבחן במערכות משובצות מחשב י3+ י4 תוספת זמן שיעור 5 לכיתות: י'-3 בקבוצה של עשור אביתר, חדר: 72 הקבצה י",
-    "my_classes": [
-     "י' - 3"
-    ],
-    "my_lessons": []
-   },
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן במערכות תקשורת",
-    "hours": [
-     3,
-     4
-    ],
-    "text": "26.11.2026, מבחן במערכות תקשורת משיעור 3 עד שיעור 4 לכיתות: יג'- 4 בקבוצה של פיינלב מקסים, חדר: 95 יג- 4",
-    "my_classes": [
-     "יג'- 4"
-    ],
-    "my_lessons": []
-   },
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן בספרות שכבה יא",
-    "hours": [
-     5,
-     6
-    ],
-    "text": "26.11.2026, מבחן בספרות שכבה יא משיעור 5 עד שיעור 6 לכיתות: יא'- 4 בקבוצה של שויד הודיה, חדר: 44 יא4",
-    "my_classes": [
-     "יא'- 4"
-    ],
-    "my_lessons": []
-   },
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן בספרות שכבה יא הקלות",
-    "hours": [
-     5,
-     6
-    ],
-    "text": "26.11.2026, מבחן בספרות שכבה יא הקלות משיעור 5 עד שיעור 6 לכיתות: יא'- 4 בקבוצה של שויד הודיה, חדר: 19 מע' מחשבים",
-    "my_classes": [
-     "יא'- 4"
-    ],
-    "my_lessons": []
-   },
    {
     "kind": "אירוע",
     "date": "2026-11-29",
@@ -952,7 +879,7 @@
      3,
      4
     ],
-    "text": "13.12.2026, מבחן בחשמל ואלק' שכבה ט' משיעור 3 עד שיעור 4 לכיתות: ט'-1 בקבוצה של שיראזי עידו",
+    "text": "13.12.2026, מבחן בחשמל ואלק' שכבה ט' משיעור 3 עד שיעור 4 לכיתות: ט'-1 בקבוצה של יעקובי עוזיאל, חדר: 79 ט-1",
     "my_classes": [
      "ט' - 1",
      "ט' - 2",
@@ -1098,7 +1025,7 @@
      1,
      2
     ],
-    "text": "17.12.2026, מבחן באזרחות שכבה ט משיעור 1 עד שיעור 2 לכיתות: ט'-1 בקבוצה של גוזלן אורן, חדר: 79 ט-1",
+    "text": "17.12.2026, מבחן באזרחות שכבה ט משיעור 1 עד שיעור 2 לכיתות: ט'-1 בקבוצה של זינמן ירון, חדר: 84 הקבצה ט1",
     "my_classes": [
      "ט' - 1",
      "ט' - 2",
@@ -1305,7 +1232,7 @@
      2,
      3
     ],
-    "text": "27.12.2026, מבחן במתמטיקה שכבה יא משיעור 2 עד שיעור 3 לכיתות: יא'- 2...יא'- 5, יא- 6 בקבוצה של סינואני אסתר, חדר: 48 יא6",
+    "text": "27.12.2026, מבחן במתמטיקה שכבה יא משיעור 2 עד שיעור 3 לכיתות: יא'- 2...יא'- 5, יא- 6 בקבוצה של צרפתי סיגל, חדר: 51 יא-2",
     "my_classes": [
      "יא'- 4"
     ],
@@ -1319,7 +1246,7 @@
      1,
      2
     ],
-    "text": "27.12.2026, מבחן בספרות שכבה ט' משיעור 1 עד שיעור 2 לכיתות: ט'-1 בקבוצה של שויד הודיה, חדר: 79 ט-1",
+    "text": "27.12.2026, מבחן בספרות שכבה ט' משיעור 1 עד שיעור 2 לכיתות: ט'-1 בקבוצה של שריקי יונית",
     "my_classes": [
      "ט' - 1",
      "ט' - 2",
@@ -1384,7 +1311,7 @@
      1,
      2
     ],
-    "text": "29.12.2026, מבחן במתמטיקה שכבה י' משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2...י'-5 בקבוצה של צרפתי סיגל, חדר: 70 י-5",
+    "text": "29.12.2026, מבחן במתמטיקה שכבה י' משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2...י'-5 בקבוצה של גרינברג אביב רונית, חדר: 66 י-3",
     "my_classes": [
      "י - 6",
      "י' - 2",
@@ -1428,7 +1355,7 @@
      1,
      2
     ],
-    "text": "31.12.2026, מבחן בפיזיקה שכבה י משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2, י'-3 בקבוצה של ברמניק אירינה, חדר: 67 י-2",
+    "text": "31.12.2026, מבחן בפיזיקה שכבה י משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2, י'-3 בקבוצה של גרופמכר מיכל, חדר: 65 י-4",
     "my_classes": [
      "י - 6",
      "י' - 1",
@@ -1490,7 +1417,7 @@
      1,
      2
     ],
-    "text": "04.01.2027, מבחן באנגלית (מתכונת) שכבת י\"א משיעור 1 עד שיעור 2 לכיתות: יא'- 3...יא'- 5, יא- 6 בקבוצה של פיכמן אינה, חדר: 45 - הקבצה יא",
+    "text": "04.01.2027, מבחן באנגלית (מתכונת) שכבת י\"א משיעור 1 עד שיעור 2 לכיתות: יא'- 3...יא'- 5, יא- 6 בקבוצה של ניסנוב לאה, חדר: 47 הקבצה יא",
     "my_classes": [
      "יא'- 4"
     ],
@@ -3583,7 +3510,7 @@
    "date": "2026-11-29",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-29",
@@ -3661,7 +3588,7 @@
    "date": "2026-11-30",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-30",
@@ -3731,7 +3658,7 @@
    "date": "2026-12-01",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-01",
@@ -3787,7 +3714,7 @@
    "date": "2026-12-02",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-02",
@@ -3842,7 +3769,7 @@
    "date": "2026-12-03",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-03",
@@ -3910,7 +3837,331 @@
    "date": "2026-12-04",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": []
+  },
+  {
+   "date": "2026-12-06",
+   "weekday": "יום ראשון",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-06",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "חונכות · תנ\"ך - בן אל נפוסי, סנד עזמי",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "י' - 2"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "חונכות · לשון - ניקול, אריקה, איליי, דנה",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "ט' - 4"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "חונכות · אנגלית - איליה, אריקה, מיכאל, הנו כנאן",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "ט' - 4"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-07",
+   "weekday": "יום שני",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-07",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "ישיבה · שיחת צוות חונכות",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "חונכות · אנגלית - הראל ברונשטיין, ליאל מירחור",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "י' - 1"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "חונכות · לשון - דניאל",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "י - 6"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "חונכות · אנגלית - אלן בן, ליאם ווינר, נויה, דניאל פ",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "ט' - 3"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-08",
+   "weekday": "יום שלישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-08",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "חונכות · אנגלית - קטיה, שליו יצחקי",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "י' - 3"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 4,
+     "start": "10:40",
+     "end": "11:25",
+     "subject": "חונכות · אנגלית - אליאנה קופרי, מאיה",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "ט' - 1"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "חונכות · אנגלית - קריסטיניה וליאנה",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "ט' - 2"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-09",
+   "weekday": "יום רביעי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-09",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "חונכות · מתמטיקה - עמית, מישל, דוד",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "ט' - 3"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "חונכות · אנגלית - ירדן, דניאל פנפילוב",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "ט' - 1"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 9,
+     "start": "15:15",
+     "end": "16:00",
+     "subject": "תיגבור במתמטיקה",
+     "status": "regular",
+     "classes": [
+      "יג'- 4"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-10",
+   "weekday": "יום חמישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-10",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "שיחת צוות י׳",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "חונכות · מתמטיקה הקבצה ב' - איתי, ארתור, מילנה, הדר",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "ט' - 1"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 4,
+     "start": "10:40",
+     "end": "11:25",
+     "subject": "ישיבה · שיחת צוות י'",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "חונכות · לשון - הראל ברונשטיין, ולדיסלב מקרוב, דיאנה נמוהאי",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "י' - 1"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-11",
+   "weekday": "יום שישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": []
   }
  ]

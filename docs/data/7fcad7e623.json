@@ -10,41 +10,11 @@
  "summary_sent": "",
  "latest": {
   "homeroom": null,
-  "scraped_at": "2026-11-26T21:31+02:00",
+  "scraped_at": "2026-11-27T20:30+02:00",
   "class_end": {},
   "site_update": "מעודכן ל: 26.11.2026, שעה: 15:03",
   "class_count": 30,
   "days": [
-   {
-    "date": "2026-11-22",
-    "weekday": "יום ראשון",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-23",
-    "weekday": "יום שני",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-24",
-    "weekday": "יום שלישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-25",
-    "weekday": "יום רביעי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-26",
-    "weekday": "יום חמישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-27",
-    "weekday": "יום שישי",
-    "holidays": []
-   },
    {
     "date": "2026-11-29",
     "weekday": "יום ראשון",
@@ -74,1303 +44,52 @@
     "date": "2026-12-04",
     "weekday": "יום שישי",
     "holidays": []
+   },
+   {
+    "date": "2026-12-06",
+    "weekday": "יום ראשון",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-07",
+    "weekday": "יום שני",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-08",
+    "weekday": "יום שלישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-09",
+    "weekday": "יום רביעי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-10",
+    "weekday": "יום חמישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-11",
+    "weekday": "יום שישי",
+    "holidays": [
+     "חנוכה"
+    ]
    }
   ],
   "lessons": [
    {
-    "date": "2026-11-22",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "שפת תכנות",
-    "status": "regular",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [
-     "88 יד- 2"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "מבחן במיקרו מעבדים יב3+יב4, 55 יב-3 · לקבוצה של טמנוגרדסקי שון",
-    "status": "regular",
-    "classes": [
-     "יב'- 3"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "21 מע' אלקט'",
-      "teacher": "עשור אביתר"
-     },
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "",
-      "teacher": "פלדשטיין מישל"
-     },
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "",
-      "teacher": "אסולין שובל"
-     },
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "22 מע' מחשבים",
-      "teacher": "מצה מוטי"
-     },
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "25 מעבדת מחשבים",
-      "teacher": "גלדון לובוב"
-     }
-    ],
-    "changes": [
-     {
-      "class": "יב'- 3",
-      "type": "מבחן",
-      "text": "מבחן במיקרו מעבדים יב3+יב4, 55 יב-3 · לקבוצה של טמנוגרדסקי שון",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "מבחן בתכנות בקרים ומיקרוברים י5+י6 , 71 י-6 · לקבוצה של טמנוגרדסקי שון",
-    "status": "regular",
-    "classes": [
-     "י - 6"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "י - 6",
-      "type": "מבחן",
-      "text": "מבחן בתכנות בקרים ומיקרוברים י5+י6 , 71 י-6 · לקבוצה של טמנוגרדסקי שון",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "צוות תיכון שבועי",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "חדר דיונים - מנהל התיכון"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "מבחן במיקרו מעבדים יב3+יב4, 55 יב-3 · לקבוצה של טמנוגרדסקי שון",
-    "status": "regular",
-    "classes": [
-     "יב'- 3"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "",
-      "teacher": "אסולין שובל"
-     },
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "22 מע' מחשבים",
-      "teacher": "מצה מוטי"
-     },
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "25 מעבדת מחשבים",
-      "teacher": "גלדון לובוב"
-     },
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "",
-      "teacher": "פלדשטיין מישל"
-     },
-     {
-      "class": "יב'- 3",
-      "subject": "מעבדה בפרויקטון",
-      "room": "21 מע' אלקט'",
-      "teacher": "עשור אביתר"
-     }
-    ],
-    "changes": [
-     {
-      "class": "יב'- 3",
-      "type": "מבחן",
-      "text": "מבחן במיקרו מעבדים יב3+יב4, 55 יב-3 · לקבוצה של טמנוגרדסקי שון",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "מבחן בתכנות בקרים ומיקרוברים י5+י6 , 71 י-6 · לקבוצה של טמנוגרדסקי שון",
-    "status": "regular",
-    "classes": [
-     "י - 6"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "י - 6",
-      "type": "מבחן",
-      "text": "מבחן בתכנות בקרים ומיקרוברים י5+י6 , 71 י-6 · לקבוצה של טמנוגרדסקי שון",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "צוות תיכון שבועי",
-    "status": "regular",
-    "manual": true,
-    "classes": [
-     "חדר דיונים - מנהל התיכון"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "מעבדה באלקטרוניקה",
-    "status": "regular",
-    "classes": [
-     "יג'- 2"
-    ],
-    "rooms": [
-     "21 מע' אלקט'"
-    ],
-    "co_teachers": [
-     {
-      "name": "איבלייב דניאל",
-      "room": ""
-     },
-     {
-      "name": "פלדשטיין מישל",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 2",
-      "type": "מילוי מקום",
-      "text": "אסולין אושרת <- איבלייב דניאל",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "מעבדה באלקטרוניקה",
-    "status": "regular",
-    "classes": [
-     "יג'- 2"
-    ],
-    "rooms": [
-     "21 מע' אלקט'"
-    ],
-    "co_teachers": [
-     {
-      "name": "איבלייב דניאל",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 2",
-      "type": "מילוי מקום",
-      "text": "פלדשטיין מישל <- טמנוגרדסקי שון 21 מע' אלקט'",
-      "mentions_me": true
-     },
-     {
-      "class": "יג'- 2",
-      "type": "מילוי מקום",
-      "text": "אסולין אושרת <- טמנוגרדסקי שון 21 מע' אלקט'",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "מעבדה באלקטרוניקה",
-    "status": "regular",
-    "classes": [
-     "יג'- 2"
-    ],
-    "rooms": [
-     "21 מע' אלקט'"
-    ],
-    "co_teachers": [
-     {
-      "name": "איבלייב דניאל",
-      "room": ""
-     },
-     {
-      "name": "אסולין אושרת",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 2",
-      "type": "מילוי מקום",
-      "text": "פלדשטיין מישל <- טמנוגרדסקי שון 21 מע' אלקט'",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "מעבדה ביישומי MASTLAB-PYTON",
-    "status": "regular",
-    "classes": [
-     "יג'- 3"
-    ],
-    "rooms": [
-     "90 מולטימדיה מכללה"
-    ],
-    "co_teachers": [
-     {
-      "name": "אסולין אושרת",
-      "room": ""
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 9,
-    "start": "15:15",
-    "end": "16:00",
-    "subject": "מעבדה ביישומי MASTLAB-PYTON",
-    "status": "regular",
-    "classes": [
-     "יג'- 3"
-    ],
-    "rooms": [
-     "90 מולטימדיה מכללה"
-    ],
-    "co_teachers": [
-     {
-      "name": "אסולין אושרת",
-      "room": ""
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "ביטול שפת תכנות, טמנוגרדסקי שון",
-    "status": "regular",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול שפת תכנות, טמנוגרדסקי שון",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "שפת תכנות",
-    "status": "cancelled",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [
-     "88 יד- 2"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול שפת תכנות, טמנוגרדסקי שון",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "מיקרו מעבדים",
-    "status": "cancelled",
-    "classes": [
-     "יב'- 3"
-    ],
-    "rooms": [
-     "55 יב-3"
-    ],
-    "co_teachers": [
-     {
-      "name": "מילץ אליאור",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יב'- 3",
-      "type": "מילוי מקום",
-      "text": "טמנוגרדסקי שון <- מילץ אליאור",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
-    "status": "regular",
-    "classes": [
-     "יא'- 4"
-    ],
-    "rooms": [
-     "21 מע' אלקט'"
-    ],
-    "co_teachers": [
-     {
-      "name": "איבלייב דניאל",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יא'- 4",
-      "type": "מילוי מקום",
-      "text": "פלדשטיין מישל <- אוחיון אריאל ברוך",
-      "mentions_me": false
-     },
-     {
-      "class": "יא'- 4",
-      "type": "מילוי מקום",
-      "text": "אסולין אושרת <- איבלייב דניאל",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "מעבדה בשפה עילית",
-    "status": "cancelled",
-    "classes": [
-     "יג'- 3"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     },
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 3",
-      "type": "מילוי מקום",
-      "text": "טמנוגרדסקי שון <- שיראזי עידו",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "מעבדה בשפה עילית",
-    "status": "cancelled",
-    "classes": [
-     "יג'- 3"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     },
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 3",
-      "type": "מילוי מקום",
-      "text": "טמנוגרדסקי שון <- שיראזי עידו",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 9,
-    "start": "15:15",
-    "end": "16:00",
-    "subject": "ביטול מעבדה בשפה עילית, טמנוגרדסקי שון",
-    "status": "regular",
-    "classes": [
-     "יג'- 4"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, טמנוגרדסקי שון",
-      "mentions_me": true
-     },
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, פנחס שחר",
-      "mentions_me": false
-     },
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, שיראזי עידו",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 9,
-    "start": "15:15",
-    "end": "16:00",
-    "subject": "מעבדה בשפה עילית",
-    "status": "cancelled",
-    "classes": [
-     "יג'- 4"
-    ],
-    "rooms": [
-     "95 יג- 4"
-    ],
-    "co_teachers": [
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     },
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, טמנוגרדסקי שון",
-      "mentions_me": true
-     },
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, פנחס שחר",
-      "mentions_me": false
-     },
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, שיראזי עידו",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 10,
-    "start": "16:00",
-    "end": "16:45",
-    "subject": "ביטול מעבדה בשפה עילית, טמנוגרדסקי שון",
-    "status": "regular",
-    "classes": [
-     "יג'- 4"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, טמנוגרדסקי שון",
-      "mentions_me": true
-     },
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, פנחס שחר",
-      "mentions_me": false
-     },
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, שיראזי עידו",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 10,
-    "start": "16:00",
-    "end": "16:45",
-    "subject": "מעבדה בשפה עילית",
-    "status": "cancelled",
-    "classes": [
-     "יג'- 4"
-    ],
-    "rooms": [
-     "95 יג- 4"
-    ],
-    "co_teachers": [
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     },
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, טמנוגרדסקי שון",
-      "mentions_me": true
-     },
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, פנחס שחר",
-      "mentions_me": false
-     },
-     {
-      "class": "יג'- 4",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה בשפה עילית, שיראזי עידו",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 2,
-    "start": "08:55",
-    "end": "09:40",
-    "subject": "קפ\"ק מורחב",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "קפ\"ק מורחב",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "מיקרו מעבדים",
-    "status": "regular",
-    "classes": [
-     "יב'- 3"
-    ],
-    "rooms": [
-     "55 יב-3"
-    ],
-    "co_teachers": [
-     {
-      "name": "מילץ אליאור",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "מעבדה במיקרו בקרים",
-    "status": "regular",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "ירובוי רינה",
-      "room": ""
-     },
-     {
-      "name": "ספירין מישל",
-      "room": ""
-     },
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "אסולין אושרת <- טמנוגרדסקי שון 90 מולטימדיה מכללה",
-    "status": "regular",
-    "classes": [
-     "יג'- 4"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [
-     {
-      "class": "יג'- 4",
-      "subject": "מעבדה בהנדסת חשמל",
-      "room": "25 מעבדת מחשבים",
-      "teacher": "איבלייב דניאל"
-     },
-     {
-      "class": "יג'- 4",
-      "subject": "מעבדה בהנדסת חשמל",
-      "room": "",
-      "teacher": "בהנסי עדי"
-     },
-     {
-      "class": "יג'- 4",
-      "subject": "מעבדה בהנדסת חשמל",
-      "room": "",
-      "teacher": "פלדשטיין מישל"
-     },
-     {
-      "class": "יג'- 4",
-      "subject": "מעבדה בהנדסת חשמל",
-      "room": "21 מע' אלקט'",
-      "teacher": "גלדון לובוב"
-     }
-    ],
-    "changes": [
-     {
-      "class": "יג'- 4",
-      "type": "מילוי מקום",
-      "text": "אסולין אושרת <- טמנוגרדסקי שון 90 מולטימדיה מכללה",
-      "mentions_me": true
-     },
-     {
-      "class": "יג'- 4",
-      "type": "מילוי מקום",
-      "text": "שיראזי עידו <- גלדון לובוב 21 מע' אלקט'",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "תכנות בקרים ומיקרו בקרים",
-    "status": "regular",
-    "classes": [
-     "י - 6"
-    ],
-    "rooms": [
-     "20 מע' מחשבים"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 9,
-    "start": "15:15",
-    "end": "16:00",
-    "subject": "מעבדה ביישומי MASTLAB-PYTON",
-    "status": "regular",
-    "classes": [
-     "יג'- 4"
-    ],
-    "rooms": [
-     "90 מולטימדיה מכללה"
-    ],
-    "co_teachers": [
-     {
-      "name": "אסולין אושרת",
-      "room": ""
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 10,
-    "start": "16:00",
-    "end": "16:45",
-    "subject": "מעבדה ביישומי MASTLAB-PYTON",
-    "status": "regular",
-    "classes": [
-     "יג'- 4"
-    ],
-    "rooms": [
-     "90 מולטימדיה מכללה"
-    ],
-    "co_teachers": [
-     {
-      "name": "אסולין אושרת",
-      "room": ""
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
-    "status": "cancelled",
-    "classes": [
-     "יא'- 3"
-    ],
-    "rooms": [
-     "21 מע' אלקט'"
-    ],
-    "co_teachers": [
-     {
-      "name": "איבלייב דניאל",
-      "room": "19 מע' מחשבים"
-     },
-     {
-      "name": "אסולין אושרת",
-      "room": ""
-     },
-     {
-      "name": "פלדשטיין מישל",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יא'- 3",
-      "type": "אירוע",
-      "text": "סיור משואה- שכבת יא",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "מיקרו מעבדים",
-    "status": "regular",
-    "classes": [
-     "יב'- 3"
-    ],
-    "rooms": [
-     "55 יב-3"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יב'- 3",
-      "type": "מילוי מקום",
-      "text": "מילץ אליאור <- מצה מוטי",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "מיקרו מעבדים",
-    "status": "regular",
-    "classes": [
-     "יב'- 3"
-    ],
-    "rooms": [
-     "55 יב-3"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יב'- 3",
-      "type": "מילוי מקום",
-      "text": "מילץ אליאור <- סויסה אבי",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 9,
-    "start": "15:15",
-    "end": "16:00",
-    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
-    "status": "cancelled",
-    "classes": [
-     "יא'- 4"
-    ],
-    "rooms": [
-     "21 מע' אלקט'"
-    ],
-    "co_teachers": [
-     {
-      "name": "איבלייב דניאל",
-      "room": ""
-     },
-     {
-      "name": "אסולין אושרת",
-      "room": ""
-     },
-     {
-      "name": "פלדשטיין מישל",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יא'- 4",
-      "type": "אירוע",
-      "text": "סיור משואה- שכבת יא",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "שיחת צוות י״א",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "תכנות בקרים ומיקרו בקרים",
-    "status": "cancelled",
-    "classes": [
-     "י - 6"
-    ],
-    "rooms": [
-     "20 מע' מחשבים"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "י - 6",
-      "type": "מילוי מקום",
-      "text": "טמנוגרדסקי שון <- פוגרבניאק גאורגי 20 מע' מחשבים",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
-    "status": "cancelled",
-    "classes": [
-     "יא'- 3"
-    ],
-    "rooms": [
-     "21 מע' אלקט'"
-    ],
-    "co_teachers": [
-     {
-      "name": "איבלייב דניאל",
-      "room": "19 מע' מחשבים"
-     },
-     {
-      "name": "אסולין אושרת",
-      "room": ""
-     },
-     {
-      "name": "פלדשטיין מישל",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יא'- 3",
-      "type": "מבחן",
-      "text": "מבחן בספרות שכבה יא, 43 יא3 · לקבוצה של דוד חי חנה",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "צוות רכזים פדגוגי",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "צוות אילוצי מערכת",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "ביטול מעבדה במיקרו בקרים , טמנוגרדסקי שון",
-    "status": "regular",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , שיראזי עידו",
-      "mentions_me": false
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , טמנוגרדסקי שון",
-      "mentions_me": true
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , ירובוי רינה",
-      "mentions_me": false
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , ספירין מישל",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "מעבדה במיקרו בקרים",
-    "status": "cancelled",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "ירובוי רינה",
-      "room": ""
-     },
-     {
-      "name": "ספירין מישל",
-      "room": ""
-     },
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , שיראזי עידו",
-      "mentions_me": false
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , טמנוגרדסקי שון",
-      "mentions_me": true
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , ירובוי רינה",
-      "mentions_me": false
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , ספירין מישל",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "ביטול מעבדה במיקרו בקרים , טמנוגרדסקי שון",
-    "status": "regular",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , ספירין מישל",
-      "mentions_me": false
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , ירובוי רינה",
-      "mentions_me": false
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , טמנוגרדסקי שון",
-      "mentions_me": true
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , שיראזי עידו",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "מעבדה במיקרו בקרים",
-    "status": "cancelled",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "ירובוי רינה",
-      "room": ""
-     },
-     {
-      "name": "ספירין מישל",
-      "room": ""
-     },
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , ספירין מישל",
-      "mentions_me": false
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , ירובוי רינה",
-      "mentions_me": false
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , טמנוגרדסקי שון",
-      "mentions_me": true
-     },
-     {
-      "class": "יד'- 2",
-      "type": "ביטול / שעה חופשית",
-      "text": "ביטול מעבדה במיקרו בקרים , שיראזי עידו",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
     "date": "2026-11-29",
     "hour": 1,
     "start": "08:10",
@@ -2221,125 +940,766 @@
       "mentions_me": true
      }
     ]
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "שפת תכנות",
+    "status": "regular",
+    "classes": [
+     "יד'- 2"
+    ],
+    "rooms": [
+     "88 יד- 2"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "צוות תיכון שבועי",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "חדר דיונים - מנהל התיכון"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 4,
+    "start": "10:40",
+    "end": "11:25",
+    "subject": "צוות תיכון שבועי",
+    "status": "regular",
+    "manual": true,
+    "classes": [
+     "חדר דיונים - מנהל התיכון"
+    ],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "מעבדה באלקטרוניקה",
+    "status": "regular",
+    "classes": [
+     "יג'- 2"
+    ],
+    "rooms": [
+     "21 מע' אלקט'"
+    ],
+    "co_teachers": [
+     {
+      "name": "איבלייב דניאל",
+      "room": ""
+     },
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פלדשטיין מישל",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "מעבדה באלקטרוניקה",
+    "status": "regular",
+    "classes": [
+     "יג'- 2"
+    ],
+    "rooms": [
+     "21 מע' אלקט'"
+    ],
+    "co_teachers": [
+     {
+      "name": "איבלייב דניאל",
+      "room": ""
+     },
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פלדשטיין מישל",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "מעבדה באלקטרוניקה",
+    "status": "regular",
+    "classes": [
+     "יג'- 2"
+    ],
+    "rooms": [
+     "21 מע' אלקט'"
+    ],
+    "co_teachers": [
+     {
+      "name": "איבלייב דניאל",
+      "room": ""
+     },
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פלדשטיין מישל",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "מעבדה ביישומי MASTLAB-PYTON",
+    "status": "regular",
+    "classes": [
+     "יג'- 3"
+    ],
+    "rooms": [
+     "90 מולטימדיה מכללה"
+    ],
+    "co_teachers": [
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 9,
+    "start": "15:15",
+    "end": "16:00",
+    "subject": "מעבדה ביישומי MASTLAB-PYTON",
+    "status": "regular",
+    "classes": [
+     "יג'- 3"
+    ],
+    "rooms": [
+     "90 מולטימדיה מכללה"
+    ],
+    "co_teachers": [
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "שפת תכנות",
+    "status": "regular",
+    "classes": [
+     "יד'- 2"
+    ],
+    "rooms": [
+     "88 יד- 2"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "מיקרו מעבדים",
+    "status": "regular",
+    "classes": [
+     "יב'- 3"
+    ],
+    "rooms": [
+     "55 יב-3"
+    ],
+    "co_teachers": [
+     {
+      "name": "מילץ אליאור",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 4,
+    "start": "10:40",
+    "end": "11:25",
+    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+    "status": "regular",
+    "classes": [
+     "יא'- 4"
+    ],
+    "rooms": [
+     "21 מע' אלקט'"
+    ],
+    "co_teachers": [
+     {
+      "name": "איבלייב דניאל",
+      "room": ""
+     },
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פלדשטיין מישל",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "מעבדה בשפה עילית",
+    "status": "regular",
+    "classes": [
+     "יג'- 3"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "מעבדה בשפה עילית",
+    "status": "regular",
+    "classes": [
+     "יג'- 3"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 9,
+    "start": "15:15",
+    "end": "16:00",
+    "subject": "מעבדה בשפה עילית",
+    "status": "regular",
+    "classes": [
+     "יג'- 4"
+    ],
+    "rooms": [
+     "95 יג- 4"
+    ],
+    "co_teachers": [
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 10,
+    "start": "16:00",
+    "end": "16:45",
+    "subject": "מעבדה בשפה עילית",
+    "status": "regular",
+    "classes": [
+     "יג'- 4"
+    ],
+    "rooms": [
+     "95 יג- 4"
+    ],
+    "co_teachers": [
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 2,
+    "start": "08:55",
+    "end": "09:40",
+    "subject": "קפ\"ק מורחב",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "קפ\"ק מורחב",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 4,
+    "start": "10:40",
+    "end": "11:25",
+    "subject": "מיקרו מעבדים",
+    "status": "regular",
+    "classes": [
+     "יב'- 3"
+    ],
+    "rooms": [
+     "55 יב-3"
+    ],
+    "co_teachers": [
+     {
+      "name": "מילץ אליאור",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "מעבדה במיקרו בקרים",
+    "status": "regular",
+    "classes": [
+     "יד'- 2"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "ירובוי רינה",
+      "room": ""
+     },
+     {
+      "name": "ספירין מישל",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "תכנות בקרים ומיקרו בקרים",
+    "status": "regular",
+    "classes": [
+     "י - 6"
+    ],
+    "rooms": [
+     "20 מע' מחשבים"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 9,
+    "start": "15:15",
+    "end": "16:00",
+    "subject": "מעבדה ביישומי MASTLAB-PYTON",
+    "status": "regular",
+    "classes": [
+     "יג'- 4"
+    ],
+    "rooms": [
+     "90 מולטימדיה מכללה"
+    ],
+    "co_teachers": [
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 10,
+    "start": "16:00",
+    "end": "16:45",
+    "subject": "מעבדה ביישומי MASTLAB-PYTON",
+    "status": "regular",
+    "classes": [
+     "יג'- 4"
+    ],
+    "rooms": [
+     "90 מולטימדיה מכללה"
+    ],
+    "co_teachers": [
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+    "status": "regular",
+    "classes": [
+     "יא'- 3"
+    ],
+    "rooms": [
+     "21 מע' אלקט'"
+    ],
+    "co_teachers": [
+     {
+      "name": "איבלייב דניאל",
+      "room": "19 מע' מחשבים"
+     },
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פלדשטיין מישל",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "מיקרו מעבדים",
+    "status": "regular",
+    "classes": [
+     "יב'- 3"
+    ],
+    "rooms": [
+     "55 יב-3"
+    ],
+    "co_teachers": [
+     {
+      "name": "מילץ אליאור",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "מיקרו מעבדים",
+    "status": "regular",
+    "classes": [
+     "יב'- 3"
+    ],
+    "rooms": [
+     "55 יב-3"
+    ],
+    "co_teachers": [
+     {
+      "name": "מילץ אליאור",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 9,
+    "start": "15:15",
+    "end": "16:00",
+    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+    "status": "regular",
+    "classes": [
+     "יא'- 4"
+    ],
+    "rooms": [
+     "21 מע' אלקט'"
+    ],
+    "co_teachers": [
+     {
+      "name": "איבלייב דניאל",
+      "room": ""
+     },
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פלדשטיין מישל",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "שיחת צוות י״א",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "תכנות בקרים ומיקרו בקרים",
+    "status": "regular",
+    "classes": [
+     "י - 6"
+    ],
+    "rooms": [
+     "20 מע' מחשבים"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+    "status": "regular",
+    "classes": [
+     "יא'- 3"
+    ],
+    "rooms": [
+     "21 מע' אלקט'"
+    ],
+    "co_teachers": [
+     {
+      "name": "איבלייב דניאל",
+      "room": "19 מע' מחשבים"
+     },
+     {
+      "name": "אסולין אושרת",
+      "room": ""
+     },
+     {
+      "name": "פלדשטיין מישל",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "צוות רכזים פדגוגי",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "צוות אילוצי מערכת",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "מעבדה במיקרו בקרים",
+    "status": "regular",
+    "classes": [
+     "יד'- 2"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "ירובוי רינה",
+      "room": ""
+     },
+     {
+      "name": "ספירין מישל",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "מעבדה במיקרו בקרים",
+    "status": "regular",
+    "classes": [
+     "יד'- 2"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "ירובוי רינה",
+      "room": ""
+     },
+     {
+      "name": "ספירין מישל",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
    }
   ],
-  "class_changes": [
-   {
-    "class": "י - 6",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 3, טמנוגרדסקי שון, מילוי מקום פוגרבניאק גאורגי, חדר: 20 מע' מחשבים",
-    "mentions_me": true
-   },
-   {
-    "class": "יד'- 2",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 7, שיראזי עידו, ביטול שעור",
-    "mentions_me": false
-   },
-   {
-    "class": "יד'- 2",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 7, טמנוגרדסקי שון, ביטול שעור",
-    "mentions_me": true
-   },
-   {
-    "class": "יד'- 2",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 7, ירובוי רינה, ביטול שעור",
-    "mentions_me": false
-   },
-   {
-    "class": "יד'- 2",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 7, ספירין מישל, ביטול שעור",
-    "mentions_me": false
-   },
-   {
-    "class": "יד'- 2",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 8, ספירין מישל, ביטול שעור",
-    "mentions_me": false
-   },
-   {
-    "class": "יד'- 2",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 8, טמנוגרדסקי שון, ביטול שעור",
-    "mentions_me": true
-   },
-   {
-    "class": "יד'- 2",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 8, שיראזי עידו, ביטול שעור",
-    "mentions_me": false
-   },
-   {
-    "class": "יד'- 2",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 8, ירובוי רינה, ביטול שעור",
-    "mentions_me": false
-   }
-  ],
+  "class_changes": [],
   "agenda": [
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן בהמרת אנרגיה",
-    "hours": [
-     1,
-     2
-    ],
-    "text": "26.11.2026, מבחן בהמרת אנרגיה משיעור 1 עד שיעור 2 לכיתות: יג'- 2 בקבוצה של דטינקה כהן אסף, חדר: 98 - יג 2",
-    "my_classes": [
-     "יג'- 2"
-    ],
-    "my_lessons": []
-   },
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן במערכות תקשורת",
-    "hours": [
-     3,
-     4
-    ],
-    "text": "26.11.2026, מבחן במערכות תקשורת משיעור 3 עד שיעור 4 לכיתות: יג'- 3 בקבוצה של פיינלב מקסים, חדר: 96 יג -3",
-    "my_classes": [
-     "יג'- 3",
-     "יג'- 4"
-    ],
-    "my_lessons": []
-   },
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן בספרות שכבה יא",
-    "hours": [
-     5,
-     6
-    ],
-    "text": "26.11.2026, מבחן בספרות שכבה יא משיעור 5 עד שיעור 6 לכיתות: יא'- 3 בקבוצה של דוד חי חנה, חדר: 43 יא3",
-    "my_classes": [
-     "יא'- 3",
-     "יא'- 4"
-    ],
-    "my_lessons": [
-     5
-    ]
-   },
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן בספרות שכבה יא הקלות",
-    "hours": [
-     5,
-     6
-    ],
-    "text": "26.11.2026, מבחן בספרות שכבה יא הקלות משיעור 5 עד שיעור 6 לכיתות: יא'- 4 בקבוצה של שויד הודיה, חדר: 19 מע' מחשבים",
-    "my_classes": [
-     "יא'- 4"
-    ],
-    "my_lessons": []
-   },
    {
     "kind": "אירוע",
     "date": "2026-11-29",
@@ -2509,7 +1869,7 @@
      3,
      4
     ],
-    "text": "02.12.2026, מבחן בתורת החשמל א משיעור 3 עד שיעור 4 לכיתות: יג'- 2 בקבוצה של פוקס איליה, חדר: 98 - יג 2",
+    "text": "02.12.2026, מבחן בתורת החשמל א משיעור 3 עד שיעור 4 לכיתות: יג'- 2 בקבוצה של פוקס איליה, חדר: 82 הקבצה ט",
     "my_classes": [
      "יג'- 2"
     ],
@@ -2626,7 +1986,7 @@
      3,
      4
     ],
-    "text": "15.12.2026, מבחן במיקרו מעבדים יב3+ יב4 משיעור 3 עד שיעור 4 לכיתות: יב'- 3 בקבוצה של טמנוגרדסקי שון, חדר: 55 יב-3",
+    "text": "15.12.2026, מבחן במיקרו מעבדים יב3+ יב4 משיעור 3 עד שיעור 4 לכיתות: יב'- 3 בקבוצה של מילץ אליאור",
     "my_classes": [
      "יב'- 3"
     ],
@@ -2831,7 +2191,7 @@
      5,
      6
     ],
-    "text": "22.12.2026, מבחן במתמטיקה שכבה יב משיעור 5 עד שיעור 6 לכיתות: יב'- 2...יב'- 6 בקבוצה של גרינברג אביב רונית, חדר: 41-יב 6",
+    "text": "22.12.2026, מבחן במתמטיקה שכבה יב משיעור 5 עד שיעור 6 לכיתות: יב'- 2...יב'- 6 בקבוצה של איליאגויוב סיוון, חדר: 52 הקבצה יב-1",
     "my_classes": [
      "יב'- 3"
     ],
@@ -2889,7 +2249,7 @@
      2,
      3
     ],
-    "text": "27.12.2026, מבחן במתמטיקה שכבה יא משיעור 2 עד שיעור 3 לכיתות: יא'- 2...יא'- 5, יא- 6 בקבוצה של סינואני אסתר, חדר: 48 יא6",
+    "text": "27.12.2026, מבחן במתמטיקה שכבה יא משיעור 2 עד שיעור 3 לכיתות: יא'- 2...יא'- 5, יא- 6 בקבוצה של צרפתי סיגל, חדר: 51 יא-2",
     "my_classes": [
      "יא'- 3",
      "יא'- 4"
@@ -2918,7 +2278,7 @@
      1,
      2
     ],
-    "text": "29.12.2026, מבחן במתמטיקה שכבה י' משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2...י'-5 בקבוצה של צרפתי סיגל, חדר: 70 י-5",
+    "text": "29.12.2026, מבחן במתמטיקה שכבה י' משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2...י'-5 בקבוצה של גרינברג אביב רונית, חדר: 66 י-3",
     "my_classes": [
      "י - 6"
     ],
@@ -2947,7 +2307,7 @@
      3,
      4
     ],
-    "text": "30.12.2026, מבחן בפרויקטים יב3+ יב4 משיעור 3 עד שיעור 4 לכיתות: יב'- 3 בקבוצה של עשור אביתר",
+    "text": "30.12.2026, מבחן בפרויקטים יב3+ יב4 משיעור 3 עד שיעור 4 לכיתות: יב'- 3 בקבוצה של גלדון לובוב",
     "my_classes": [
      "יב'- 3"
     ],
@@ -2976,7 +2336,7 @@
      1,
      2
     ],
-    "text": "31.12.2026, מבחן בפיזיקה שכבה י משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2, י'-3 בקבוצה של ברמניק אירינה, חדר: 67 י-2",
+    "text": "31.12.2026, מבחן בפיזיקה שכבה י משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2, י'-3 בקבוצה של גרופמכר מיכל, חדר: 65 י-4",
     "my_classes": [
      "י - 6"
     ],
@@ -3004,7 +2364,7 @@
      1,
      2
     ],
-    "text": "04.01.2027, מבחן באנגלית (מתכונת) שכבת י\"א משיעור 1 עד שיעור 2 לכיתות: יא'- 3...יא'- 5, יא- 6 בקבוצה של פיכמן אינה, חדר: 45 - הקבצה יא",
+    "text": "04.01.2027, מבחן באנגלית (מתכונת) שכבת י\"א משיעור 1 עד שיעור 2 לכיתות: יא'- 3...יא'- 5, יא- 6 בקבוצה של ניסנוב לאה, חדר: 47 הקבצה יא",
     "my_classes": [
      "יא'- 3",
      "יא'- 4"
@@ -3019,7 +2379,7 @@
      1,
      2
     ],
-    "text": "05.01.2027, מבחן באנגלית שכבה יב משיעור 1 עד שיעור 2 לכיתות: יב'- 3...יב'- 6 בקבוצה של הרמן בתיה, חדר: 55 יב-3",
+    "text": "05.01.2027, מבחן באנגלית שכבה יב משיעור 1 עד שיעור 2 לכיתות: יב'- 3...יב'- 6 בקבוצה של פיכמן אינה, חדר: 56 יב 4",
     "my_classes": [
      "יב'- 3"
     ],
@@ -5741,7 +5101,7 @@
    "date": "2026-11-29",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-29",
@@ -5940,7 +5300,7 @@
    "date": "2026-11-30",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-30",
@@ -6117,7 +5477,7 @@
    "date": "2026-12-01",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-01",
@@ -6272,7 +5632,7 @@
    "date": "2026-12-02",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-02",
@@ -6384,7 +5744,7 @@
    "date": "2026-12-03",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-03",
@@ -6633,58 +5993,826 @@
    "date": "2026-12-04",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": []
+  },
+  {
+   "date": "2026-12-06",
+   "weekday": "יום ראשון",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-06",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "שפת תכנות",
+     "status": "regular",
+     "classes": [
+      "יד'- 2"
+     ],
+     "rooms": [
+      "88 יד- 2"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "צוות תיכון שבועי",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "חדר דיונים - מנהל התיכון"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 4,
+     "start": "10:40",
+     "end": "11:25",
+     "subject": "צוות תיכון שבועי",
+     "status": "regular",
+     "manual": true,
+     "classes": [
+      "חדר דיונים - מנהל התיכון"
+     ],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "מעבדה באלקטרוניקה",
+     "status": "regular",
+     "classes": [
+      "יג'- 2"
+     ],
+     "rooms": [
+      "21 מע' אלקט'"
+     ],
+     "co_teachers": [
+      {
+       "name": "איבלייב דניאל",
+       "room": ""
+      },
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פלדשטיין מישל",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "מעבדה באלקטרוניקה",
+     "status": "regular",
+     "classes": [
+      "יג'- 2"
+     ],
+     "rooms": [
+      "21 מע' אלקט'"
+     ],
+     "co_teachers": [
+      {
+       "name": "איבלייב דניאל",
+       "room": ""
+      },
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פלדשטיין מישל",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "מעבדה באלקטרוניקה",
+     "status": "regular",
+     "classes": [
+      "יג'- 2"
+     ],
+     "rooms": [
+      "21 מע' אלקט'"
+     ],
+     "co_teachers": [
+      {
+       "name": "איבלייב דניאל",
+       "room": ""
+      },
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פלדשטיין מישל",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "מעבדה ביישומי MASTLAB-PYTON",
+     "status": "regular",
+     "classes": [
+      "יג'- 3"
+     ],
+     "rooms": [
+      "90 מולטימדיה מכללה"
+     ],
+     "co_teachers": [
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 9,
+     "start": "15:15",
+     "end": "16:00",
+     "subject": "מעבדה ביישומי MASTLAB-PYTON",
+     "status": "regular",
+     "classes": [
+      "יג'- 3"
+     ],
+     "rooms": [
+      "90 מולטימדיה מכללה"
+     ],
+     "co_teachers": [
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-07",
+   "weekday": "יום שני",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-07",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "שפת תכנות",
+     "status": "regular",
+     "classes": [
+      "יד'- 2"
+     ],
+     "rooms": [
+      "88 יד- 2"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "מיקרו מעבדים",
+     "status": "regular",
+     "classes": [
+      "יב'- 3"
+     ],
+     "rooms": [
+      "55 יב-3"
+     ],
+     "co_teachers": [
+      {
+       "name": "מילץ אליאור",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 4,
+     "start": "10:40",
+     "end": "11:25",
+     "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+     "status": "regular",
+     "classes": [
+      "יא'- 4"
+     ],
+     "rooms": [
+      "21 מע' אלקט'"
+     ],
+     "co_teachers": [
+      {
+       "name": "איבלייב דניאל",
+       "room": ""
+      },
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פלדשטיין מישל",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "מעבדה בשפה עילית",
+     "status": "regular",
+     "classes": [
+      "יג'- 3"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "מעבדה בשפה עילית",
+     "status": "regular",
+     "classes": [
+      "יג'- 3"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 9,
+     "start": "15:15",
+     "end": "16:00",
+     "subject": "מעבדה בשפה עילית",
+     "status": "regular",
+     "classes": [
+      "יג'- 4"
+     ],
+     "rooms": [
+      "95 יג- 4"
+     ],
+     "co_teachers": [
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 10,
+     "start": "16:00",
+     "end": "16:45",
+     "subject": "מעבדה בשפה עילית",
+     "status": "regular",
+     "classes": [
+      "יג'- 4"
+     ],
+     "rooms": [
+      "95 יג- 4"
+     ],
+     "co_teachers": [
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-08",
+   "weekday": "יום שלישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-08",
+     "hour": 2,
+     "start": "08:55",
+     "end": "09:40",
+     "subject": "קפ\"ק מורחב",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "קפ\"ק מורחב",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 4,
+     "start": "10:40",
+     "end": "11:25",
+     "subject": "מיקרו מעבדים",
+     "status": "regular",
+     "classes": [
+      "יב'- 3"
+     ],
+     "rooms": [
+      "55 יב-3"
+     ],
+     "co_teachers": [
+      {
+       "name": "מילץ אליאור",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "מעבדה במיקרו בקרים",
+     "status": "regular",
+     "classes": [
+      "יד'- 2"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "ירובוי רינה",
+       "room": ""
+      },
+      {
+       "name": "ספירין מישל",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "תכנות בקרים ומיקרו בקרים",
+     "status": "regular",
+     "classes": [
+      "י - 6"
+     ],
+     "rooms": [
+      "20 מע' מחשבים"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 9,
+     "start": "15:15",
+     "end": "16:00",
+     "subject": "מעבדה ביישומי MASTLAB-PYTON",
+     "status": "regular",
+     "classes": [
+      "יג'- 4"
+     ],
+     "rooms": [
+      "90 מולטימדיה מכללה"
+     ],
+     "co_teachers": [
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 10,
+     "start": "16:00",
+     "end": "16:45",
+     "subject": "מעבדה ביישומי MASTLAB-PYTON",
+     "status": "regular",
+     "classes": [
+      "יג'- 4"
+     ],
+     "rooms": [
+      "90 מולטימדיה מכללה"
+     ],
+     "co_teachers": [
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-09",
+   "weekday": "יום רביעי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-09",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+     "status": "regular",
+     "classes": [
+      "יא'- 3"
+     ],
+     "rooms": [
+      "21 מע' אלקט'"
+     ],
+     "co_teachers": [
+      {
+       "name": "איבלייב דניאל",
+       "room": "19 מע' מחשבים"
+      },
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פלדשטיין מישל",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "מיקרו מעבדים",
+     "status": "regular",
+     "classes": [
+      "יב'- 3"
+     ],
+     "rooms": [
+      "55 יב-3"
+     ],
+     "co_teachers": [
+      {
+       "name": "מילץ אליאור",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "מיקרו מעבדים",
+     "status": "regular",
+     "classes": [
+      "יב'- 3"
+     ],
+     "rooms": [
+      "55 יב-3"
+     ],
+     "co_teachers": [
+      {
+       "name": "מילץ אליאור",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 9,
+     "start": "15:15",
+     "end": "16:00",
+     "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+     "status": "regular",
+     "classes": [
+      "יא'- 4"
+     ],
+     "rooms": [
+      "21 מע' אלקט'"
+     ],
+     "co_teachers": [
+      {
+       "name": "איבלייב דניאל",
+       "room": ""
+      },
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פלדשטיין מישל",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-10",
+   "weekday": "יום חמישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-10",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "שיחת צוות י״א",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "תכנות בקרים ומיקרו בקרים",
+     "status": "regular",
+     "classes": [
+      "י - 6"
+     ],
+     "rooms": [
+      "20 מע' מחשבים"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+     "status": "regular",
+     "classes": [
+      "יא'- 3"
+     ],
+     "rooms": [
+      "21 מע' אלקט'"
+     ],
+     "co_teachers": [
+      {
+       "name": "איבלייב דניאל",
+       "room": "19 מע' מחשבים"
+      },
+      {
+       "name": "אסולין אושרת",
+       "room": ""
+      },
+      {
+       "name": "פלדשטיין מישל",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "צוות רכזים פדגוגי",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "צוות אילוצי מערכת",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "מעבדה במיקרו בקרים",
+     "status": "regular",
+     "classes": [
+      "יד'- 2"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "ירובוי רינה",
+       "room": ""
+      },
+      {
+       "name": "ספירין מישל",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "מעבדה במיקרו בקרים",
+     "status": "regular",
+     "classes": [
+      "יד'- 2"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "ירובוי רינה",
+       "room": ""
+      },
+      {
+       "name": "ספירין מישל",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-11",
+   "weekday": "יום שישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": []
   }
  ],
  "grade_agenda": [
-  {
-   "kind": "אירוע",
-   "date": "2026-11-26",
-   "title": "שיווק מכללה לתיכון יא2",
-   "hours": [
-    4,
-    4
-   ],
-   "text": "26.11.2026, שיווק מכללה לתיכון יא2 שיעור 4 לכיתות: יא'- 2",
-   "my_classes": [
-    "יא'- 2"
-   ],
-   "my_lessons": []
-  },
-  {
-   "kind": "מבחן",
-   "date": "2026-11-26",
-   "title": "מבחן בספרות שכבה יא",
-   "hours": [
-    5,
-    6
-   ],
-   "text": "26.11.2026, מבחן בספרות שכבה יא משיעור 5 עד שיעור 6 לכיתות: יא'- 1 בקבוצה של דוד חי חנה, חדר: 49 יא-1",
-   "my_classes": [
-    "יא'- 1",
-    "יא'- 2",
-    "יא'- 3",
-    "יא'- 4",
-    "יא'- 5",
-    "יא- 6"
-   ],
-   "my_lessons": []
-  },
-  {
-   "kind": "מבחן",
-   "date": "2026-11-26",
-   "title": "מבחן בספרות שכבה יא הקלות",
-   "hours": [
-    5,
-    6
-   ],
-   "text": "26.11.2026, מבחן בספרות שכבה יא הקלות משיעור 5 עד שיעור 6 לכיתות: יא'- 4 בקבוצה של שויד הודיה, חדר: 19 מע' מחשבים",
-   "my_classes": [
-    "יא'- 4"
-   ],
-   "my_lessons": []
-  },
   {
    "kind": "אירוע",
    "date": "2026-11-29",
@@ -6793,7 +6921,7 @@
     1,
     3
    ],
-   "text": "13.12.2026, מבחן במעבדת תכן מע' הנדסיות יא 1 משיעור 1 עד שיעור 3 לכיתות: יא'- 1 בקבוצה של ארשבסקי אדם, חדר: 50 הקבצה יא-1",
+   "text": "13.12.2026, מבחן במעבדת תכן מע' הנדסיות יא 1 משיעור 1 עד שיעור 3 לכיתות: יא'- 1 בקבוצה של דהן ירין",
    "my_classes": [
     "יא'- 1"
    ],
@@ -6850,7 +6978,7 @@
     4,
     6
    ],
-   "text": "13.12.2026, מבחן במעבדת תכן מע' הנדסיות יא 2 משיעור 4 עד שיעור 6 לכיתות: יא'- 2 בקבוצה של כץ עדי",
+   "text": "13.12.2026, מבחן במעבדת תכן מע' הנדסיות יא 2 משיעור 4 עד שיעור 6 לכיתות: יא'- 2 בקבוצה של שפילר אדם",
    "my_classes": [
     "יא'- 2"
    ],
@@ -6955,7 +7083,7 @@
     5,
     6
    ],
-   "text": "20.12.2026, מבחן בתנ\"ך שכבה יא משיעור 5 עד שיעור 6 לכיתות: יא'- 1 בקבוצה של סויסה אבי",
+   "text": "20.12.2026, מבחן בתנ\"ך שכבה יא משיעור 5 עד שיעור 6 לכיתות: יא'- 1 בקבוצה של ביבי-בלגזל יפעת, חדר: 05 מע' פנאו' ואטומציה",
    "my_classes": [
     "יא'- 1",
     "יא'- 2",
@@ -7012,7 +7140,7 @@
     2,
     3
    ],
-   "text": "27.12.2026, מבחן במתמטיקה שכבה יא משיעור 2 עד שיעור 3 לכיתות: יא'- 1 בקבוצה של רוזנברג אריקה, חדר: 50 הקבצה יא-1",
+   "text": "27.12.2026, מבחן במתמטיקה שכבה יא משיעור 2 עד שיעור 3 לכיתות: יא'- 1 בקבוצה של גרינברג אביב רונית, חדר: 49 יא-1",
    "my_classes": [
     "יא'- 1",
     "יא'- 2",
@@ -7068,7 +7196,7 @@
     1,
     2
    ],
-   "text": "31.12.2026, מבחן באזרחות שכבה יא משיעור 1 עד שיעור 2 לכיתות: יא'- 1 בקבוצה של אוליניקוב יוליה, חדר: 49 יא-1",
+   "text": "31.12.2026, מבחן באזרחות שכבה יא משיעור 1 עד שיעור 2 לכיתות: יא'- 1 בקבוצה של זינמן ירון, חדר: 50 הקבצה יא-1",
    "my_classes": [
     "יא'- 1",
     "יא'- 2",
@@ -7087,7 +7215,7 @@
     1,
     2
    ],
-   "text": "04.01.2027, מבחן באנגלית (מתכונת) שכבת י\"א משיעור 1 עד שיעור 2 לכיתות: יא'- 1 בקבוצה של נור אולגה",
+   "text": "04.01.2027, מבחן באנגלית (מתכונת) שכבת י\"א משיעור 1 עד שיעור 2 לכיתות: יא'- 1 בקבוצה של הרמן בתיה, חדר: 49 יא-1",
    "my_classes": [
     "יא'- 1",
     "יא'- 2",
@@ -7149,7 +7277,7 @@
     5,
     6
    ],
-   "text": "10.01.2027, מבחן בספרות שכבה יא משיעור 5 עד שיעור 6 לכיתות: יא'- 1 בקבוצה של דוד חי חנה, חדר: 05 מע' פנאו' ואטומציה",
+   "text": "10.01.2027, מבחן בספרות שכבה יא משיעור 5 עד שיעור 6 לכיתות: יא'- 1 בקבוצה של שויד הודיה",
    "my_classes": [
     "יא'- 1",
     "יא'- 2",

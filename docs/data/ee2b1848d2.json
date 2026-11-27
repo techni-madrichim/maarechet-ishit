@@ -10,41 +10,11 @@
  "summary_sent": "",
  "latest": {
   "homeroom": null,
-  "scraped_at": "2026-11-26T21:31+02:00",
+  "scraped_at": "2026-11-27T20:30+02:00",
   "class_end": {},
   "site_update": "מעודכן ל: 26.11.2026, שעה: 15:03",
   "class_count": 30,
   "days": [
-   {
-    "date": "2026-11-22",
-    "weekday": "יום ראשון",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-23",
-    "weekday": "יום שני",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-24",
-    "weekday": "יום שלישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-25",
-    "weekday": "יום רביעי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-26",
-    "weekday": "יום חמישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-27",
-    "weekday": "יום שישי",
-    "holidays": []
-   },
    {
     "date": "2026-11-29",
     "weekday": "יום ראשון",
@@ -74,258 +44,51 @@
     "date": "2026-12-04",
     "weekday": "יום שישי",
     "holidays": []
+   },
+   {
+    "date": "2026-12-06",
+    "weekday": "יום ראשון",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-07",
+    "weekday": "יום שני",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-08",
+    "weekday": "יום שלישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-09",
+    "weekday": "יום רביעי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-10",
+    "weekday": "יום חמישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-11",
+    "weekday": "יום שישי",
+    "holidays": [
+     "חנוכה"
+    ]
    }
   ],
   "lessons": [
-   {
-    "date": "2026-11-22",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "שיחת צוות חשמל",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "עמ\"י",
-    "status": "regular",
-    "classes": [
-     "ט' - 3"
-    ],
-    "rooms": [
-     "77 ט-3"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 2,
-    "start": "08:55",
-    "end": "09:40",
-    "subject": "קפ\"ק מורחב",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "קפ\"ק מורחב",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "מעבדה בהתמחות מערכות הספק",
-    "status": "regular",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [
-     "28 מע' פיקוד"
-    ],
-    "co_teachers": [
-     {
-      "name": "בוטרימוב אלכסנדרה",
-      "room": ""
-     },
-     {
-      "name": "גניים תימור",
-      "room": "27 מע' הינע"
-     },
-     {
-      "name": "ירובוי לאה",
-      "room": ""
-     },
-     {
-      "name": "ספירין מישל",
-      "room": ""
-     },
-     {
-      "name": "קריין נועה",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יד'- 2",
-      "type": "מילוי מקום",
-      "text": "טימור עידו <- בוטרימוב אלכסנדרה",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "מעבדה בהתמחות מערכות הספק",
-    "status": "regular",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [
-     "28 מע' פיקוד"
-    ],
-    "co_teachers": [
-     {
-      "name": "בוטרימוב אלכסנדרה",
-      "room": ""
-     },
-     {
-      "name": "גניים תימור",
-      "room": "27 מע' הינע"
-     },
-     {
-      "name": "ירובוי לאה",
-      "room": ""
-     },
-     {
-      "name": "ספירין מישל",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "יד'- 2",
-      "type": "מילוי מקום",
-      "text": "טימור עידו <- גניים תימור 27 מע' הינע",
-      "mentions_me": false
-     },
-     {
-      "class": "יד'- 2",
-      "type": "מילוי מקום",
-      "text": "טימור עידו <- ירובוי לאה",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "מעבדה בהתמחות מערכות הספק",
-    "status": "regular",
-    "classes": [
-     "יד'- 2"
-    ],
-    "rooms": [
-     "28 מע' פיקוד"
-    ],
-    "co_teachers": [
-     {
-      "name": "בוטרימוב אלכסנדרה",
-      "room": ""
-     },
-     {
-      "name": "גניים תימור",
-      "room": "27 מע' הינע"
-     },
-     {
-      "name": "טימור עידו",
-      "room": "22 מע' מחשבים"
-     },
-     {
-      "name": "ירובוי לאה",
-      "room": ""
-     },
-     {
-      "name": "ספירין מישל",
-      "room": ""
-     },
-     {
-      "name": "קריין נועה",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 9,
-    "start": "15:15",
-    "end": "16:00",
-    "subject": "שיחת צוות הנדסאים",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "תגבור צוות חשמל",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "צוות רכזים פדגוגי",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "צוות אילוצי מערכת",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
    {
     "date": "2026-11-29",
     "hour": 6,
@@ -551,6 +314,243 @@
    },
    {
     "date": "2026-12-03",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "צוות אילוצי מערכת",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "שיחת צוות חשמל",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "עמ\"י",
+    "status": "regular",
+    "classes": [
+     "ט' - 3"
+    ],
+    "rooms": [
+     "77 ט-3"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 2,
+    "start": "08:55",
+    "end": "09:40",
+    "subject": "קפ\"ק מורחב",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "קפ\"ק מורחב",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "מעבדה בהתמחות מערכות הספק",
+    "status": "regular",
+    "classes": [
+     "יד'- 2"
+    ],
+    "rooms": [
+     "28 מע' פיקוד"
+    ],
+    "co_teachers": [
+     {
+      "name": "בוטרימוב אלכסנדרה",
+      "room": ""
+     },
+     {
+      "name": "גניים תימור",
+      "room": "27 מע' הינע"
+     },
+     {
+      "name": "טימור עידו",
+      "room": "22 מע' מחשבים"
+     },
+     {
+      "name": "ירובוי לאה",
+      "room": ""
+     },
+     {
+      "name": "ספירין מישל",
+      "room": ""
+     },
+     {
+      "name": "קריין נועה",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "מעבדה בהתמחות מערכות הספק",
+    "status": "regular",
+    "classes": [
+     "יד'- 2"
+    ],
+    "rooms": [
+     "28 מע' פיקוד"
+    ],
+    "co_teachers": [
+     {
+      "name": "בוטרימוב אלכסנדרה",
+      "room": ""
+     },
+     {
+      "name": "גניים תימור",
+      "room": "27 מע' הינע"
+     },
+     {
+      "name": "טימור עידו",
+      "room": "22 מע' מחשבים"
+     },
+     {
+      "name": "ירובוי לאה",
+      "room": ""
+     },
+     {
+      "name": "ספירין מישל",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "מעבדה בהתמחות מערכות הספק",
+    "status": "regular",
+    "classes": [
+     "יד'- 2"
+    ],
+    "rooms": [
+     "28 מע' פיקוד"
+    ],
+    "co_teachers": [
+     {
+      "name": "בוטרימוב אלכסנדרה",
+      "room": ""
+     },
+     {
+      "name": "גניים תימור",
+      "room": "27 מע' הינע"
+     },
+     {
+      "name": "טימור עידו",
+      "room": "22 מע' מחשבים"
+     },
+     {
+      "name": "ירובוי לאה",
+      "room": ""
+     },
+     {
+      "name": "ספירין מישל",
+      "room": ""
+     },
+     {
+      "name": "קריין נועה",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 9,
+    "start": "15:15",
+    "end": "16:00",
+    "subject": "שיחת צוות הנדסאים",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "תגבור צוות חשמל",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "צוות רכזים פדגוגי",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
     "hour": 6,
     "start": "12:15",
     "end": "13:00",
@@ -1572,7 +1572,7 @@
    "date": "2026-11-29",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-29",
@@ -1594,7 +1594,7 @@
    "date": "2026-11-30",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-30",
@@ -1619,7 +1619,7 @@
    "date": "2026-12-01",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-01",
@@ -1791,7 +1791,7 @@
    "date": "2026-12-02",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-02",
@@ -1813,7 +1813,7 @@
    "date": "2026-12-03",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-03",
@@ -1849,40 +1849,307 @@
    "date": "2026-12-04",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": []
+  },
+  {
+   "date": "2026-12-06",
+   "weekday": "יום ראשון",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-06",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "שיחת צוות חשמל",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-07",
+   "weekday": "יום שני",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-07",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "עמ\"י",
+     "status": "regular",
+     "classes": [
+      "ט' - 3"
+     ],
+     "rooms": [
+      "77 ט-3"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-08",
+   "weekday": "יום שלישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-08",
+     "hour": 2,
+     "start": "08:55",
+     "end": "09:40",
+     "subject": "קפ\"ק מורחב",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "קפ\"ק מורחב",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "מעבדה בהתמחות מערכות הספק",
+     "status": "regular",
+     "classes": [
+      "יד'- 2"
+     ],
+     "rooms": [
+      "28 מע' פיקוד"
+     ],
+     "co_teachers": [
+      {
+       "name": "בוטרימוב אלכסנדרה",
+       "room": ""
+      },
+      {
+       "name": "גניים תימור",
+       "room": "27 מע' הינע"
+      },
+      {
+       "name": "טימור עידו",
+       "room": "22 מע' מחשבים"
+      },
+      {
+       "name": "ירובוי לאה",
+       "room": ""
+      },
+      {
+       "name": "ספירין מישל",
+       "room": ""
+      },
+      {
+       "name": "קריין נועה",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "מעבדה בהתמחות מערכות הספק",
+     "status": "regular",
+     "classes": [
+      "יד'- 2"
+     ],
+     "rooms": [
+      "28 מע' פיקוד"
+     ],
+     "co_teachers": [
+      {
+       "name": "בוטרימוב אלכסנדרה",
+       "room": ""
+      },
+      {
+       "name": "גניים תימור",
+       "room": "27 מע' הינע"
+      },
+      {
+       "name": "טימור עידו",
+       "room": "22 מע' מחשבים"
+      },
+      {
+       "name": "ירובוי לאה",
+       "room": ""
+      },
+      {
+       "name": "ספירין מישל",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "מעבדה בהתמחות מערכות הספק",
+     "status": "regular",
+     "classes": [
+      "יד'- 2"
+     ],
+     "rooms": [
+      "28 מע' פיקוד"
+     ],
+     "co_teachers": [
+      {
+       "name": "בוטרימוב אלכסנדרה",
+       "room": ""
+      },
+      {
+       "name": "גניים תימור",
+       "room": "27 מע' הינע"
+      },
+      {
+       "name": "טימור עידו",
+       "room": "22 מע' מחשבים"
+      },
+      {
+       "name": "ירובוי לאה",
+       "room": ""
+      },
+      {
+       "name": "ספירין מישל",
+       "room": ""
+      },
+      {
+       "name": "קריין נועה",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-08",
+     "hour": 9,
+     "start": "15:15",
+     "end": "16:00",
+     "subject": "שיחת צוות הנדסאים",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-09",
+   "weekday": "יום רביעי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-09",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "תגבור צוות חשמל",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-10",
+   "weekday": "יום חמישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-10",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "צוות רכזים פדגוגי",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "צוות אילוצי מערכת",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-11",
+   "weekday": "יום שישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": []
   }
  ],
  "grade_agenda": [
-  {
-   "kind": "מבחן",
-   "date": "2026-11-26",
-   "title": "מבחן בהמרת אנרגיה",
-   "hours": [
-    1,
-    2
-   ],
-   "text": "26.11.2026, מבחן בהמרת אנרגיה משיעור 1 עד שיעור 2 לכיתות: יג'- 2 בקבוצה של דטינקה כהן אסף, חדר: 98 - יג 2",
-   "my_classes": [
-    "יג'- 2"
-   ],
-   "my_lessons": []
-  },
-  {
-   "kind": "מבחן",
-   "date": "2026-11-26",
-   "title": "מבחן במערכות תקשורת",
-   "hours": [
-    3,
-    4
-   ],
-   "text": "26.11.2026, מבחן במערכות תקשורת משיעור 3 עד שיעור 4 לכיתות: יג'- 3 בקבוצה של פיינלב מקסים, חדר: 96 יג -3",
-   "my_classes": [
-    "יג'- 3",
-    "יג'- 4"
-   ],
-   "my_lessons": []
-  },
   {
    "kind": "מבחן",
    "date": "2026-11-29",
@@ -1905,7 +2172,7 @@
     1,
     2
    ],
-   "text": "30.11.2026, מבחן ב DSP משיעור 1 עד שיעור 2 לכיתות: יד'- 3 בקבוצה של לוי אייל, חדר: 89 יד-3",
+   "text": "30.11.2026, מבחן ב DSP משיעור 1 עד שיעור 2 לכיתות: יד'- 3 בקבוצה של לוי אייל, חדר: 97 הקבצה מכללה",
    "my_classes": [
     "יד'- 3"
    ],
@@ -2005,7 +2272,7 @@
     3,
     4
    ],
-   "text": "02.12.2026, מבחן בתורת החשמל א משיעור 3 עד שיעור 4 לכיתות: יג'- 2 בקבוצה של פוקס איליה, חדר: 98 - יג 2",
+   "text": "02.12.2026, מבחן בתורת החשמל א משיעור 3 עד שיעור 4 לכיתות: יג'- 2 בקבוצה של פוקס איליה, חדר: 82 הקבצה ט",
    "my_classes": [
     "יג'- 2"
    ],
@@ -2019,7 +2286,7 @@
     3,
     4
    ],
-   "text": "02.12.2026, מבחן בתקשורת מחשבים משיעור 3 עד שיעור 4 לכיתות: יד'- 3 בקבוצה של טסליצקי מרק, חדר: 89 יד-3",
+   "text": "02.12.2026, מבחן בתקשורת מחשבים משיעור 3 עד שיעור 4 לכיתות: יד'- 3 בקבוצה של טסליצקי מרק, חדר: 97 הקבצה מכללה",
    "my_classes": [
     "יד'- 3"
    ],

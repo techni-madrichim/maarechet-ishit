@@ -11,41 +11,11 @@
    "class": "ט׳ - 5",
    "days": {}
   },
-  "scraped_at": "2026-11-26T21:31+02:00",
+  "scraped_at": "2026-11-27T20:30+02:00",
   "class_end": {},
   "site_update": "מעודכן ל: 26.11.2026, שעה: 15:03",
   "class_count": 30,
   "days": [
-   {
-    "date": "2026-11-22",
-    "weekday": "יום ראשון",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-23",
-    "weekday": "יום שני",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-24",
-    "weekday": "יום שלישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-25",
-    "weekday": "יום רביעי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-26",
-    "weekday": "יום חמישי",
-    "holidays": []
-   },
-   {
-    "date": "2026-11-27",
-    "weekday": "יום שישי",
-    "holidays": []
-   },
    {
     "date": "2026-11-29",
     "weekday": "יום ראשון",
@@ -75,720 +45,51 @@
     "date": "2026-12-04",
     "weekday": "יום שישי",
     "holidays": []
+   },
+   {
+    "date": "2026-12-06",
+    "weekday": "יום ראשון",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-07",
+    "weekday": "יום שני",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-08",
+    "weekday": "יום שלישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-09",
+    "weekday": "יום רביעי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-10",
+    "weekday": "יום חמישי",
+    "holidays": [
+     "חנוכה"
+    ]
+   },
+   {
+    "date": "2026-12-11",
+    "weekday": "יום שישי",
+    "holidays": [
+     "חנוכה"
+    ]
    }
   ],
   "lessons": [
-   {
-    "date": "2026-11-22",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "חשמל+אלק'",
-    "status": "regular",
-    "classes": [
-     "ט' - 5"
-    ],
-    "rooms": [
-     "83 ט 5"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 2,
-    "start": "08:55",
-    "end": "09:40",
-    "subject": "חשמל+אלק'",
-    "status": "regular",
-    "classes": [
-     "ט' - 5"
-    ],
-    "rooms": [
-     "83 ט 5"
-    ],
-    "co_teachers": [
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 5",
-      "type": "מילוי מקום",
-      "text": "אוחיון איתי <- שיראזי עידו",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "אוריינות מחשב ומידע",
-    "status": "cancelled",
-    "classes": [
-     "ט' - 5"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "אוחיון אריאל ברוך",
-      "room": ""
-     },
-     {
-      "name": "בהנסי עדי",
-      "room": ""
-     },
-     {
-      "name": "בריילובסקי יקטרינה יהל",
-      "room": "90 מולטימדיה מכללה"
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 5",
-      "type": "אירוע",
-      "text": "אורח חיים בריא ט5",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "אוריינות מחשב ומידע",
-    "status": "regular",
-    "classes": [
-     "ט' - 1"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "אוחיון אריאל ברוך",
-      "room": ""
-     },
-     {
-      "name": "בהנסי עדי",
-      "room": ""
-     },
-     {
-      "name": "בריילובסקי יקטרינה יהל",
-      "room": ""
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "אוריינות מחשב ומידע",
-    "status": "regular",
-    "classes": [
-     "ט' - 3"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "אוחיון אריאל ברוך",
-      "room": ""
-     },
-     {
-      "name": "בריילובסקי יקטרינה יהל",
-      "room": "22 מע' מחשבים"
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "חיל האוויר-שעת מק\"ס",
-    "status": "regular",
-    "classes": [
-     "ט' - 5"
-    ],
-    "rooms": [
-     "83 ט 5"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-22",
-    "hour": 9,
-    "start": "15:15",
-    "end": "16:00",
-    "subject": "שיחת צוות ט'",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 1,
-    "start": "08:10",
-    "end": "08:55",
-    "subject": "חשמל+אלק'",
-    "status": "regular",
-    "classes": [
-     "ט' - 3"
-    ],
-    "rooms": [
-     "77 ט-3"
-    ],
-    "co_teachers": [
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 3",
-      "type": "מילוי מקום",
-      "text": "אוחיון איתי <- יעקובי עוזיאל 77 ט-3",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 2,
-    "start": "08:55",
-    "end": "09:40",
-    "subject": "חשמל+אלק'",
-    "status": "regular",
-    "classes": [
-     "ט' - 3"
-    ],
-    "rooms": [
-     "77 ט-3"
-    ],
-    "co_teachers": [
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 3",
-      "type": "מילוי מקום",
-      "text": "אוחיון איתי <- שיראזי עידו",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "חשמל+אלק'",
-    "status": "regular",
-    "classes": [
-     "ט' - 1"
-    ],
-    "rooms": [
-     "79 ט-1"
-    ],
-    "co_teachers": [
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 1",
-      "type": "מילוי מקום",
-      "text": "אוחיון איתי <- יעקובי עוזיאל 79 ט-1",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "חשמל+אלק'",
-    "status": "regular",
-    "classes": [
-     "ט' - 1"
-    ],
-    "rooms": [
-     "79 ט-1"
-    ],
-    "co_teachers": [
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 1",
-      "type": "מילוי מקום",
-      "text": "אוחיון איתי <- שיראזי עידו",
-      "mentions_me": false
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "חשמל+אלק'",
-    "status": "regular",
-    "classes": [
-     "ט' - 2"
-    ],
-    "rooms": [
-     "76 ט-2"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 2",
-      "type": "מילוי מקום",
-      "text": "אוחיון איתי <- יעקובי עוזיאל 76 ט-2",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-23",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "חשמל+אלק'",
-    "status": "regular",
-    "classes": [
-     "ט' - 2"
-    ],
-    "rooms": [
-     "76 ט-2"
-    ],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 2",
-      "type": "מילוי מקום",
-      "text": "אוחיון איתי <- יעקובי עוזיאל 76 ט-2",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-24",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "שיחת צוות אלקטרוניקה",
-    "status": "regular",
-    "manual": true,
-    "classes": [],
-    "rooms": [],
-    "co_teachers": [],
-    "other_lessons": [],
-    "changes": []
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 3,
-    "start": "09:55",
-    "end": "10:40",
-    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
-    "status": "cancelled",
-    "classes": [
-     "י' - 4"
-    ],
-    "rooms": [
-     "22 מע' מחשבים"
-    ],
-    "co_teachers": [
-     {
-      "name": "איבלייב דניאל",
-      "room": ""
-     },
-     {
-      "name": "בהנסי עדי",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "י' - 4",
-      "type": "מילוי מקום",
-      "text": "יעקובי עוזיאל <- איבלייב דניאל",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 4,
-    "start": "10:40",
-    "end": "11:25",
-    "subject": "אוריינות מחשב ומידע",
-    "status": "cancelled",
-    "classes": [
-     "ט' - 4"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "אוחיון אריאל ברוך",
-      "room": ""
-     },
-     {
-      "name": "בהנסי עדי",
-      "room": ""
-     },
-     {
-      "name": "בריילובסקי יקטרינה יהל",
-      "room": ""
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 4",
-      "type": "מילוי מקום",
-      "text": "פנחס שחר <- בהנסי עדי",
-      "mentions_me": false
-     },
-     {
-      "class": "ט' - 4",
-      "type": "מילוי מקום",
-      "text": "יעקובי עוזיאל <- בהנסי עדי",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "אוריינות מחשב ומידע",
-    "status": "cancelled",
-    "classes": [
-     "ט' - 1"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "אוחיון אריאל ברוך",
-      "room": ""
-     },
-     {
-      "name": "בהנסי עדי",
-      "room": ""
-     },
-     {
-      "name": "בריילובסקי יקטרינה יהל",
-      "room": ""
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 1",
-      "type": "מילוי מקום",
-      "text": "פנחס שחר <- בריילובסקי יקטרינה יהל",
-      "mentions_me": false
-     },
-     {
-      "class": "ט' - 1",
-      "type": "מילוי מקום",
-      "text": "יעקובי עוזיאל <- בובליל שלום",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "אוריינות מחשב ומידע",
-    "status": "cancelled",
-    "classes": [
-     "ט' - 5"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "אוחיון אריאל ברוך",
-      "room": ""
-     },
-     {
-      "name": "בהנסי עדי",
-      "room": ""
-     },
-     {
-      "name": "בריילובסקי יקטרינה יהל",
-      "room": "90 מולטימדיה מכללה"
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 5",
-      "type": "מילוי מקום",
-      "text": "פנחס שחר <- אוחיון אריאל ברוך",
-      "mentions_me": false
-     },
-     {
-      "class": "ט' - 5",
-      "type": "מילוי מקום",
-      "text": "יעקובי עוזיאל <- בריילובסקי יקטרינה יהל 90 מולטימדיה מכללה",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 8,
-    "start": "14:25",
-    "end": "15:10",
-    "subject": "אוריינות מחשב ומידע",
-    "status": "cancelled",
-    "classes": [
-     "ט' - 2"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "אוחיון אריאל ברוך",
-      "room": ""
-     },
-     {
-      "name": "בהנסי עדי",
-      "room": ""
-     },
-     {
-      "name": "בריילובסקי יקטרינה יהל",
-      "room": "19 מע' מחשבים"
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 2",
-      "type": "מילוי מקום",
-      "text": "פנחס שחר <- בריילובסקי יקטרינה יהל 19 מע' מחשבים",
-      "mentions_me": false
-     },
-     {
-      "class": "ט' - 2",
-      "type": "מילוי מקום",
-      "text": "יעקובי עוזיאל <- בריילובסקי יקטרינה יהל 19 מע' מחשבים",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-25",
-    "hour": 9,
-    "start": "15:15",
-    "end": "16:00",
-    "subject": "אוריינות מחשב ומידע",
-    "status": "cancelled",
-    "classes": [
-     "ט' - 2"
-    ],
-    "rooms": [],
-    "co_teachers": [
-     {
-      "name": "אוחיון אריאל ברוך",
-      "room": ""
-     },
-     {
-      "name": "בריילובסקי יקטרינה יהל",
-      "room": "19 מע' מחשבים"
-     },
-     {
-      "name": "פנחס שחר",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 2",
-      "type": "מילוי מקום",
-      "text": "פנחס שחר <- בריילובסקי יקטרינה יהל 19 מע' מחשבים",
-      "mentions_me": false
-     },
-     {
-      "class": "ט' - 2",
-      "type": "מילוי מקום",
-      "text": "יעקובי עוזיאל <- בריילובסקי יקטרינה יהל 19 מע' מחשבים",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 5,
-    "start": "11:30",
-    "end": "12:15",
-    "subject": "חשמל+אלק'",
-    "status": "cancelled",
-    "classes": [
-     "ט' - 4"
-    ],
-    "rooms": [
-     "78 ט-4"
-    ],
-    "co_teachers": [
-     {
-      "name": "אוחיון איתי",
-      "room": ""
-     },
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 4",
-      "type": "מילוי מקום",
-      "text": "יעקובי עוזיאל <- שיראזי עידו",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 6,
-    "start": "12:15",
-    "end": "13:00",
-    "subject": "חשמל+אלק'",
-    "status": "cancelled",
-    "classes": [
-     "ט' - 4"
-    ],
-    "rooms": [
-     "78 ט-4"
-    ],
-    "co_teachers": [
-     {
-      "name": "אוחיון איתי",
-      "room": ""
-     },
-     {
-      "name": "שיראזי עידו",
-      "room": ""
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "ט' - 4",
-      "type": "מילוי מקום",
-      "text": "יעקובי עוזיאל <- שיראזי עידו",
-      "mentions_me": true
-     }
-    ]
-   },
-   {
-    "date": "2026-11-26",
-    "hour": 7,
-    "start": "13:40",
-    "end": "14:25",
-    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
-    "status": "cancelled",
-    "classes": [
-     "י' - 3"
-    ],
-    "rooms": [
-     "19 מע' מחשבים"
-    ],
-    "co_teachers": [
-     {
-      "name": "איבלייב דניאל",
-      "room": ""
-     },
-     {
-      "name": "בהנסי עדי",
-      "room": ""
-     },
-     {
-      "name": "לכטמן ולריה",
-      "room": "21 מע' אלקט'"
-     }
-    ],
-    "other_lessons": [],
-    "changes": [
-     {
-      "class": "י' - 3",
-      "type": "מילוי מקום",
-      "text": "יעקובי עוזיאל <- לכטמן ולריה 21 מע' אלקט'",
-      "mentions_me": true
-     }
-    ]
-   },
    {
     "date": "2026-11-29",
     "hour": 1,
@@ -1401,58 +702,602 @@
     ],
     "other_lessons": [],
     "changes": []
-   }
-  ],
-  "class_changes": [
-   {
-    "class": "ט' - 4",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 5, יעקובי עוזיאל, מילוי מקום שיראזי עידו",
-    "mentions_me": true
    },
    {
-    "class": "ט' - 4",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 6, יעקובי עוזיאל, מילוי מקום שיראזי עידו",
-    "mentions_me": true
-   },
-   {
-    "class": "י' - 3",
-    "date_label": "",
-    "text": "26.11.2026, שיעור 7, יעקובי עוזיאל, מילוי מקום לכטמן ולריה, חדר: 21 מע' אלקט'",
-    "mentions_me": true
-   }
-  ],
-  "agenda": [
-   {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן במערכות משובצות מחשב י3+ י4",
-    "hours": [
-     3,
-     4
+    "date": "2026-12-06",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 5"
     ],
-    "text": "26.11.2026, מבחן במערכות משובצות מחשב י3+ י4 משיעור 3 עד שיעור 4 לכיתות: י'-3 בקבוצה של עשור אביתר, חדר: 66 י-3",
-    "my_classes": [
-     "י' - 3",
+    "rooms": [
+     "83 ט 5"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 2,
+    "start": "08:55",
+    "end": "09:40",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 5"
+    ],
+    "rooms": [
+     "83 ט 5"
+    ],
+    "co_teachers": [
+     {
+      "name": "אוחיון איתי",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "אוריינות מחשב ומידע",
+    "status": "regular",
+    "classes": [
+     "ט' - 5"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "אוחיון אריאל ברוך",
+      "room": ""
+     },
+     {
+      "name": "בהנסי עדי",
+      "room": ""
+     },
+     {
+      "name": "בריילובסקי יקטרינה יהל",
+      "room": "90 מולטימדיה מכללה"
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "אוריינות מחשב ומידע",
+    "status": "regular",
+    "classes": [
+     "ט' - 1"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "אוחיון אריאל ברוך",
+      "room": ""
+     },
+     {
+      "name": "בהנסי עדי",
+      "room": ""
+     },
+     {
+      "name": "בריילובסקי יקטרינה יהל",
+      "room": ""
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "אוריינות מחשב ומידע",
+    "status": "regular",
+    "classes": [
+     "ט' - 3"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "אוחיון אריאל ברוך",
+      "room": ""
+     },
+     {
+      "name": "בריילובסקי יקטרינה יהל",
+      "room": "22 מע' מחשבים"
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "חיל האוויר-שעת מק\"ס",
+    "status": "regular",
+    "classes": [
+     "ט' - 5"
+    ],
+    "rooms": [
+     "83 ט 5"
+    ],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-06",
+    "hour": 9,
+    "start": "15:15",
+    "end": "16:00",
+    "subject": "שיחת צוות ט'",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 1,
+    "start": "08:10",
+    "end": "08:55",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 3"
+    ],
+    "rooms": [
+     "77 ט-3"
+    ],
+    "co_teachers": [
+     {
+      "name": "אוחיון איתי",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 2,
+    "start": "08:55",
+    "end": "09:40",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 3"
+    ],
+    "rooms": [
+     "77 ט-3"
+    ],
+    "co_teachers": [
+     {
+      "name": "אוחיון איתי",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 1"
+    ],
+    "rooms": [
+     "79 ט-1"
+    ],
+    "co_teachers": [
+     {
+      "name": "אוחיון איתי",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 4,
+    "start": "10:40",
+    "end": "11:25",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 1"
+    ],
+    "rooms": [
+     "79 ט-1"
+    ],
+    "co_teachers": [
+     {
+      "name": "אוחיון איתי",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 2"
+    ],
+    "rooms": [
+     "76 ט-2"
+    ],
+    "co_teachers": [
+     {
+      "name": "אוחיון איתי",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-07",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 2"
+    ],
+    "rooms": [
+     "76 ט-2"
+    ],
+    "co_teachers": [
+     {
+      "name": "אוחיון איתי",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-08",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "שיחת צוות אלקטרוניקה",
+    "status": "regular",
+    "manual": true,
+    "classes": [],
+    "rooms": [],
+    "co_teachers": [],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 3,
+    "start": "09:55",
+    "end": "10:40",
+    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+    "status": "regular",
+    "classes": [
      "י' - 4"
     ],
-    "my_lessons": []
+    "rooms": [
+     "22 מע' מחשבים"
+    ],
+    "co_teachers": [
+     {
+      "name": "איבלייב דניאל",
+      "room": ""
+     },
+     {
+      "name": "בהנסי עדי",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
    },
    {
-    "kind": "מבחן",
-    "date": "2026-11-26",
-    "title": "מבחן במערכות משובצות מחשב י3+ י4 תוספת זמן",
-    "hours": [
-     5,
-     5
+    "date": "2026-12-09",
+    "hour": 4,
+    "start": "10:40",
+    "end": "11:25",
+    "subject": "אוריינות מחשב ומידע",
+    "status": "regular",
+    "classes": [
+     "ט' - 4"
     ],
-    "text": "26.11.2026, מבחן במערכות משובצות מחשב י3+ י4 תוספת זמן שיעור 5 לכיתות: י'-3 בקבוצה של עשור אביתר, חדר: 72 הקבצה י",
-    "my_classes": [
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "אוחיון אריאל ברוך",
+      "room": ""
+     },
+     {
+      "name": "בהנסי עדי",
+      "room": ""
+     },
+     {
+      "name": "בריילובסקי יקטרינה יהל",
+      "room": ""
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "אוריינות מחשב ומידע",
+    "status": "regular",
+    "classes": [
+     "ט' - 1"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "אוחיון אריאל ברוך",
+      "room": ""
+     },
+     {
+      "name": "בהנסי עדי",
+      "room": ""
+     },
+     {
+      "name": "בריילובסקי יקטרינה יהל",
+      "room": ""
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "אוריינות מחשב ומידע",
+    "status": "regular",
+    "classes": [
+     "ט' - 5"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "אוחיון אריאל ברוך",
+      "room": ""
+     },
+     {
+      "name": "בהנסי עדי",
+      "room": ""
+     },
+     {
+      "name": "בריילובסקי יקטרינה יהל",
+      "room": "90 מולטימדיה מכללה"
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 8,
+    "start": "14:25",
+    "end": "15:10",
+    "subject": "אוריינות מחשב ומידע",
+    "status": "regular",
+    "classes": [
+     "ט' - 2"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "אוחיון אריאל ברוך",
+      "room": ""
+     },
+     {
+      "name": "בהנסי עדי",
+      "room": ""
+     },
+     {
+      "name": "בריילובסקי יקטרינה יהל",
+      "room": "19 מע' מחשבים"
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-09",
+    "hour": 9,
+    "start": "15:15",
+    "end": "16:00",
+    "subject": "אוריינות מחשב ומידע",
+    "status": "regular",
+    "classes": [
+     "ט' - 2"
+    ],
+    "rooms": [],
+    "co_teachers": [
+     {
+      "name": "אוחיון אריאל ברוך",
+      "room": ""
+     },
+     {
+      "name": "בריילובסקי יקטרינה יהל",
+      "room": "19 מע' מחשבים"
+     },
+     {
+      "name": "פנחס שחר",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 5,
+    "start": "11:30",
+    "end": "12:15",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 4"
+    ],
+    "rooms": [
+     "78 ט-4"
+    ],
+    "co_teachers": [
+     {
+      "name": "אוחיון איתי",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 6,
+    "start": "12:15",
+    "end": "13:00",
+    "subject": "חשמל+אלק'",
+    "status": "regular",
+    "classes": [
+     "ט' - 4"
+    ],
+    "rooms": [
+     "78 ט-4"
+    ],
+    "co_teachers": [
+     {
+      "name": "אוחיון איתי",
+      "room": ""
+     },
+     {
+      "name": "שיראזי עידו",
+      "room": ""
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   },
+   {
+    "date": "2026-12-10",
+    "hour": 7,
+    "start": "13:40",
+    "end": "14:25",
+    "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+    "status": "regular",
+    "classes": [
      "י' - 3"
     ],
-    "my_lessons": []
-   },
+    "rooms": [
+     "19 מע' מחשבים"
+    ],
+    "co_teachers": [
+     {
+      "name": "איבלייב דניאל",
+      "room": ""
+     },
+     {
+      "name": "בהנסי עדי",
+      "room": ""
+     },
+     {
+      "name": "לכטמן ולריה",
+      "room": "21 מע' אלקט'"
+     }
+    ],
+    "other_lessons": [],
+    "changes": []
+   }
+  ],
+  "class_changes": [],
+  "agenda": [
    {
     "kind": "אירוע",
     "date": "2026-11-29",
@@ -1590,7 +1435,7 @@
      3,
      4
     ],
-    "text": "13.12.2026, מבחן בחשמל ואלק' שכבה ט' משיעור 3 עד שיעור 4 לכיתות: ט'-1 בקבוצה של שיראזי עידו",
+    "text": "13.12.2026, מבחן בחשמל ואלק' שכבה ט' משיעור 3 עד שיעור 4 לכיתות: ט'-1 בקבוצה של יעקובי עוזיאל, חדר: 79 ט-1",
     "my_classes": [
      "ט' - 1",
      "ט' - 2",
@@ -1666,7 +1511,7 @@
      1,
      2
     ],
-    "text": "17.12.2026, מבחן באזרחות שכבה ט משיעור 1 עד שיעור 2 לכיתות: ט'-1 בקבוצה של גוזלן אורן, חדר: 79 ט-1",
+    "text": "17.12.2026, מבחן באזרחות שכבה ט משיעור 1 עד שיעור 2 לכיתות: ט'-1 בקבוצה של זינמן ירון, חדר: 84 הקבצה ט1",
     "my_classes": [
      "ט' - 1",
      "ט' - 2",
@@ -1799,7 +1644,7 @@
      1,
      2
     ],
-    "text": "27.12.2026, מבחן בספרות שכבה ט' משיעור 1 עד שיעור 2 לכיתות: ט'-1 בקבוצה של שויד הודיה, חדר: 79 ט-1",
+    "text": "27.12.2026, מבחן בספרות שכבה ט' משיעור 1 עד שיעור 2 לכיתות: ט'-1 בקבוצה של שריקי יונית",
     "my_classes": [
      "ט' - 1",
      "ט' - 2",
@@ -1853,7 +1698,7 @@
      1,
      2
     ],
-    "text": "29.12.2026, מבחן במתמטיקה שכבה י' משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2...י'-5 בקבוצה של צרפתי סיגל, חדר: 70 י-5",
+    "text": "29.12.2026, מבחן במתמטיקה שכבה י' משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2...י'-5 בקבוצה של גרינברג אביב רונית, חדר: 66 י-3",
     "my_classes": [
      "י' - 3",
      "י' - 4"
@@ -1868,7 +1713,7 @@
      1,
      2
     ],
-    "text": "31.12.2026, מבחן בפיזיקה שכבה י משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2, י'-3 בקבוצה של ברמניק אירינה, חדר: 67 י-2",
+    "text": "31.12.2026, מבחן בפיזיקה שכבה י משיעור 1 עד שיעור 2 לכיתות: י-6, י'-2, י'-3 בקבוצה של גרופמכר מיכל, חדר: 65 י-4",
     "my_classes": [
      "י' - 3",
      "י' - 4"
@@ -4087,7 +3932,7 @@
    "date": "2026-11-29",
    "weekday": "יום ראשון",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-29",
@@ -4282,7 +4127,7 @@
    "date": "2026-11-30",
    "weekday": "יום שני",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-11-30",
@@ -4438,7 +4283,7 @@
    "date": "2026-12-01",
    "weekday": "יום שלישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-01",
@@ -4460,7 +4305,7 @@
    "date": "2026-12-02",
    "weekday": "יום רביעי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-02",
@@ -4650,7 +4495,7 @@
    "date": "2026-12-03",
    "weekday": "יום חמישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": [
     {
      "date": "2026-12-03",
@@ -4740,7 +4585,658 @@
    "date": "2026-12-04",
    "weekday": "יום שישי",
    "holidays": [],
-   "recorded_at": "2026-11-26T21:31+02:00",
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": []
+  },
+  {
+   "date": "2026-12-06",
+   "weekday": "יום ראשון",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-06",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 5"
+     ],
+     "rooms": [
+      "83 ט 5"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 2,
+     "start": "08:55",
+     "end": "09:40",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 5"
+     ],
+     "rooms": [
+      "83 ט 5"
+     ],
+     "co_teachers": [
+      {
+       "name": "אוחיון איתי",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "אוריינות מחשב ומידע",
+     "status": "regular",
+     "classes": [
+      "ט' - 5"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "אוחיון אריאל ברוך",
+       "room": ""
+      },
+      {
+       "name": "בהנסי עדי",
+       "room": ""
+      },
+      {
+       "name": "בריילובסקי יקטרינה יהל",
+       "room": "90 מולטימדיה מכללה"
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "אוריינות מחשב ומידע",
+     "status": "regular",
+     "classes": [
+      "ט' - 1"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "אוחיון אריאל ברוך",
+       "room": ""
+      },
+      {
+       "name": "בהנסי עדי",
+       "room": ""
+      },
+      {
+       "name": "בריילובסקי יקטרינה יהל",
+       "room": ""
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "אוריינות מחשב ומידע",
+     "status": "regular",
+     "classes": [
+      "ט' - 3"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "אוחיון אריאל ברוך",
+       "room": ""
+      },
+      {
+       "name": "בריילובסקי יקטרינה יהל",
+       "room": "22 מע' מחשבים"
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "חיל האוויר-שעת מק\"ס",
+     "status": "regular",
+     "classes": [
+      "ט' - 5"
+     ],
+     "rooms": [
+      "83 ט 5"
+     ],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-06",
+     "hour": 9,
+     "start": "15:15",
+     "end": "16:00",
+     "subject": "שיחת צוות ט'",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-07",
+   "weekday": "יום שני",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-07",
+     "hour": 1,
+     "start": "08:10",
+     "end": "08:55",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 3"
+     ],
+     "rooms": [
+      "77 ט-3"
+     ],
+     "co_teachers": [
+      {
+       "name": "אוחיון איתי",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 2,
+     "start": "08:55",
+     "end": "09:40",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 3"
+     ],
+     "rooms": [
+      "77 ט-3"
+     ],
+     "co_teachers": [
+      {
+       "name": "אוחיון איתי",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 1"
+     ],
+     "rooms": [
+      "79 ט-1"
+     ],
+     "co_teachers": [
+      {
+       "name": "אוחיון איתי",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 4,
+     "start": "10:40",
+     "end": "11:25",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 1"
+     ],
+     "rooms": [
+      "79 ט-1"
+     ],
+     "co_teachers": [
+      {
+       "name": "אוחיון איתי",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 2"
+     ],
+     "rooms": [
+      "76 ט-2"
+     ],
+     "co_teachers": [
+      {
+       "name": "אוחיון איתי",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-07",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 2"
+     ],
+     "rooms": [
+      "76 ט-2"
+     ],
+     "co_teachers": [
+      {
+       "name": "אוחיון איתי",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-08",
+   "weekday": "יום שלישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-08",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "שיחת צוות אלקטרוניקה",
+     "status": "regular",
+     "manual": true,
+     "classes": [],
+     "rooms": [],
+     "co_teachers": [],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-09",
+   "weekday": "יום רביעי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-09",
+     "hour": 3,
+     "start": "09:55",
+     "end": "10:40",
+     "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+     "status": "regular",
+     "classes": [
+      "י' - 4"
+     ],
+     "rooms": [
+      "22 מע' מחשבים"
+     ],
+     "co_teachers": [
+      {
+       "name": "איבלייב דניאל",
+       "room": ""
+      },
+      {
+       "name": "בהנסי עדי",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 4,
+     "start": "10:40",
+     "end": "11:25",
+     "subject": "אוריינות מחשב ומידע",
+     "status": "regular",
+     "classes": [
+      "ט' - 4"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "אוחיון אריאל ברוך",
+       "room": ""
+      },
+      {
+       "name": "בהנסי עדי",
+       "room": ""
+      },
+      {
+       "name": "בריילובסקי יקטרינה יהל",
+       "room": ""
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "אוריינות מחשב ומידע",
+     "status": "regular",
+     "classes": [
+      "ט' - 1"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "אוחיון אריאל ברוך",
+       "room": ""
+      },
+      {
+       "name": "בהנסי עדי",
+       "room": ""
+      },
+      {
+       "name": "בריילובסקי יקטרינה יהל",
+       "room": ""
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "אוריינות מחשב ומידע",
+     "status": "regular",
+     "classes": [
+      "ט' - 5"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "אוחיון אריאל ברוך",
+       "room": ""
+      },
+      {
+       "name": "בהנסי עדי",
+       "room": ""
+      },
+      {
+       "name": "בריילובסקי יקטרינה יהל",
+       "room": "90 מולטימדיה מכללה"
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 8,
+     "start": "14:25",
+     "end": "15:10",
+     "subject": "אוריינות מחשב ומידע",
+     "status": "regular",
+     "classes": [
+      "ט' - 2"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "אוחיון אריאל ברוך",
+       "room": ""
+      },
+      {
+       "name": "בהנסי עדי",
+       "room": ""
+      },
+      {
+       "name": "בריילובסקי יקטרינה יהל",
+       "room": "19 מע' מחשבים"
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-09",
+     "hour": 9,
+     "start": "15:15",
+     "end": "16:00",
+     "subject": "אוריינות מחשב ומידע",
+     "status": "regular",
+     "classes": [
+      "ט' - 2"
+     ],
+     "rooms": [],
+     "co_teachers": [
+      {
+       "name": "אוחיון אריאל ברוך",
+       "room": ""
+      },
+      {
+       "name": "בריילובסקי יקטרינה יהל",
+       "room": "19 מע' מחשבים"
+      },
+      {
+       "name": "פנחס שחר",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-10",
+   "weekday": "יום חמישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
+   "lessons": [
+    {
+     "date": "2026-12-10",
+     "hour": 5,
+     "start": "11:30",
+     "end": "12:15",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 4"
+     ],
+     "rooms": [
+      "78 ט-4"
+     ],
+     "co_teachers": [
+      {
+       "name": "אוחיון איתי",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 6,
+     "start": "12:15",
+     "end": "13:00",
+     "subject": "חשמל+אלק'",
+     "status": "regular",
+     "classes": [
+      "ט' - 4"
+     ],
+     "rooms": [
+      "78 ט-4"
+     ],
+     "co_teachers": [
+      {
+       "name": "אוחיון איתי",
+       "room": ""
+      },
+      {
+       "name": "שיראזי עידו",
+       "room": ""
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    },
+    {
+     "date": "2026-12-10",
+     "hour": 7,
+     "start": "13:40",
+     "end": "14:25",
+     "subject": "מעבדה במבוא להנדסת אלקטרוניקה",
+     "status": "regular",
+     "classes": [
+      "י' - 3"
+     ],
+     "rooms": [
+      "19 מע' מחשבים"
+     ],
+     "co_teachers": [
+      {
+       "name": "איבלייב דניאל",
+       "room": ""
+      },
+      {
+       "name": "בהנסי עדי",
+       "room": ""
+      },
+      {
+       "name": "לכטמן ולריה",
+       "room": "21 מע' אלקט'"
+      }
+     ],
+     "other_lessons": [],
+     "changes": []
+    }
+   ]
+  },
+  {
+   "date": "2026-12-11",
+   "weekday": "יום שישי",
+   "holidays": [
+    "חנוכה"
+   ],
+   "recorded_at": "2026-11-27T20:30+02:00",
    "lessons": []
   }
  ]
